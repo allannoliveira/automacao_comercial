@@ -1,0 +1,20 @@
+# =========================
+# Dependências principais
+# =========================
+requests>=2.31.0
+beautifulsoup4>=4.12.2
+playwright>=1.42.0
+
+# =========================
+# Desenvolvimento / Qualidade
+# =========================
+pytest>=8.0.0
+pytest-playwright>=0.4.4
+black>=24.1.0
+flake8>=7.0.0
+mypy>=1.8.0
+
+# =========================
+# Utilidades
+# =========================
+python-dotenv>=1.0.1
