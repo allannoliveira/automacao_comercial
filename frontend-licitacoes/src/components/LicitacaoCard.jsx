@@ -30,7 +30,7 @@ export default function LicitacaoCard({ data }) {
   return (
     <div
       className="
-        bg-neutral-800 rounded-xl border border-neutral-700
+        bg-neutral-800 rounded-xl border border-neutral-700 
         shadow-lg shadow-black/40 hover:shadow-2xl hover:shadow-black/50
         transition-all duration-300 flex flex-col overflow-hidden
         w-full h-auto lg:h-[480px]

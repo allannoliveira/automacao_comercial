@@ -1,0 +1,12 @@
+[
+  {
+    "timestamp": "2026-01-06T14:44:14.754439",
+    "level": "INFO",
+    "message": "Login concluído"
+  },
+  {
+    "timestamp": "2026-01-06T14:49:57.925758",
+    "level": "INFO",
+    "message": "41 registros inseridos no MySQL"
+  }
+]
