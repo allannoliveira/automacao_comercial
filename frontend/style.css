@@ -1,0 +1,41 @@
+body {
+  background: #f4f6fa;
+  font-family: system-ui, sans-serif;
+}
+
+.navbar {
+  background-color: #00009B;
+}
+
+.box-resumo {
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 6px 14px rgba(0,0,0,.08);
+}
+
+.box-resumo small {
+  color: #555;
+}
+
+.card-licitacao {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+  cursor: pointer;
+  transition: transform .2s ease;
+}
+
+.card-licitacao:hover {
+  transform: translateY(-4px);
+}
+
+.badge-situacao {
+  background-color: #00009B;
+}
+
+.descricao {
+  font-size: .85rem;
+  color: #555;
+}

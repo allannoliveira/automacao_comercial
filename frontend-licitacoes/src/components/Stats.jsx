@@ -12,13 +12,19 @@ export default function Stats({ licitacoes }) {
   return (
     <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div className="bg-neutral-800 rounded-xl p-5">
-        <p className="text-sm text-gray-400">Licitações encontradas</p>
-        <p className="text-3xl font-semibold mt-2">{total}</p>
+        <p className="text-sm text-gray-400 ml-2">
+          Licitações encontradas
+        </p>
+        <p className="text-3xl font-semibold mt-2 ml-2">
+          {total}
+        </p>
       </div>
 
       <div className="bg-neutral-800 rounded-xl p-5">
-        <p className="text-sm text-gray-400">Valor estimado total</p>
-        <p className="text-2xl font-semibold mt-2">
+        <p className="text-sm text-gray-400 ml-2">
+          Valor estimado total
+        </p>
+        <p className="text-2xl font-semibold mt-2 ml-2">
           R$ {valorTotal.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}
         </p>
       </div>

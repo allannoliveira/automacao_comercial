@@ -12,7 +12,7 @@ export default function LicitacoesBoard({ licitacoes }) {
   return (
     <section className="mt-8 pb-12">
       <div className="flex items-center justify-between mb-6 max-w-[1300px] mx-auto px-6 sm:px-8 lg:px-12">
-        <h2 className="text-2xl font-bold">Licitações</h2>
+        <h2 className="text-2xl font-bold ml-2">Licitações</h2>
         <span className="text-sm text-neutral-400">{licitacoes.length} itens</span>
       </div>
       

@@ -16,7 +16,7 @@ export default function UploadCSV({ onLoad }) {
 
   return (
     <div className="bg-white p-6 rounded-xl shadow-sm border">
-      <label className="block text-sm font-medium mb-2">
+      <label className="block text-sm font-medium mb-2 ml-2">
         Importar CSV de licitações
       </label>
 
