@@ -1,169 +1,201 @@
-import csv
+import mysql.connector
 import requests
 from datetime import datetime
 
-# =========================
-# CONFIGURACAO
-# =========================
-
+# ================= CONFIG =================
 API_TOKEN = "7b468a4d212b9a56888de85994e639f93505fe4c"
 BASE_URL = "https://api.pipedrive.com/v1"
 
 PIPELINE_ID = 3
-STAGE_ID = 23
+STAGE_ID = 23  # Qualificado
+
+MYSQL_CONFIG = {
+    "host": "localhost",
+    "user": "root",
+    "password": "",
+    "database": "licitacoes",
+    "port": 3306,
+    "autocommit": False
+}
+
+# Campos personalizados Pipedrive
+CAMPO_ID_CONLICITACAO = "3bb14b1ac754aecd840706f3cd52d670221257ee"  # bidding_id
+CAMPO_EDITAL = "bd6e872591ceb70567b6cd75a2f8c1edfb0198e7"
+CAMPO_DATA_DISPUTA = "1400a977de9ee3cbc0a0d53aa1d3d7dc35e61443"
+CAMPO_HORA_DISPUTA = "b983d5bb7f370518c749a52d5a14ab72b341a823"
+CAMPO_VALOR_BRUTO = "21a5de62805b729b00e5765fbb1ba0ce53072154"
+# =========================================
 
 
-# =========================
-# UTILITARIOS
-# =========================
-
-def formatar_data(data_str):
-    if not data_str:
+# ---------- UTIL ----------
+def tratar_valor(valor):
+    if not valor:
         return None
 
-    data_str = data_str.strip()
+    valor = str(valor)
+    return float(
+        valor.replace("R$", "")
+        .replace(".", "")
+        .replace(",", ".")
+        .strip()
+    )
 
-    formatos = [
-        "%Y-%m-%d",
-        "%d/%m/%Y",
-        "%d-%m-%Y"
-    ]
 
-    for fmt in formatos:
-        try:
-            return datetime.strptime(data_str, fmt).strftime("%Y-%m-%d")
-        except ValueError:
-            continue
+def tratar_data_hora(data_str):
+    if not data_str:
+        return None, None
 
-    print("Data nao reconhecida:", data_str)
+    if isinstance(data_str, datetime):
+        return data_str.date().isoformat(), data_str.strftime("%H:%M")
+
+    dt = datetime.strptime(str(data_str), "%d/%m/%Y %H:%M")
+    return dt.date().isoformat(), dt.strftime("%H:%M")
+
+
+# ---------- BUSCA DUPLICIDADE ----------
+def buscar_deal_por_bidding_id(bidding_id):
+    if not bidding_id:
+        return None
+
+    url = f"{BASE_URL}/deals/search"
+    params = {
+        "api_token": API_TOKEN,
+        "term": str(bidding_id),
+        "fields": CAMPO_ID_CONLICITACAO,
+        "exact_match": True
+    }
+
+    r = requests.get(url, params=params)
+    data = r.json()
+
+    if data.get("success") and data["data"]["items"]:
+        return data["data"]["items"][0]["item"]["id"]
+
     return None
 
 
-def converter_valor_monetario(valor_str):
-    if not valor_str:
-        return 0.0
-
-    valor = valor_str.replace("R$", "").replace(" ", "")
-    valor = valor.replace(".", "").replace(",", ".")
-
-    try:
-        return float(valor)
-    except ValueError:
-        print("Valor invalido:", valor_str)
-        return 0.0
-
-
-# =========================
-# PAYLOADS
-# =========================
-
-def payload_criacao(dados):
-    return {
-        "title": f"Edital {dados['edital']} - {dados['cidade']}/{dados['estado']}",
-        "pipeline_id": PIPELINE_ID,
-        "stage_id": STAGE_ID,
-        "status": "open"
-    }
-
-
-def payload_atualizacao(dados):
-    return {
-        # ID Conlicitacao (bidding_id)
-        "3bb14b1ac754aecd840706f3cd52d670221257ee": dados.get("bidding_id"),
-
-        # Numero do Edital
-        "bd6e872591ceb70567b6cd75a2f8c1edfb0198e7": dados.get("edital"),
-
-        # Data Disputa
-        "1400a977de9ee3cbc0a0d53aa1d3d7dc35e61443": formatar_data(dados.get("data_abertura")),
-
-        # Valor Bruto
-        "21a5de62805b729b00e5765fbb1ba0ce53072154": converter_valor_monetario(dados.get("valor_estimado"))
-    }
-
-
-# =========================
-# API - DEALS
-# =========================
-
+# ---------- CREATE DEAL ----------
 def criar_deal(dados):
     url = f"{BASE_URL}/deals"
-    params = {"api_token": API_TOKEN}
 
-    response = requests.post(url, params=params, json=payload_criacao(dados))
-    return response.json()
+    edital = str(dados.get("edital", "")).strip()
+    cidade = str(dados.get("cidade", "")).strip().upper()
+    estado = str(dados.get("estado", "")).strip().upper()
+
+    titulo = f"EDITAL {edital}"
+    if cidade and estado:
+        titulo += f" - {cidade}/{estado}"
+
+    payload = {
+        "title": titulo,
+        "pipeline_id": PIPELINE_ID,
+        "stage_id": STAGE_ID,
+        CAMPO_EDITAL: edital,
+        CAMPO_ID_CONLICITACAO: dados.get("bidding_id")
+    }
+
+    return requests.post(url, params={"api_token": API_TOKEN}, json=payload).json()
 
 
+# ---------- UPDATE DEAL ----------
 def atualizar_deal(deal_id, dados):
     url = f"{BASE_URL}/deals/{deal_id}"
-    params = {"api_token": API_TOKEN}
+    data_disputa, hora_disputa = tratar_data_hora(dados.get("data_abertura"))
 
-    response = requests.put(url, params=params, json=payload_atualizacao(dados))
-    return response.json()
+    payload = {
+        CAMPO_ID_CONLICITACAO: dados.get("bidding_id"),
+        CAMPO_EDITAL: dados.get("edital"),
+        CAMPO_VALOR_BRUTO: tratar_valor(dados.get("valor_estimado")),
+        CAMPO_DATA_DISPUTA: data_disputa,
+        CAMPO_HORA_DISPUTA: hora_disputa
+    }
+
+    return requests.put(url, params={"api_token": API_TOKEN}, json=payload).json()
 
 
-# =========================
-# API - NOTES (ANOTACOES)
-# =========================
-
+# ---------- NOTA ----------
 def criar_anotacao(deal_id, descricao):
     if not descricao:
         return None
 
     url = f"{BASE_URL}/notes"
-    params = {"api_token": API_TOKEN}
-
     payload = {
-        "deal_id": deal_id,
-        "content": descricao
+        "content": descricao,
+        "deal_id": deal_id
     }
 
-    response = requests.post(url, params=params, json=payload)
-    return response.json()
+    return requests.post(url, params={"api_token": API_TOKEN}, json=payload).json()
 
 
-# =========================
-# CSV
-# =========================
+# ---------- MARCAR SINCRONIZADO ----------
+def marcar_sincronizado(cursor, boletim_id):
+    cursor.execute("""
+        UPDATE boletins
+        SET sincronizado_pipedrive = 1,
+            data_sincronizacao = NOW()
+        WHERE boletim_id = %s
+    """, (boletim_id,))
 
-def importar_csv(caminho_csv):
-    with open(caminho_csv, newline="", encoding="utf-8") as csvfile:
-        reader = csv.DictReader(csvfile)
 
-        for linha in reader:
-            print("\nProcessando edital", linha.get("edital"))
+# ---------- MYSQL ----------
+def importar_mysql():
+    conn = mysql.connector.connect(**MYSQL_CONFIG)
+    cursor = conn.cursor(dictionary=True)
 
-            # 1 - CRIAR DEAL
+    cursor.execute("""
+        SELECT
+            boletim_id,
+            bidding_id,
+            edital,
+            data_abertura,
+            valor_estimado,
+            cidade,
+            estado,
+            situacao,
+            descricao
+        FROM boletins
+        WHERE sincronizado_pipedrive = 0
+    """)
+
+    registros = cursor.fetchall()
+
+    for linha in registros:
+        boletim_id = linha["boletim_id"]
+        bidding_id = linha.get("bidding_id")
+
+        if not bidding_id:
+            print("Ignorado: bidding_id vazio (boletim_id =", boletim_id, ")")
+            continue
+
+        print("\nProcessando bidding_id", bidding_id)
+
+        deal_id = buscar_deal_por_bidding_id(bidding_id)
+
+        if deal_id:
+            print("Deal existente - ID", deal_id)
+        else:
             criado = criar_deal(linha)
-
             if not criado.get("success"):
                 print("Erro ao criar deal:", criado)
                 continue
-
             deal_id = criado["data"]["id"]
             print("Deal criado - ID", deal_id)
 
-            # 2 - ATUALIZAR DEAL
-            atualizado = atualizar_deal(deal_id, linha)
+        atualizado = atualizar_deal(deal_id, linha)
+        if not atualizado.get("success"):
+            print("Erro ao atualizar deal:", atualizado)
+            continue
 
-            if atualizado.get("success"):
-                print("Deal atualizado com sucesso - ID", deal_id)
-            else:
-                print("Erro ao atualizar deal", deal_id, atualizado)
-                continue
+        criar_anotacao(deal_id, linha.get("descricao"))
 
-            # 3 - CRIAR ANOTACAO (DESCRICAO)
-            nota = criar_anotacao(deal_id, linha.get("descricao"))
+        marcar_sincronizado(cursor, boletim_id)
+        conn.commit()
+        print("Registro marcado como sincronizado")
 
-            if nota and nota.get("success"):
-                print("Anotacao criada para o deal", deal_id)
-            else:
-                print("Nenhuma anotacao criada para o deal", deal_id)
+    cursor.close()
+    conn.close()
 
 
-# =========================
-# MAIN
-# =========================
-
+# ---------- EXEC ----------
 if __name__ == "__main__":
-    importar_csv("input_data/licitacoes_filtradas.csv")
+    importar_mysql()
