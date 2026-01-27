@@ -2,10 +2,10 @@ import re
 import json
 import os
 from datetime import datetime
-from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
+from playwright.sync_api import sync_playwright
 import mysql.connector
 import requests
-from bs4 import BeautifulSoup
+from dateutil import parser
 
 # =====================================================
 # CONFIGURAÇÕES
@@ -42,6 +42,9 @@ PADROES_REGEX = [
 
 log_entries = []
 
+# =====================================================
+# LOG
+# =====================================================
 def log_message(level, message, extra=None):
     entry = {
         "timestamp": datetime.now().isoformat(),
@@ -63,8 +66,7 @@ def carregar_ultimo_boletim():
     if os.path.exists(CHECKPOINT_FILE):
         try:
             with open(CHECKPOINT_FILE, "r", encoding="utf-8") as f:
-                data = json.load(f)
-                return int(data.get("ultimo_id", 0))
+                return int(json.load(f).get("ultimo_id", 0))
         except Exception:
             return 0
     return 0
@@ -75,6 +77,10 @@ def salvar_ultimo_boletim(boletim_id):
             {"ultimo_id": boletim_id, "data_processamento": datetime.now().isoformat()},
             f, indent=2, ensure_ascii=False
         )
+
+def bate_regex(texto):
+    texto = normalizar_texto(texto or "")
+    return any(re.search(p, texto) for p in PADROES_REGEX)
 
 # =====================================================
 # MYSQL
@@ -87,54 +93,48 @@ def conectar_mysql():
 def inserir_boletins_mysql(conn, dados):
     sql = """
         INSERT IGNORE INTO boletins (
-            boletim_id, bidding_id, edital,
-            data_abertura, prazo, data_coleta,
-            valor_estimado, cidade, estado,
-            situacao, descricao
-        ) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
+            boletim_id,
+            bidding_id,
+            orgao_cidade,
+            orgao_estado,
+            edital,
+            edital_site,
+            itens,
+            descricao,
+            valor_estimado,
+            datahora_abertura,
+            datahora_prazo,
+            data_coleta
+        ) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
     """
 
     def parse_data(valor):
         if not valor:
             return None
-        for f in ("%d/%m/%Y %H:%M", "%d/%m/%Y %H:%M:%S"):
-            try:
-                return datetime.strptime(valor, f)
-            except ValueError:
-                pass
-        return None
-
-    def parse_valor(valor):
-        if not valor:
-            return None
-        valor = (
-            str(valor)
-            .replace("R$", "")
-            .replace("\xa0", "")
-            .replace(".", "")
-            .replace(",", ".")
-            .strip()
-        )
         try:
-            return float(valor)
-        except ValueError:
+            dt = parser.isoparse(valor)
+            return dt.replace(tzinfo=None)
+        except Exception:
             return None
 
     cur = conn.cursor()
+
     for d in dados:
         cur.execute(sql, (
-            d["boletim_id"],
-            normalizar_texto(d["bidding_id"]),
-            normalizar_texto(d["edital"]),
-            parse_data(d["data_abertura"]),
-            parse_data(d["prazo"]),
-            datetime.now(),
-            parse_valor(d["valor_estimado"]),
-            normalizar_texto(d["cidade"]),
-            normalizar_texto(d["estado"]),
-            normalizar_texto(d["situacao"]),
-            normalizar_texto(d["descricao"])
+            d.get("boletim_id"),
+            d.get("bidding_id"),
+            normalizar_texto(d.get("orgao_cidade")),
+            normalizar_texto(d.get("orgao_estado")),
+            normalizar_texto(d.get("edital")),
+            d.get("edital_site"),
+            d.get("itens"),
+            d.get("descricao"),
+            d.get("valor_estimado"),          # ✅ DIRETO (float)
+            parse_data(d.get("datahora_abertura")),
+            parse_data(d.get("datahora_prazo")),
+            datetime.now()
         ))
+
     conn.commit()
     cur.close()
 
@@ -159,29 +159,59 @@ def criar_browser_autenticado():
     page.get_by_role("textbox", name="Sua senha").fill(creds["password"])
     page.get_by_role("button", name="Acessar").click()
     page.wait_for_timeout(8000)
-
     log_message("INFO", "Login concluído")
+
     return p, browser, context
 
 # =====================================================
-# EXTRAIR BOLETINS
+# EXTRAIR BOLETINS (VERSÃO QUE FUNCIONA)
 # =====================================================
 def extrair_boletins(context):
-    page = context.new_page()
-    page.goto(CALENDARIO_URL, wait_until="domcontentloaded", timeout=20000)
-    page.wait_for_timeout(5000)
-    html = page.content()
-    page.close()
-    boletins = set(re.findall(r"\b\d{8,}\b", html))
-    log_message("INFO", f"{len(boletins)} boletins encontrados")
-    return sorted(map(int, boletins))
+    log_message("INFO", "Extraindo boletins via Playwright (FullCalendar)")
 
-def bate_regex(texto):
-    texto = normalizar_texto(texto or "")
-    return any(re.search(p, texto) for p in PADROES_REGEX)
+    page = context.new_page()
+    boletins = set()
+
+    try:
+        page.goto(
+            CALENDARIO_URL,
+            wait_until="networkidle",
+            timeout=30000
+        )
+
+        # 🔑 espera o calendário existir
+        page.wait_for_selector(".fc-event", timeout=30000)
+
+        # dá tempo do JS preencher os eventos
+        page.wait_for_timeout(3000)
+
+        eventos = page.locator(".fc-event").all()
+
+        for ev in eventos:
+            try:
+                # pega qualquer atributo ou texto do evento
+                html = ev.inner_html()
+
+                # boletins SEMPRE têm IDs longos (8+ dígitos)
+                encontrados = re.findall(r"\b1\d{7,}\b", html)
+                for b in encontrados:
+                    boletins.add(int(b))
+
+            except Exception:
+                continue
+
+        log_message("INFO", f"{len(boletins)} boletins válidos encontrados")
+        return sorted(boletins)
+
+    except Exception as e:
+        log_message("ERROR", f"Erro ao extrair boletins: {e}")
+        return []
+
+    finally:
+        page.close()
 
 # =====================================================
-# EXTRAÇÃO DETALHES (HTML REAL)
+# EXTRAÇÃO DETALHES (HTML)
 # =====================================================
 def extrair_detalhes_bidding(context, bidding_id):
     situacao = "NORMAL"
@@ -197,57 +227,29 @@ def extrair_detalhes_bidding(context, bidding_id):
             timeout=30000
         )
 
-        # 🔑 ESPERA UM ELEMENTO REAL DO LAYOUT
         page.wait_for_selector("div.bidding-info-title", timeout=20000)
 
-        # ===== COLETA TODOS OS TEXTOS RELEVANTES =====
         textos = []
-
-        # Títulos (Datas:, Valor Estimado:, etc)
         textos += page.locator("div.bidding-info-title").all_text_contents()
-
-        # Valores das datas
         textos += page.locator("div.text-secondary").all_text_contents()
-
-        # Valor estimado
         textos += page.locator("span.estimated").all_text_contents()
 
         texto = " ".join(textos)
 
-        # ===== SITUAÇÃO =====
         if re.search(r"\bURGENTE\b", texto, re.I):
             situacao = "URGENTE"
 
-        # ===== DATA DE ABERTURA =====
-        m_abertura = re.search(
-            r"Abertura\s*:\s*(\d{2}/\d{2}/\d{4}\s+\d{2}:\d{2})",
-            texto
-        )
-        if m_abertura:
-            data_abertura = m_abertura.group(1)
+        m = re.search(r"Abertura\s*:\s*(\d{2}/\d{2}/\d{4}\s+\d{2}:\d{2})", texto)
+        if m:
+            data_abertura = m.group(1)
 
-        # ===== PRAZO =====
-        m_prazo = re.search(
-            r"Prazo\s*:\s*(\d{2}/\d{2}/\d{4}\s+\d{2}:\d{2})",
-            texto
-        )
-        if m_prazo:
-            prazo = m_prazo.group(1)
+        m = re.search(r"Prazo\s*:\s*(\d{2}/\d{2}/\d{4}\s+\d{2}:\d{2})", texto)
+        if m:
+            prazo = m.group(1)
 
-        # ===== VALOR ESTIMADO =====
-        m_valor = re.search(
-            r"R\$\s*([\d\.,]+)",
-            texto
-        )
-        if m_valor:
-            valor_estimado = m_valor.group(1)
-
-        log_message("INFO", f"Bidding {bidding_id} EXTRAÍDO", {
-            "data_abertura": data_abertura or "vazio",
-            "prazo": prazo or "vazio",
-            "valor_estimado": valor_estimado or "vazio",
-            "situacao": situacao
-        })
+        m = re.search(r"R\$\s*([\d\.,]+)", texto)
+        if m:
+            valor_estimado = m.group(1)
 
     except Exception as e:
         log_message("ERROR", f"Erro ao extrair bidding {bidding_id}: {e}")
@@ -258,6 +260,21 @@ def extrair_detalhes_bidding(context, bidding_id):
     return situacao, prazo, data_abertura, valor_estimado
 
 
+def ativar_boletim_html(context, boletim_id):
+    """
+    Abre a página HTML do boletim apenas para ativar a sessão no backend.
+    NÃO extrai dados.
+    """
+    page = context.new_page()
+    try:
+        url = f"https://consulteonline.conlicitacao.com.br/boletim_web/public/boletins/{boletim_id}"
+        log_message("INFO", f"Ativando boletim HTML {boletim_id}")
+        page.goto(url, wait_until="domcontentloaded", timeout=30000)
+        page.wait_for_timeout(4000)
+    except Exception as e:
+        log_message("WARNING", f"Falha ao ativar boletim {boletim_id}: {e}")
+    finally:
+        page.close()
 
 # =====================================================
 # COLETA
@@ -298,6 +315,7 @@ def coletar_licitacoes(context, boletins):
                 "descricao": item.get("descricao"),
                 "datahora_abertura": item.get("datahora_abertura"),
                 "datahora_prazo": item.get("datahora_prazo"),
+                "valor_estimado": item.get("valor_estimado")
             })
 
             log_message(
@@ -312,6 +330,7 @@ def coletar_licitacoes(context, boletins):
             )
 
     return resultados
+
 
 # =====================================================
 # MAIN

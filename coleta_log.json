@@ -1,4886 +1,1516 @@
 [
   {
-    "timestamp": "2026-01-20T09:28:45.651203",
+    "timestamp": "2026-01-27T16:59:48.842163",
     "level": "INFO",
-    "message": "=== INICIANDO COLETA DE LICITAÇÕES ==="
+    "message": "=== INICIANDO COLETA ==="
   },
   {
-    "timestamp": "2026-01-20T09:28:45.651964",
+    "timestamp": "2026-01-27T16:59:48.844523",
     "level": "INFO",
-    "message": "Último boletim processado: 135677210"
+    "message": "Último boletim processado: 136565000"
   },
   {
-    "timestamp": "2026-01-20T09:28:46.979603",
+    "timestamp": "2026-01-27T16:59:50.121841",
     "level": "INFO",
-    "message": "Iniciando processo de login..."
+    "message": "Iniciando login..."
   },
   {
-    "timestamp": "2026-01-20T09:29:05.699256",
+    "timestamp": "2026-01-27T17:00:09.545231",
     "level": "INFO",
-    "message": "Login concluído com sucesso"
+    "message": "Login concluído"
   },
   {
-    "timestamp": "2026-01-20T09:29:05.699547",
+    "timestamp": "2026-01-27T17:00:09.545394",
     "level": "INFO",
-    "message": "Extraindo lista de boletins..."
+    "message": "Extraindo boletins via Playwright (FullCalendar)"
   },
   {
-    "timestamp": "2026-01-20T09:29:15.897808",
+    "timestamp": "2026-01-27T17:00:21.813963",
     "level": "INFO",
-    "message": "34 boletins encontrados"
+    "message": "51 boletins válidos encontrados"
   },
   {
-    "timestamp": "2026-01-20T09:29:15.897869",
+    "timestamp": "2026-01-27T17:00:21.908880",
     "level": "INFO",
-    "message": "22 boletins novos para processar"
+    "message": "Ativando boletim HTML 136591377"
   },
   {
-    "timestamp": "2026-01-20T09:29:15.911080",
+    "timestamp": "2026-01-27T17:00:31.093730",
     "level": "INFO",
-    "message": "Coletando licitações de 22 boletins..."
+    "message": "Boletim 136591377: 56 biddings"
   },
   {
-    "timestamp": "2026-01-20T09:29:15.911131",
+    "timestamp": "2026-01-27T17:00:31.093848",
     "level": "INFO",
-    "message": "Processando boletim 135701548 (1/22)"
+    "message": "Bidding 18574999 coletado",
+    "cidade": "Santa Maria de Jetibá",
+    "estado": "ES",
+    "abertura": "2026-02-02T08:29:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:29:21.066266",
+    "timestamp": "2026-01-27T17:00:31.093905",
     "level": "INFO",
-    "message": "Boletim 135701548: 60 licitações encontradas"
+    "message": "Bidding 18574004 coletado",
+    "cidade": "Guarani de Goiás",
+    "estado": "GO",
+    "abertura": "2026-01-30T08:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:29:21.068293",
+    "timestamp": "2026-01-27T17:00:31.093952",
     "level": "INFO",
-    "message": "Licitação 18529915 corresponde aos critérios"
+    "message": "Bidding 18575503 coletado",
+    "cidade": "Mineiros",
+    "estado": "GO",
+    "abertura": "2026-01-29T14:40:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:29:26.066681",
-    "level": "DEBUG",
-    "message": "Bidding 18529915: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:29:26.093635",
+    "timestamp": "2026-01-27T17:00:31.093988",
     "level": "INFO",
-    "message": "Licitação 18529563 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:29:29.619210",
-    "level": "DEBUG",
-    "message": "Bidding 18529563: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18573834 coletado",
+    "cidade": "Belo Horizonte",
+    "estado": "MG",
+    "abertura": "2026-01-28T08:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:29:29.641119",
+    "timestamp": "2026-01-27T17:00:31.094022",
     "level": "INFO",
-    "message": "Licitação 18529559 corresponde aos critérios"
+    "message": "Bidding 18573271 coletado",
+    "cidade": "Francisco Sá",
+    "estado": "MG",
+    "abertura": "2026-01-30T08:59:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:29:34.508396",
-    "level": "DEBUG",
-    "message": "Bidding 18529559: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:29:34.530000",
+    "timestamp": "2026-01-27T17:00:31.094054",
     "level": "INFO",
-    "message": "Licitação 18529552 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:29:39.270727",
-    "level": "DEBUG",
-    "message": "Bidding 18529552: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18574734 coletado",
+    "cidade": "Santa Maria do Suaçuí",
+    "estado": "MG",
+    "abertura": "2026-01-29T09:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:29:39.290866",
+    "timestamp": "2026-01-27T17:00:31.094086",
     "level": "INFO",
-    "message": "Licitação 18529542 corresponde aos critérios"
+    "message": "Bidding 18575450 coletado",
+    "cidade": "Marliéria",
+    "estado": "MG",
+    "abertura": "2026-02-12T08:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:29:43.529731",
-    "level": "DEBUG",
-    "message": "Bidding 18529542: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:29:43.545132",
+    "timestamp": "2026-01-27T17:00:31.094119",
     "level": "INFO",
-    "message": "Licitação 18529547 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:29:47.529650",
-    "level": "DEBUG",
-    "message": "Bidding 18529547: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18522146 coletado",
+    "cidade": "Rio de Janeiro",
+    "estado": "RJ",
+    "abertura": null,
+    "prazo": "2026-01-29T17:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:29:47.558953",
+    "timestamp": "2026-01-27T17:00:31.094151",
     "level": "INFO",
-    "message": "Licitação 18529570 corresponde aos critérios"
+    "message": "Bidding 18575112 coletado",
+    "cidade": "Piraju",
+    "estado": "SP",
+    "abertura": "2026-01-29T14:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:29:50.311327",
-    "level": "DEBUG",
-    "message": "Bidding 18529570: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:29:50.326050",
+    "timestamp": "2026-01-27T17:00:31.094183",
     "level": "INFO",
-    "message": "Licitação 18529579 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:29:56.325207",
-    "level": "DEBUG",
-    "message": "Bidding 18529579: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18575129 coletado",
+    "cidade": "São José do Rio Preto",
+    "estado": "SP",
+    "abertura": "2026-01-30T08:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:29:56.335544",
+    "timestamp": "2026-01-27T17:00:31.094214",
     "level": "INFO",
-    "message": "Licitação 18529585 corresponde aos critérios"
+    "message": "Bidding 18572464 coletado",
+    "cidade": "Manaus",
+    "estado": "AM",
+    "abertura": null,
+    "prazo": "2026-02-09T10:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:29:58.936853",
-    "level": "DEBUG",
-    "message": "Bidding 18529585: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:29:58.949693",
+    "timestamp": "2026-01-27T17:00:31.094247",
     "level": "INFO",
-    "message": "Licitação 18529588 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:30:01.466093",
-    "level": "DEBUG",
-    "message": "Bidding 18529588: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18574209 coletado",
+    "cidade": "Potengi",
+    "estado": "CE",
+    "abertura": "2026-01-29T23:59:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:30:01.486316",
+    "timestamp": "2026-01-27T17:00:31.094288",
     "level": "INFO",
-    "message": "Licitação 18529589 corresponde aos critérios"
+    "message": "Bidding 18574709 coletado",
+    "cidade": "Marmelópolis",
+    "estado": "MG",
+    "abertura": "2026-02-09T09:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:30:04.590396",
-    "level": "DEBUG",
-    "message": "Bidding 18529589: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:30:04.754086",
+    "timestamp": "2026-01-27T17:00:31.094324",
     "level": "INFO",
-    "message": "Licitação 18529537 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:30:07.175069",
-    "level": "DEBUG",
-    "message": "Bidding 18529537: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18573620 coletado",
+    "cidade": "Papagaios",
+    "estado": "MG",
+    "abertura": "2026-02-06T10:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:30:07.200515",
+    "timestamp": "2026-01-27T17:00:31.094354",
     "level": "INFO",
-    "message": "Licitação 18528829 corresponde aos critérios"
+    "message": "Bidding 18574402 coletado",
+    "cidade": "Guarani",
+    "estado": "MG",
+    "abertura": null,
+    "prazo": "2026-03-13T13:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:30:12.161769",
-    "level": "DEBUG",
-    "message": "Bidding 18528829: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:30:12.181573",
+    "timestamp": "2026-01-27T17:00:31.094384",
     "level": "INFO",
-    "message": "Licitação 18529196 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:30:14.977075",
-    "level": "DEBUG",
-    "message": "Bidding 18529196: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18574968 coletado",
+    "cidade": "Belo Horizonte",
+    "estado": "MG",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:30:15.023613",
+    "timestamp": "2026-01-27T17:00:31.094413",
     "level": "INFO",
-    "message": "Licitação 18262312 corresponde aos critérios"
+    "message": "Bidding 18575407 coletado",
+    "cidade": "Imbé de Minas",
+    "estado": "MG",
+    "abertura": null,
+    "prazo": "2026-02-10T08:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:30:19.240927",
-    "level": "DEBUG",
-    "message": "Bidding 18262312: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:30:19.274123",
+    "timestamp": "2026-01-27T17:00:31.094441",
     "level": "INFO",
-    "message": "Licitação 17675226 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:30:24.641303",
-    "level": "DEBUG",
-    "message": "Bidding 17675226: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18575527 coletado",
+    "cidade": "Santa Bárbara do Monte Verde",
+    "estado": "MG",
+    "abertura": null,
+    "prazo": "2026-12-31T00:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:30:24.655262",
+    "timestamp": "2026-01-27T17:00:31.094471",
     "level": "INFO",
-    "message": "Licitação 17603929 corresponde aos critérios"
+    "message": "Bidding 18575601 coletado",
+    "cidade": "Piumhi",
+    "estado": "MG",
+    "abertura": "2026-02-10T00:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:30:27.138130",
-    "level": "DEBUG",
-    "message": "Bidding 17603929: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:30:27.151852",
+    "timestamp": "2026-01-27T17:00:31.094506",
     "level": "INFO",
-    "message": "Licitação 17818699 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:30:31.199980",
-    "level": "DEBUG",
-    "message": "Bidding 17818699: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18573924 coletado",
+    "cidade": "Pombal",
+    "estado": "PB",
+    "abertura": "2026-01-29T18:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:30:31.218440",
+    "timestamp": "2026-01-27T17:00:31.094536",
     "level": "INFO",
-    "message": "Licitação 17635677 corresponde aos critérios"
+    "message": "Bidding 18565484 coletado",
+    "cidade": "Juripiranga",
+    "estado": "PB",
+    "abertura": "2026-02-06T10:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:30:34.046935",
-    "level": "DEBUG",
-    "message": "Bidding 17635677: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:30:34.065422",
+    "timestamp": "2026-01-27T17:00:31.094576",
     "level": "INFO",
-    "message": "Licitação 17635660 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:30:37.073646",
-    "level": "DEBUG",
-    "message": "Bidding 17635660: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18574752 coletado",
+    "cidade": "São José do Belmonte",
+    "estado": "PE",
+    "abertura": null,
+    "prazo": "2026-02-06T11:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:30:37.243293",
+    "timestamp": "2026-01-27T17:00:31.094614",
     "level": "INFO",
-    "message": "Licitação 17582418 corresponde aos critérios"
+    "message": "Bidding 18571020 coletado",
+    "cidade": "Mirador",
+    "estado": "PR",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:30:41.583570",
-    "level": "DEBUG",
-    "message": "Bidding 17582418: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:30:41.603379",
+    "timestamp": "2026-01-27T17:00:31.094647",
     "level": "INFO",
-    "message": "Licitação 17635674 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:30:45.566104",
-    "level": "DEBUG",
-    "message": "Bidding 17635674: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18563335 coletado",
+    "cidade": "Mirador",
+    "estado": "PR",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:30:45.586476",
+    "timestamp": "2026-01-27T17:00:31.094677",
     "level": "INFO",
-    "message": "Licitação 18528235 corresponde aos critérios"
+    "message": "Bidding 18575409 coletado",
+    "cidade": "Curitiba",
+    "estado": "PR",
+    "abertura": null,
+    "prazo": "2026-02-09T10:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:31:00.706260",
-    "level": "ERROR",
-    "message": "Timeout ao acessar detalhes do bidding 18528235"
-  },
-  {
-    "timestamp": "2026-01-20T09:31:00.714275",
+    "timestamp": "2026-01-27T17:00:31.094706",
     "level": "INFO",
-    "message": "Licitação 18226741 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:31:03.509594",
-    "level": "DEBUG",
-    "message": "Bidding 18226741: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18575565 coletado",
+    "cidade": "Bom Jardim",
+    "estado": "RJ",
+    "abertura": "2026-02-10T09:32:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:31:03.522640",
+    "timestamp": "2026-01-27T17:00:31.094735",
     "level": "INFO",
-    "message": "Licitação 18500291 corresponde aos critérios"
+    "message": "Bidding 18571479 coletado",
+    "cidade": "Canoas",
+    "estado": "RS",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:31:06.400047",
-    "level": "DEBUG",
-    "message": "Bidding 18500291: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:31:06.415808",
+    "timestamp": "2026-01-27T17:00:31.094770",
     "level": "INFO",
-    "message": "Processando boletim 135725668 (2/22)"
+    "message": "Bidding 18574074 coletado",
+    "cidade": "Lages",
+    "estado": "SC",
+    "abertura": "2026-02-09T09:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:31:09.571226",
+    "timestamp": "2026-01-27T17:00:31.094798",
     "level": "INFO",
-    "message": "Boletim 135725668: 55 licitações encontradas"
+    "message": "Bidding 18572786 coletado",
+    "cidade": "Tigrinhos",
+    "estado": "SC",
+    "abertura": null,
+    "prazo": "2026-02-10T08:29:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:31:09.572518",
+    "timestamp": "2026-01-27T17:00:31.094826",
     "level": "INFO",
-    "message": "Licitação 18530074 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:31:12.259313",
-    "level": "DEBUG",
-    "message": "Bidding 18530074: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18574962 coletado",
+    "cidade": "Bom Jesus",
+    "estado": "SC",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:31:12.276747",
+    "timestamp": "2026-01-27T17:00:31.094855",
     "level": "INFO",
-    "message": "Licitação 18526147 corresponde aos critérios"
+    "message": "Bidding 18574417 coletado",
+    "cidade": "Pariquera-Açu",
+    "estado": "SP",
+    "abertura": null,
+    "prazo": "2026-02-10T09:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:31:16.565881",
-    "level": "DEBUG",
-    "message": "Bidding 18526147: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:31:16.584270",
+    "timestamp": "2026-01-27T17:00:31.094958",
     "level": "INFO",
-    "message": "Licitação 18530119 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:31:20.772938",
-    "level": "DEBUG",
-    "message": "Bidding 18530119: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18574637 coletado",
+    "cidade": "Águas de Santa Bárbara",
+    "estado": "SP",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:31:20.799241",
+    "timestamp": "2026-01-27T17:00:31.095146",
     "level": "INFO",
-    "message": "Licitação 18530459 corresponde aos critérios"
+    "message": "Bidding 18573361 coletado",
+    "cidade": "Alambari",
+    "estado": "SP",
+    "abertura": "2026-02-25T16:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:31:24.846265",
-    "level": "DEBUG",
-    "message": "Bidding 18530459: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:31:24.868064",
+    "timestamp": "2026-01-27T17:00:31.095206",
     "level": "INFO",
-    "message": "Licitação 18529927 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:31:27.692139",
-    "level": "DEBUG",
-    "message": "Bidding 18529927: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18564607 coletado",
+    "cidade": "Catanduva",
+    "estado": "SP",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:31:27.808974",
+    "timestamp": "2026-01-27T17:00:31.095239",
     "level": "INFO",
-    "message": "Licitação 18531045 corresponde aos critérios"
+    "message": "Bidding 18564592 coletado",
+    "cidade": "Catanduva",
+    "estado": "SP",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:31:30.356735",
-    "level": "DEBUG",
-    "message": "Bidding 18531045: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:31:30.376574",
+    "timestamp": "2026-01-27T17:00:31.095271",
     "level": "INFO",
-    "message": "Licitação 18531038 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:31:32.973486",
-    "level": "DEBUG",
-    "message": "Bidding 18531038: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18564623 coletado",
+    "cidade": "Catanduva",
+    "estado": "SP",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:31:32.988420",
+    "timestamp": "2026-01-27T17:00:31.095302",
     "level": "INFO",
-    "message": "Licitação 18530582 corresponde aos critérios"
+    "message": "Bidding 18564598 coletado",
+    "cidade": "Catanduva",
+    "estado": "SP",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:31:36.734174",
-    "level": "DEBUG",
-    "message": "Bidding 18530582: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:31:36.753445",
+    "timestamp": "2026-01-27T17:00:31.095334",
     "level": "INFO",
-    "message": "Licitação 18530588 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:31:39.603144",
-    "level": "DEBUG",
-    "message": "Bidding 18530588: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18575529 coletado",
+    "cidade": "Barra Bonita",
+    "estado": "SP",
+    "abertura": null,
+    "prazo": "2026-02-20T17:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:31:39.629841",
+    "timestamp": "2026-01-27T17:00:31.095363",
     "level": "INFO",
-    "message": "Licitação 18530561 corresponde aos critérios"
+    "message": "Bidding 18575405 coletado",
+    "cidade": "Mogi Guaçu",
+    "estado": "SP",
+    "abertura": null,
+    "prazo": "2026-02-12T08:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:31:42.259999",
-    "level": "DEBUG",
-    "message": "Bidding 18530561: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:31:42.277397",
+    "timestamp": "2026-01-27T17:00:31.095392",
     "level": "INFO",
-    "message": "Licitação 18501348 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:31:45.604714",
-    "level": "DEBUG",
-    "message": "Bidding 18501348: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18575619 coletado",
+    "cidade": "Iperó",
+    "estado": "SP",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:31:45.611941",
+    "timestamp": "2026-01-27T17:00:31.095433",
     "level": "INFO",
-    "message": "Licitação 18521144 corresponde aos critérios"
+    "message": "Bidding 18569731 coletado",
+    "cidade": "Confresa",
+    "estado": "MT",
+    "abertura": "2026-02-05T00:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:31:48.390785",
-    "level": "DEBUG",
-    "message": "Bidding 18521144: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:31:48.412950",
+    "timestamp": "2026-01-27T17:00:31.095466",
     "level": "INFO",
-    "message": "Processando boletim 135752699 (3/22)"
+    "message": "Bidding 18561384 coletado",
+    "cidade": "Redenção",
+    "estado": "PA",
+    "abertura": null,
+    "prazo": "2026-07-27T09:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:31:51.733894",
+    "timestamp": "2026-01-27T17:00:31.095540",
     "level": "INFO",
-    "message": "Boletim 135752699: 58 licitações encontradas"
+    "message": "Bidding 18485879 coletado",
+    "cidade": "Rio Branco",
+    "estado": "AC",
+    "abertura": null,
+    "prazo": "2026-02-19T11:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:31:51.734275",
+    "timestamp": "2026-01-27T17:00:31.095693",
     "level": "INFO",
-    "message": "Licitação 18531573 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:31:55.755410",
-    "level": "DEBUG",
-    "message": "Bidding 18531573: situacao=NORMAL, prazo=''"
+    "message": "Bidding 16717436 coletado",
+    "cidade": "Salvador",
+    "estado": "BA",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:31:55.774626",
+    "timestamp": "2026-01-27T17:00:31.095757",
     "level": "INFO",
-    "message": "Licitação 18532405 corresponde aos critérios"
+    "message": "Bidding 16758437 coletado",
+    "cidade": "Salvador",
+    "estado": "BA",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:31:58.833299",
-    "level": "DEBUG",
-    "message": "Bidding 18532405: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:31:59.003603",
+    "timestamp": "2026-01-27T17:00:31.095793",
     "level": "INFO",
-    "message": "Licitação 18531980 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:32:01.768675",
-    "level": "DEBUG",
-    "message": "Bidding 18531980: situacao=NORMAL, prazo=''"
+    "message": "Bidding 16748852 coletado",
+    "cidade": "Salvador",
+    "estado": "BA",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:32:01.793513",
+    "timestamp": "2026-01-27T17:00:31.095824",
     "level": "INFO",
-    "message": "Licitação 18531824 corresponde aos critérios"
+    "message": "Bidding 16952540 coletado",
+    "cidade": "Salvador",
+    "estado": "BA",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:32:05.711177",
-    "level": "DEBUG",
-    "message": "Bidding 18531824: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:32:05.725979",
+    "timestamp": "2026-01-27T17:00:31.095855",
     "level": "INFO",
-    "message": "Licitação 18531504 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:32:09.100489",
-    "level": "DEBUG",
-    "message": "Bidding 18531504: situacao=NORMAL, prazo=''"
+    "message": "Bidding 16961453 coletado",
+    "cidade": "Salvador",
+    "estado": "BA",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:32:09.121758",
+    "timestamp": "2026-01-27T17:00:31.095885",
     "level": "INFO",
-    "message": "Licitação 18532123 corresponde aos critérios"
+    "message": "Bidding 18516282 coletado",
+    "cidade": "Recife",
+    "estado": "PE",
+    "abertura": "2026-03-24T10:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:32:11.943631",
-    "level": "DEBUG",
-    "message": "Bidding 18532123: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:32:12.049341",
+    "timestamp": "2026-01-27T17:00:31.095917",
     "level": "INFO",
-    "message": "Licitação 18531513 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:32:15.616905",
-    "level": "DEBUG",
-    "message": "Bidding 18531513: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18411986 coletado",
+    "cidade": "Rio de Janeiro",
+    "estado": "RJ",
+    "abertura": null,
+    "prazo": "2026-02-03T12:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:32:15.632420",
+    "timestamp": "2026-01-27T17:00:31.095948",
     "level": "INFO",
-    "message": "Licitação 18532467 corresponde aos critérios"
+    "message": "Bidding 18400165 coletado",
+    "cidade": "Porto Alegre",
+    "estado": "RS",
+    "abertura": "2026-02-11T09:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:32:19.373298",
-    "level": "DEBUG",
-    "message": "Bidding 18532467: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:32:19.405293",
+    "timestamp": "2026-01-27T17:00:31.095976",
     "level": "INFO",
-    "message": "Processando boletim 135774927 (4/22)"
+    "message": "Bidding 18528495 coletado",
+    "cidade": "Criciúma",
+    "estado": "SC",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:32:21.142318",
+    "timestamp": "2026-01-27T17:00:31.096022",
     "level": "INFO",
-    "message": "Boletim 135774927: 33 licitações encontradas"
+    "message": "Bidding 15948084 coletado",
+    "cidade": "Costa Rica",
+    "estado": "MS",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:32:21.142545",
+    "timestamp": "2026-01-27T17:00:31.096058",
     "level": "INFO",
-    "message": "Licitação 18532873 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:32:24.915345",
-    "level": "DEBUG",
-    "message": "Bidding 18532873: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18544631 coletado",
+    "cidade": "Guanambi",
+    "estado": "BA",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:32:24.936401",
+    "timestamp": "2026-01-27T17:00:31.096088",
     "level": "INFO",
-    "message": "Licitação 18532947 corresponde aos critérios"
+    "message": "Bidding 18271753 coletado",
+    "cidade": "Brasília",
+    "estado": "DF",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:32:28.788164",
-    "level": "DEBUG",
-    "message": "Bidding 18532947: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:32:28.802911",
+    "timestamp": "2026-01-27T17:00:31.096145",
     "level": "INFO",
-    "message": "Licitação 18532880 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:32:32.508131",
-    "level": "DEBUG",
-    "message": "Bidding 18532880: situacao=NORMAL, prazo=''"
+    "message": "Bidding 17705329 coletado",
+    "cidade": "São Luís",
+    "estado": "MA",
+    "abertura": "2026-02-19T09:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:32:32.518935",
+    "timestamp": "2026-01-27T17:00:31.181317",
     "level": "INFO",
-    "message": "Licitação 14047745 corresponde aos critérios"
+    "message": "Ativando boletim HTML 136614543"
   },
   {
-    "timestamp": "2026-01-20T09:32:37.262466",
-    "level": "DEBUG",
-    "message": "Bidding 14047745: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:32:37.291920",
+    "timestamp": "2026-01-27T17:00:38.544939",
     "level": "INFO",
-    "message": "Licitação 17994457 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:32:41.130579",
-    "level": "DEBUG",
-    "message": "Bidding 17994457: situacao=NORMAL, prazo=''"
+    "message": "Boletim 136614543: 42 biddings"
   },
   {
-    "timestamp": "2026-01-20T09:32:41.141633",
+    "timestamp": "2026-01-27T17:00:38.544997",
     "level": "INFO",
-    "message": "Licitação 18473916 corresponde aos critérios"
+    "message": "Bidding 18576100 coletado",
+    "cidade": "Salvador",
+    "estado": "BA",
+    "abertura": null,
+    "prazo": "2026-02-03T09:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:32:49.651544",
-    "level": "DEBUG",
-    "message": "Bidding 18473916: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:32:49.677868",
+    "timestamp": "2026-01-27T17:00:38.545012",
     "level": "INFO",
-    "message": "Processando boletim 135800734 (5/22)"
+    "message": "Bidding 18573209 coletado",
+    "cidade": "Feira de Santana",
+    "estado": "BA",
+    "abertura": null,
+    "prazo": "2026-01-28T10:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:32:51.788278",
+    "timestamp": "2026-01-27T17:00:38.545022",
     "level": "INFO",
-    "message": "Boletim 135800734: 49 licitações encontradas"
+    "message": "Bidding 18576503 coletado",
+    "cidade": "Castro Alves",
+    "estado": "BA",
+    "abertura": "2026-01-28T09:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:32:51.789454",
+    "timestamp": "2026-01-27T17:00:38.545031",
     "level": "INFO",
-    "message": "Licitação 18530561 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:32:55.311983",
-    "level": "DEBUG",
-    "message": "Bidding 18530561: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18576510 coletado",
+    "cidade": "Castro Alves",
+    "estado": "BA",
+    "abertura": "2026-01-28T09:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:32:55.334990",
+    "timestamp": "2026-01-27T17:00:38.545040",
     "level": "INFO",
-    "message": "Licitação 18034890 corresponde aos critérios"
+    "message": "Bidding 18545604 coletado",
+    "cidade": "Goiânia",
+    "estado": "GO",
+    "abertura": "2026-01-30T15:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:32:58.009998",
-    "level": "DEBUG",
-    "message": "Bidding 18034890: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:32:58.023801",
+    "timestamp": "2026-01-27T17:00:38.545049",
     "level": "INFO",
-    "message": "Licitação 18534012 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:33:00.917420",
-    "level": "DEBUG",
-    "message": "Bidding 18534012: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18576039 coletado",
+    "cidade": "Resplendor",
+    "estado": "MG",
+    "abertura": "2026-02-02T09:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:33:00.935767",
+    "timestamp": "2026-01-27T17:00:38.545061",
     "level": "INFO",
-    "message": "Licitação 18533533 corresponde aos critérios"
+    "message": "Bidding 18575814 coletado",
+    "cidade": "Cambuquira",
+    "estado": "MG",
+    "abertura": "2026-01-30T11:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:33:03.657476",
-    "level": "DEBUG",
-    "message": "Bidding 18533533: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:33:03.671291",
+    "timestamp": "2026-01-27T17:00:38.545076",
     "level": "INFO",
-    "message": "Licitação 18533944 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:33:06.383029",
-    "level": "DEBUG",
-    "message": "Bidding 18533944: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18576234 coletado",
+    "cidade": "Boa Esperança",
+    "estado": "MG",
+    "abertura": "2026-01-30T11:54:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:33:06.402908",
+    "timestamp": "2026-01-27T17:00:38.545090",
     "level": "INFO",
-    "message": "Licitação 18533560 corresponde aos critérios"
+    "message": "Bidding 18574309 coletado",
+    "cidade": "Rio de Janeiro",
+    "estado": "RJ",
+    "abertura": "2026-01-29T10:59:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:33:09.201588",
-    "level": "DEBUG",
-    "message": "Bidding 18533560: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:33:09.220488",
+    "timestamp": "2026-01-27T17:00:38.545104",
     "level": "INFO",
-    "message": "Licitação 18533209 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:33:12.002434",
-    "level": "DEBUG",
-    "message": "Bidding 18533209: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18517733 coletado",
+    "cidade": "Rio de Janeiro",
+    "estado": "RJ",
+    "abertura": null,
+    "prazo": "2026-01-28T17:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:33:12.015336",
+    "timestamp": "2026-01-27T17:00:38.545119",
     "level": "INFO",
-    "message": "Licitação 18533883 corresponde aos critérios"
+    "message": "Bidding 18520013 coletado",
+    "cidade": "Rio de Janeiro",
+    "estado": "RJ",
+    "abertura": null,
+    "prazo": "2026-01-27T12:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:33:16.016052",
-    "level": "DEBUG",
-    "message": "Bidding 18533883: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:33:16.037347",
+    "timestamp": "2026-01-27T17:00:38.545135",
     "level": "INFO",
-    "message": "Licitação 18520775 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:33:22.760158",
-    "level": "DEBUG",
-    "message": "Bidding 18520775: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18575860 coletado",
+    "cidade": "Porto Velho",
+    "estado": "RO",
+    "abertura": "2026-02-02T09:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:33:22.775751",
+    "timestamp": "2026-01-27T17:00:38.545149",
     "level": "INFO",
-    "message": "Processando boletim 135826007 (6/22)"
+    "message": "Bidding 18576310 coletado",
+    "cidade": "Porto Alegre",
+    "estado": "RS",
+    "abertura": "2026-01-28T16:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:33:25.208558",
+    "timestamp": "2026-01-27T17:00:38.545166",
     "level": "INFO",
-    "message": "Boletim 135826007: 48 licitações encontradas"
+    "message": "Bidding 18576493 coletado",
+    "cidade": "Santo André",
+    "estado": "SP",
+    "abertura": "2026-01-29T00:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:33:25.209058",
+    "timestamp": "2026-01-27T17:00:38.545180",
     "level": "INFO",
-    "message": "Licitação 18535002 corresponde aos critérios"
+    "message": "Bidding 18568260 coletado",
+    "cidade": "Santo André",
+    "estado": "SP",
+    "abertura": "2026-01-28T00:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:33:29.179463",
-    "level": "DEBUG",
-    "message": "Bidding 18535002: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:33:29.209864",
+    "timestamp": "2026-01-27T17:00:38.545193",
     "level": "INFO",
-    "message": "Licitação 18535215 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:33:33.548134",
-    "level": "DEBUG",
-    "message": "Bidding 18535215: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18575161 coletado",
+    "cidade": "Adustina",
+    "estado": "BA",
+    "abertura": "2026-02-10T10:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:33:33.594946",
+    "timestamp": "2026-01-27T17:00:38.545206",
     "level": "INFO",
-    "message": "Licitação 18535175 corresponde aos critérios"
+    "message": "Bidding 18576158 coletado",
+    "cidade": "Remanso",
+    "estado": "BA",
+    "abertura": "2026-02-10T11:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:33:36.910408",
-    "level": "DEBUG",
-    "message": "Bidding 18535175: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:33:36.932433",
+    "timestamp": "2026-01-27T17:00:38.545220",
     "level": "INFO",
-    "message": "Licitação 18534535 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:33:40.357712",
-    "level": "DEBUG",
-    "message": "Bidding 18534535: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18576400 coletado",
+    "cidade": "Saúde",
+    "estado": "BA",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:33:40.375399",
+    "timestamp": "2026-01-27T17:00:38.545238",
     "level": "INFO",
-    "message": "Licitação 18535156 corresponde aos critérios"
+    "message": "Bidding 18571284 coletado",
+    "cidade": "Tauá",
+    "estado": "CE",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:33:48.681015",
-    "level": "DEBUG",
-    "message": "Bidding 18535156: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:33:48.841239",
+    "timestamp": "2026-01-27T17:00:38.545253",
     "level": "INFO",
-    "message": "Licitação 18534539 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:33:52.820804",
-    "level": "DEBUG",
-    "message": "Bidding 18534539: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18576562 coletado",
+    "cidade": "São Luís",
+    "estado": "MA",
+    "abertura": "2026-02-09T09:30:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:33:52.838286",
+    "timestamp": "2026-01-27T17:00:38.545268",
     "level": "INFO",
-    "message": "Licitação 18528341 corresponde aos critérios"
+    "message": "Bidding 18576685 coletado",
+    "cidade": "Belo Horizonte",
+    "estado": "MG",
+    "abertura": null,
+    "prazo": "2026-02-09T10:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:33:56.396370",
-    "level": "DEBUG",
-    "message": "Bidding 18528341: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:33:56.417271",
+    "timestamp": "2026-01-27T17:00:38.545281",
     "level": "INFO",
-    "message": "Licitação 18527549 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:33:59.236381",
-    "level": "DEBUG",
-    "message": "Bidding 18527549: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18576702 coletado",
+    "cidade": "Governador Valadares",
+    "estado": "MG",
+    "abertura": null,
+    "prazo": "2026-02-10T14:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:33:59.253559",
+    "timestamp": "2026-01-27T17:00:38.545295",
     "level": "INFO",
-    "message": "Licitação 17896913 corresponde aos critérios"
+    "message": "Bidding 18574106 coletado",
+    "cidade": "Itabaiana",
+    "estado": "PB",
+    "abertura": "2026-02-10T09:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:34:03.459543",
-    "level": "DEBUG",
-    "message": "Bidding 17896913: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:34:03.498283",
+    "timestamp": "2026-01-27T17:00:38.545310",
     "level": "INFO",
-    "message": "Licitação 18520058 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:34:07.464721",
-    "level": "DEBUG",
-    "message": "Bidding 18520058: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18575772 coletado",
+    "cidade": "São José do Belmonte",
+    "estado": "PE",
+    "abertura": null,
+    "prazo": "2026-02-09T09:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:34:07.499449",
+    "timestamp": "2026-01-27T17:00:38.545324",
     "level": "INFO",
-    "message": "Processando boletim 135847114 (7/22)"
+    "message": "Bidding 18570031 coletado",
+    "cidade": "Sussuapara",
+    "estado": "PI",
+    "abertura": "2026-02-09T08:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:34:13.137682",
+    "timestamp": "2026-01-27T17:00:38.545339",
     "level": "INFO",
-    "message": "Boletim 135847114: 35 licitações encontradas"
+    "message": "Bidding 18576529 coletado",
+    "cidade": "São João do Ivaí",
+    "estado": "PR",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:34:13.138569",
+    "timestamp": "2026-01-27T17:00:38.545352",
     "level": "INFO",
-    "message": "Licitação 18536310 corresponde aos critérios"
+    "message": "Bidding 18575565 coletado",
+    "cidade": "Bom Jardim",
+    "estado": "RJ",
+    "abertura": "2026-02-10T09:32:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:34:17.925733",
-    "level": "DEBUG",
-    "message": "Bidding 18536310: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:34:17.947273",
+    "timestamp": "2026-01-27T17:00:38.545367",
     "level": "INFO",
-    "message": "Licitação 18534916 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:34:21.968682",
-    "level": "DEBUG",
-    "message": "Bidding 18534916: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18576430 coletado",
+    "cidade": "Rio de Janeiro",
+    "estado": "RJ",
+    "abertura": null,
+    "prazo": "2026-02-19T12:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:34:21.991165",
+    "timestamp": "2026-01-27T17:00:38.545384",
     "level": "INFO",
-    "message": "Licitação 18536176 corresponde aos critérios"
+    "message": "Bidding 18576385 coletado",
+    "cidade": "Rio de Janeiro",
+    "estado": "RJ",
+    "abertura": null,
+    "prazo": "2026-02-19T12:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:34:24.648718",
-    "level": "DEBUG",
-    "message": "Bidding 18536176: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:34:24.671176",
+    "timestamp": "2026-01-27T17:00:38.545398",
     "level": "INFO",
-    "message": "Licitação 17676742 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:34:27.227689",
-    "level": "DEBUG",
-    "message": "Bidding 17676742: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18576223 coletado",
+    "cidade": "Novo Hamburgo",
+    "estado": "RS",
+    "abertura": "2026-02-03T08:59:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:34:27.240538",
+    "timestamp": "2026-01-27T17:00:38.545413",
     "level": "INFO",
-    "message": "Licitação 18473916 corresponde aos critérios"
+    "message": "Bidding 18574334 coletado",
+    "cidade": "Barueri",
+    "estado": "SP",
+    "abertura": "2026-02-10T14:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:34:30.834046",
-    "level": "DEBUG",
-    "message": "Bidding 18473916: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:34:30.849892",
+    "timestamp": "2026-01-27T17:00:38.545428",
     "level": "INFO",
-    "message": "Licitação 18451379 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:34:34.588212",
-    "level": "DEBUG",
-    "message": "Bidding 18451379: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18576491 coletado",
+    "cidade": "São Bernardo do Campo",
+    "estado": "SP",
+    "abertura": "2026-02-02T00:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:34:34.607838",
+    "timestamp": "2026-01-27T17:00:38.545442",
     "level": "INFO",
-    "message": "Processando boletim 135872805 (8/22)"
+    "message": "Bidding 18576796 coletado",
+    "cidade": "São Paulo",
+    "estado": "SP",
+    "abertura": null,
+    "prazo": "2026-02-06T09:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:34:37.327526",
+    "timestamp": "2026-01-27T17:00:38.545455",
     "level": "INFO",
-    "message": "Boletim 135872805: 57 licitações encontradas"
+    "message": "Bidding 18576959 coletado",
+    "cidade": "Caconde",
+    "estado": "SP",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:34:37.330586",
+    "timestamp": "2026-01-27T17:00:38.545470",
     "level": "INFO",
-    "message": "Licitação 18536900 corresponde aos critérios"
+    "message": "Bidding 18575712 coletado",
+    "cidade": "Tocantinópolis",
+    "estado": "TO",
+    "abertura": "2026-02-10T09:30:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:34:41.151054",
-    "level": "DEBUG",
-    "message": "Bidding 18536900: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:34:41.166966",
+    "timestamp": "2026-01-27T17:00:38.545485",
     "level": "INFO",
-    "message": "Licitação 18537707 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:34:43.965178",
-    "level": "DEBUG",
-    "message": "Bidding 18537707: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18576474 coletado",
+    "cidade": "Palmeirópolis",
+    "estado": "TO",
+    "abertura": null,
+    "prazo": "2026-02-10T00:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:34:44.091336",
+    "timestamp": "2026-01-27T17:00:38.545502",
     "level": "INFO",
-    "message": "Licitação 18537353 corresponde aos critérios"
+    "message": "Bidding 18572223 coletado",
+    "cidade": "Pedra Grande",
+    "estado": "RN",
+    "abertura": "2026-02-19T08:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:34:46.667422",
-    "level": "DEBUG",
-    "message": "Bidding 18537353: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:34:46.836601",
+    "timestamp": "2026-01-27T17:00:38.545517",
     "level": "INFO",
-    "message": "Licitação 18527655 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:34:50.632798",
-    "level": "DEBUG",
-    "message": "Bidding 18527655: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18570173 coletado",
+    "cidade": "Ubajara",
+    "estado": "CE",
+    "abertura": null,
+    "prazo": "2026-12-31T08:59:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:34:50.652734",
+    "timestamp": "2026-01-27T17:00:38.545536",
     "level": "INFO",
-    "message": "Licitação 18533864 corresponde aos critérios"
+    "message": "Bidding 18575601 coletado",
+    "cidade": "Piumhi",
+    "estado": "MG",
+    "abertura": null,
+    "prazo": "2027-02-10T23:59:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:34:55.277724",
-    "level": "DEBUG",
-    "message": "Bidding 18533864: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:34:55.309066",
+    "timestamp": "2026-01-27T17:00:38.545553",
     "level": "INFO",
-    "message": "Licitação 18536949 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:34:58.278621",
-    "level": "DEBUG",
-    "message": "Bidding 18536949: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18520059 coletado",
+    "cidade": "Rio de Janeiro",
+    "estado": "RJ",
+    "abertura": null,
+    "prazo": "2026-02-02T20:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:34:58.293867",
+    "timestamp": "2026-01-27T17:00:38.545569",
     "level": "INFO",
-    "message": "Licitação 18537469 corresponde aos critérios"
+    "message": "Bidding 18483589 coletado",
+    "cidade": "Fortaleza",
+    "estado": "CE",
+    "abertura": null,
+    "prazo": "2026-02-13T09:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:35:01.098882",
-    "level": "DEBUG",
-    "message": "Bidding 18537469: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:35:01.127648",
+    "timestamp": "2026-01-27T17:00:38.545618",
     "level": "INFO",
-    "message": "Licitação 18537485 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:35:03.944713",
-    "level": "DEBUG",
-    "message": "Bidding 18537485: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18527549 coletado",
+    "cidade": "Piracuruca",
+    "estado": "PI",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:35:03.974597",
+    "timestamp": "2026-01-27T17:00:38.616910",
     "level": "INFO",
-    "message": "Licitação 18473916 corresponde aos critérios"
+    "message": "Ativando boletim HTML 136640868"
   },
   {
-    "timestamp": "2026-01-20T09:35:07.895089",
-    "level": "DEBUG",
-    "message": "Bidding 18473916: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:35:07.919048",
+    "timestamp": "2026-01-27T17:00:46.127695",
     "level": "INFO",
-    "message": "Processando boletim 135895703 (9/22)"
+    "message": "Boletim 136640868: 63 biddings"
   },
   {
-    "timestamp": "2026-01-20T09:35:15.354312",
+    "timestamp": "2026-01-27T17:00:46.127756",
     "level": "INFO",
-    "message": "Boletim 135895703: 52 licitações encontradas"
+    "message": "Bidding 18577765 coletado",
+    "cidade": "Goiânia",
+    "estado": "GO",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:35:15.365940",
+    "timestamp": "2026-01-27T17:00:46.127773",
     "level": "INFO",
-    "message": "Licitação 18538843 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:35:19.479104",
-    "level": "DEBUG",
-    "message": "Bidding 18538843: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18577761 coletado",
+    "cidade": "Goiânia",
+    "estado": "GO",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:35:19.512702",
+    "timestamp": "2026-01-27T17:00:46.127787",
     "level": "INFO",
-    "message": "Licitação 18539312 corresponde aos critérios"
+    "message": "Bidding 18577757 coletado",
+    "cidade": "Goiânia",
+    "estado": "GO",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:35:22.227182",
-    "level": "DEBUG",
-    "message": "Bidding 18539312: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:35:22.258349",
+    "timestamp": "2026-01-27T17:00:46.127800",
     "level": "INFO",
-    "message": "Licitação 18538801 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:35:26.135982",
-    "level": "DEBUG",
-    "message": "Bidding 18538801: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18576942 coletado",
+    "cidade": "Comendador Gomes",
+    "estado": "MG",
+    "abertura": "2026-02-02T08:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:35:26.159508",
+    "timestamp": "2026-01-27T17:00:46.127814",
     "level": "INFO",
-    "message": "Licitação 18539117 corresponde aos critérios"
+    "message": "Bidding 18574734 coletado",
+    "cidade": "Santa Maria do Suaçuí",
+    "estado": "MG",
+    "abertura": "2026-01-29T09:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:35:29.741518",
-    "level": "DEBUG",
-    "message": "Bidding 18539117: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:35:29.751845",
+    "timestamp": "2026-01-27T17:00:46.127829",
     "level": "INFO",
-    "message": "Licitação 18539562 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:35:33.154545",
-    "level": "DEBUG",
-    "message": "Bidding 18539562: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18573584 coletado",
+    "cidade": "Itambé do Mato Dentro",
+    "estado": "MG",
+    "abertura": "2026-01-29T10:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:35:33.164854",
+    "timestamp": "2026-01-27T17:00:46.127852",
     "level": "INFO",
-    "message": "Licitação 18535156 corresponde aos critérios"
+    "message": "Bidding 18578614 coletado",
+    "cidade": "Belém",
+    "estado": "PA",
+    "abertura": "2026-02-02T11:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:35:36.974371",
-    "level": "DEBUG",
-    "message": "Bidding 18535156: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:35:36.993347",
+    "timestamp": "2026-01-27T17:00:46.127865",
     "level": "INFO",
-    "message": "Licitação 18539222 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:35:40.721164",
-    "level": "DEBUG",
-    "message": "Bidding 18539222: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18577151 coletado",
+    "cidade": "Belém",
+    "estado": "PB",
+    "abertura": "2026-01-30T12:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:35:40.749033",
+    "timestamp": "2026-01-27T17:00:46.127878",
     "level": "INFO",
-    "message": "Licitação 18534535 corresponde aos critérios"
+    "message": "Bidding 18578546 coletado",
+    "cidade": "Recife",
+    "estado": "PE",
+    "abertura": null,
+    "prazo": "2026-01-28T11:15:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:35:44.112880",
-    "level": "DEBUG",
-    "message": "Bidding 18534535: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:35:44.126462",
+    "timestamp": "2026-01-27T17:00:46.127891",
     "level": "INFO",
-    "message": "Processando boletim 135921205 (10/22)"
+    "message": "Bidding 18577164 coletado",
+    "cidade": "Campo Mourão",
+    "estado": "PR",
+    "abertura": "2026-02-03T13:44:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:35:47.541809",
+    "timestamp": "2026-01-27T17:00:46.127907",
     "level": "INFO",
-    "message": "Boletim 135921205: 42 licitações encontradas"
+    "message": "Bidding 18577067 coletado",
+    "cidade": "Miguel Pereira",
+    "estado": "RJ",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:35:47.552434",
+    "timestamp": "2026-01-27T17:00:46.127920",
     "level": "INFO",
-    "message": "Licitação 18537751 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:35:51.448003",
-    "level": "DEBUG",
-    "message": "Bidding 18537751: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18577696 coletado",
+    "cidade": "Aracaju",
+    "estado": "SE",
+    "abertura": "2026-02-02T09:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:35:51.460363",
+    "timestamp": "2026-01-27T17:00:46.127933",
     "level": "INFO",
-    "message": "Licitação 18538754 corresponde aos critérios"
+    "message": "Bidding 18577824 coletado",
+    "cidade": "Barra do Chapéu",
+    "estado": "SP",
+    "abertura": "2026-01-29T16:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:35:54.366365",
-    "level": "DEBUG",
-    "message": "Bidding 18538754: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:35:54.385394",
+    "timestamp": "2026-01-27T17:00:46.127947",
     "level": "INFO",
-    "message": "Licitação 18540629 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:35:57.101271",
-    "level": "DEBUG",
-    "message": "Bidding 18540629: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18576909 coletado",
+    "cidade": "Itanhém",
+    "estado": "BA",
+    "abertura": null,
+    "prazo": "2026-12-31T12:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:35:57.123035",
+    "timestamp": "2026-01-27T17:00:46.127960",
     "level": "INFO",
-    "message": "Licitação 18540687 corresponde aos critérios"
+    "message": "Bidding 18573048 coletado",
+    "cidade": "Rio Real",
+    "estado": "BA",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:36:01.010554",
-    "level": "DEBUG",
-    "message": "Bidding 18540687: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:36:01.042116",
+    "timestamp": "2026-01-27T17:00:46.127979",
     "level": "INFO",
-    "message": "Licitação 18539991 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:36:04.791433",
-    "level": "DEBUG",
-    "message": "Bidding 18539991: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18556853 coletado",
+    "cidade": "Maracanaú",
+    "estado": "CE",
+    "abertura": null,
+    "prazo": "2026-02-20T09:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:36:04.802322",
+    "timestamp": "2026-01-27T17:00:46.127993",
     "level": "INFO",
-    "message": "Licitação 18541120 corresponde aos critérios"
+    "message": "Bidding 18576941 coletado",
+    "cidade": "Vitória",
+    "estado": "ES",
+    "abertura": null,
+    "prazo": "2026-02-10T09:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:36:08.924480",
-    "level": "DEBUG",
-    "message": "Bidding 18541120: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:36:08.937033",
+    "timestamp": "2026-01-27T17:00:46.128006",
     "level": "INFO",
-    "message": "Licitação 18532880 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:36:12.676769",
-    "level": "DEBUG",
-    "message": "Bidding 18532880: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18570489 coletado",
+    "cidade": "Ouro Verde de Goiás",
+    "estado": "GO",
+    "abertura": "2026-01-29T00:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:36:12.701295",
+    "timestamp": "2026-01-27T17:00:46.128018",
     "level": "INFO",
-    "message": "Licitação 18539222 corresponde aos critérios"
+    "message": "Bidding 18568941 coletado",
+    "cidade": "Araçu",
+    "estado": "GO",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:36:16.340643",
-    "level": "DEBUG",
-    "message": "Bidding 18539222: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:36:16.359335",
+    "timestamp": "2026-01-27T17:00:46.128034",
     "level": "INFO",
-    "message": "Licitação 18540115 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:36:20.642319",
-    "level": "DEBUG",
-    "message": "Bidding 18540115: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18564107 coletado",
+    "cidade": "São Luís",
+    "estado": "MA",
+    "abertura": null,
+    "prazo": "2026-02-09T09:30:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:36:20.653421",
+    "timestamp": "2026-01-27T17:00:46.128048",
     "level": "INFO",
-    "message": "Licitação 18540112 corresponde aos critérios"
+    "message": "Bidding 18564168 coletado",
+    "cidade": "São Luís",
+    "estado": "MA",
+    "abertura": "2026-02-13T09:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:36:24.541685",
-    "level": "DEBUG",
-    "message": "Bidding 18540112: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:36:24.558010",
+    "timestamp": "2026-01-27T17:00:46.128061",
     "level": "INFO",
-    "message": "Licitação 18540296 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:36:28.414190",
-    "level": "DEBUG",
-    "message": "Bidding 18540296: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18564186 coletado",
+    "cidade": "São Luís",
+    "estado": "MA",
+    "abertura": null,
+    "prazo": "2026-02-13T15:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:36:28.438065",
+    "timestamp": "2026-01-27T17:00:46.128074",
     "level": "INFO",
-    "message": "Processando boletim 135946768 (11/22)"
+    "message": "Bidding 18571610 coletado",
+    "cidade": "Santana do Garambéu",
+    "estado": "MG",
+    "abertura": null,
+    "prazo": "2026-01-29T08:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:36:31.201793",
+    "timestamp": "2026-01-27T17:00:46.128087",
     "level": "INFO",
-    "message": "Boletim 135946768: 49 licitações encontradas"
+    "message": "Bidding 18577664 coletado",
+    "cidade": "Raposos",
+    "estado": "MG",
+    "abertura": "2026-06-05T09:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:36:31.205611",
+    "timestamp": "2026-01-27T17:00:46.128100",
     "level": "INFO",
-    "message": "Licitação 18541589 corresponde aos critérios"
+    "message": "Bidding 18577029 coletado",
+    "cidade": "São José do Mantimento",
+    "estado": "MG",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:36:35.672850",
-    "level": "DEBUG",
-    "message": "Bidding 18541589: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:36:35.687351",
+    "timestamp": "2026-01-27T17:00:46.128117",
     "level": "INFO",
-    "message": "Licitação 18538464 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:36:39.434276",
-    "level": "DEBUG",
-    "message": "Bidding 18538464: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18577546 coletado",
+    "cidade": "Dores do Indaiá",
+    "estado": "MG",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:36:39.447458",
+    "timestamp": "2026-01-27T17:00:46.128131",
     "level": "INFO",
-    "message": "Licitação 18541594 corresponde aos critérios"
+    "message": "Bidding 18562178 coletado",
+    "cidade": "Virgem da Lapa",
+    "estado": "MG",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:36:43.503473",
-    "level": "DEBUG",
-    "message": "Bidding 18541594: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:36:43.515250",
+    "timestamp": "2026-01-27T17:00:46.128145",
     "level": "INFO",
-    "message": "Licitação 18541281 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:36:47.532567",
-    "level": "DEBUG",
-    "message": "Bidding 18541281: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18577924 coletado",
+    "cidade": "Santana do Deserto",
+    "estado": "MG",
+    "abertura": "2026-02-02T09:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:36:47.558722",
+    "timestamp": "2026-01-27T17:00:46.128160",
     "level": "INFO",
-    "message": "Licitação 18541883 corresponde aos critérios"
+    "message": "Bidding 18575586 coletado",
+    "cidade": "Lavras",
+    "estado": "MG",
+    "abertura": "2026-02-02T09:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:36:51.393062",
-    "level": "DEBUG",
-    "message": "Bidding 18541883: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:36:51.414908",
+    "timestamp": "2026-01-27T17:00:46.128174",
     "level": "INFO",
-    "message": "Licitação 18533209 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:36:55.059031",
-    "level": "DEBUG",
-    "message": "Bidding 18533209: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18577343 coletado",
+    "cidade": "Guarani",
+    "estado": "MG",
+    "abertura": "2026-03-13T13:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:36:55.072926",
+    "timestamp": "2026-01-27T17:00:46.128190",
     "level": "INFO",
-    "message": "Licitação 18536176 corresponde aos critérios"
+    "message": "Bidding 18573015 coletado",
+    "cidade": "Rio Pomba",
+    "estado": "MG",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:37:01.767756",
-    "level": "DEBUG",
-    "message": "Bidding 18536176: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:37:01.786776",
+    "timestamp": "2026-01-27T17:00:46.128205",
     "level": "INFO",
-    "message": "Processando boletim 135970117 (12/22)"
+    "message": "Bidding 18578064 coletado",
+    "cidade": "Três Pontas",
+    "estado": "MG",
+    "abertura": "2026-02-10T08:30:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:37:03.715607",
+    "timestamp": "2026-01-27T17:00:46.128220",
     "level": "INFO",
-    "message": "Boletim 135970117: 60 licitações encontradas"
+    "message": "Bidding 18574593 coletado",
+    "cidade": "Alto Taquari",
+    "estado": "MT",
+    "abertura": null,
+    "prazo": "2026-01-28T16:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:37:03.715789",
+    "timestamp": "2026-01-27T17:00:46.128273",
     "level": "INFO",
-    "message": "Licitação 18543573 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:37:14.266597",
-    "level": "DEBUG",
-    "message": "Bidding 18543573: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18577598 coletado",
+    "cidade": "Novo São Joaquim",
+    "estado": "MT",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:37:14.289477",
+    "timestamp": "2026-01-27T17:00:46.128290",
     "level": "INFO",
-    "message": "Licitação 18519610 corresponde aos critérios"
+    "message": "Bidding 18578137 coletado",
+    "cidade": "Novo São Joaquim",
+    "estado": "MT",
+    "abertura": null,
+    "prazo": "2026-02-10T11:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:37:20.466517",
-    "level": "DEBUG",
-    "message": "Bidding 18519610: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:37:20.477744",
+    "timestamp": "2026-01-27T17:00:46.128308",
     "level": "INFO",
-    "message": "Licitação 18541920 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:37:25.079359",
-    "level": "DEBUG",
-    "message": "Bidding 18541920: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18577394 coletado",
+    "cidade": "Nova Esperança do Piriá",
+    "estado": "PA",
+    "abertura": "2026-01-30T12:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:37:25.098818",
+    "timestamp": "2026-01-27T17:00:46.128323",
     "level": "INFO",
-    "message": "Licitação 18541925 corresponde aos critérios"
+    "message": "Bidding 18578177 coletado",
+    "cidade": "Rio de Janeiro",
+    "estado": "RJ",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:37:28.734740",
-    "level": "DEBUG",
-    "message": "Bidding 18541925: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:37:28.747875",
+    "timestamp": "2026-01-27T17:00:46.128337",
     "level": "INFO",
-    "message": "Licitação 18543468 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:37:32.896948",
-    "level": "DEBUG",
-    "message": "Bidding 18543468: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18578259 coletado",
+    "cidade": "Mirante da Serra",
+    "estado": "RO",
+    "abertura": "2026-02-09T09:01:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:37:32.915706",
+    "timestamp": "2026-01-27T17:00:46.128351",
     "level": "INFO",
-    "message": "Licitação 18542438 corresponde aos critérios"
+    "message": "Bidding 18568280 coletado",
+    "cidade": "Hulha Negra",
+    "estado": "RS",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:37:36.852399",
-    "level": "DEBUG",
-    "message": "Bidding 18542438: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:37:36.863944",
+    "timestamp": "2026-01-27T17:00:46.128366",
     "level": "INFO",
-    "message": "Licitação 18542469 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:37:46.004347",
-    "level": "DEBUG",
-    "message": "Bidding 18542469: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18558943 coletado",
+    "cidade": "Florianópolis",
+    "estado": "SC",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:37:46.025708",
+    "timestamp": "2026-01-27T17:00:46.128380",
     "level": "INFO",
-    "message": "Licitação 18542866 corresponde aos critérios"
+    "message": "Bidding 18569842 coletado",
+    "cidade": "Monte Castelo",
+    "estado": "SC",
+    "abertura": "2026-02-11T09:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:37:49.663058",
-    "level": "DEBUG",
-    "message": "Bidding 18542866: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:37:49.681568",
+    "timestamp": "2026-01-27T17:00:46.128394",
     "level": "INFO",
-    "message": "Licitação 18540687 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:37:53.261990",
-    "level": "DEBUG",
-    "message": "Bidding 18540687: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18577291 coletado",
+    "cidade": "Cajamar",
+    "estado": "SP",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:37:53.284114",
+    "timestamp": "2026-01-27T17:00:46.128408",
     "level": "INFO",
-    "message": "Licitação 18542576 corresponde aos critérios"
+    "message": "Bidding 18571126 coletado",
+    "cidade": "Salto",
+    "estado": "SP",
+    "abertura": null,
+    "prazo": "2026-01-29T15:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:37:56.870154",
-    "level": "DEBUG",
-    "message": "Bidding 18542576: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:37:56.892845",
+    "timestamp": "2026-01-27T17:00:46.128423",
     "level": "INFO",
-    "message": "Licitação 18543591 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:38:00.906546",
-    "level": "DEBUG",
-    "message": "Bidding 18543591: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18573652 coletado",
+    "cidade": "Viradouro",
+    "estado": "SP",
+    "abertura": "2026-02-10T09:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:38:00.918723",
+    "timestamp": "2026-01-27T17:00:46.128437",
     "level": "INFO",
-    "message": "Licitação 18543196 corresponde aos critérios"
+    "message": "Bidding 18573344 coletado",
+    "cidade": "Santo Antônio do Pinhal",
+    "estado": "SP",
+    "abertura": "2026-02-11T09:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:38:04.542547",
-    "level": "DEBUG",
-    "message": "Bidding 18543196: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:38:04.556940",
+    "timestamp": "2026-01-27T17:00:46.128455",
     "level": "INFO",
-    "message": "Licitação 18531513 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:38:08.130803",
-    "level": "DEBUG",
-    "message": "Bidding 18531513: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18578706 coletado",
+    "cidade": "São Paulo",
+    "estado": "SP",
+    "abertura": "2026-02-11T11:01:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:38:08.169543",
+    "timestamp": "2026-01-27T17:00:46.128471",
     "level": "INFO",
-    "message": "Licitação 18454776 corresponde aos critérios"
+    "message": "Bidding 18545433 coletado",
+    "cidade": "Palhano",
+    "estado": "CE",
+    "abertura": "2026-02-11T09:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:38:23.181301",
-    "level": "DEBUG",
-    "message": "Bidding 18454776: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:38:23.201943",
+    "timestamp": "2026-01-27T17:00:46.128487",
     "level": "INFO",
-    "message": "Licitação 18444118 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:38:26.821457",
-    "level": "DEBUG",
-    "message": "Bidding 18444118: situacao=NORMAL, prazo=''"
+    "message": "Bidding 18546002 coletado",
+    "cidade": "Brasília",
+    "estado": "DF",
+    "abertura": null,
+    "prazo": "2026-02-06T09:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:38:26.834929",
+    "timestamp": "2026-01-27T17:00:46.128502",
     "level": "INFO",
-    "message": "Licitação 18527791 corresponde aos critérios"
+    "message": "Bidding 18359932 coletado",
+    "cidade": "Vitória",
+    "estado": "ES",
+    "abertura": null,
+    "prazo": "2026-02-10T09:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:38:30.464688",
-    "level": "DEBUG",
-    "message": "Bidding 18527791: situacao=NORMAL, prazo=''"
+    "timestamp": "2026-01-27T17:00:46.128517",
+    "level": "INFO",
+    "message": "Bidding 18553847 coletado",
+    "cidade": "Divinópolis de Goiás",
+    "estado": "GO",
+    "abertura": null,
+    "prazo": "2026-12-31T17:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:38:30.476680",
+    "timestamp": "2026-01-27T17:00:46.128533",
     "level": "INFO",
-    "message": "Processando boletim 135994116 (13/22)"
+    "message": "Bidding 17331086 coletado",
+    "cidade": "Nova Ponte",
+    "estado": "MG",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:38:34.921959",
+    "timestamp": "2026-01-27T17:00:46.128547",
     "level": "INFO",
-    "message": "Boletim 135994116: 39 licitações encontradas"
+    "message": "Bidding 17712288 coletado",
+    "cidade": "Mutum",
+    "estado": "MG",
+    "abertura": null,
+    "prazo": "2026-12-31T23:59:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:38:34.922109",
+    "timestamp": "2026-01-27T17:00:46.128560",
     "level": "INFO",
-    "message": "Licitação 18544607 corresponde aos critérios"
+    "message": "Bidding 18446729 coletado",
+    "cidade": "Teresópolis",
+    "estado": "RJ",
+    "abertura": null,
+    "prazo": "2026-02-11T11:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:38:38.451374",
-    "level": "DEBUG",
-    "message": "Bidding 18544607: situacao=NORMAL, prazo=''"
+    "timestamp": "2026-01-27T17:00:46.128574",
+    "level": "INFO",
+    "message": "Bidding 18191128 coletado",
+    "cidade": "Porto Velho",
+    "estado": "RO",
+    "abertura": null,
+    "prazo": "2026-02-10T10:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:38:38.464685",
+    "timestamp": "2026-01-27T17:00:46.128586",
     "level": "INFO",
-    "message": "Licitação 18544631 corresponde aos critérios"
+    "message": "Bidding 18400165 coletado",
+    "cidade": "Porto Alegre",
+    "estado": "RS",
+    "abertura": "2026-02-11T09:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:38:53.557700",
-    "level": "ERROR",
-    "message": "Timeout ao acessar detalhes do bidding 18544631"
+    "timestamp": "2026-01-27T17:00:46.128605",
+    "level": "INFO",
+    "message": "Bidding 18556185 coletado",
+    "cidade": "Mirassolândia",
+    "estado": "SP",
+    "abertura": "2026-02-11T09:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:38:53.570412",
+    "timestamp": "2026-01-27T17:00:46.128621",
     "level": "INFO",
-    "message": "Licitação 18544872 corresponde aos critérios"
+    "message": "Bidding 18559863 coletado",
+    "cidade": "Mirassolândia",
+    "estado": "SP",
+    "abertura": "2026-02-12T09:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:38:55.957809",
-    "level": "DEBUG",
-    "message": "Bidding 18544872: situacao=NORMAL, prazo=''"
+    "timestamp": "2026-01-27T17:00:46.128636",
+    "level": "INFO",
+    "message": "Bidding 18388461 coletado",
+    "cidade": "Alagoinhas",
+    "estado": "BA",
+    "abertura": null,
+    "prazo": "2026-02-03T00:00:00.000-03:00"
   },
   {
-    "timestamp": "2026-01-20T09:38:55.974170",
+    "timestamp": "2026-01-27T17:00:46.128650",
     "level": "INFO",
-    "message": "Licitação 18544706 corresponde aos critérios"
+    "message": "Bidding 18077804 coletado",
+    "cidade": "Santos Dumont",
+    "estado": "MG",
+    "abertura": "2026-02-12T14:00:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:39:11.051756",
-    "level": "ERROR",
-    "message": "Timeout ao acessar detalhes do bidding 18544706"
+    "timestamp": "2026-01-27T17:00:46.128664",
+    "level": "INFO",
+    "message": "Bidding 18539772 coletado",
+    "cidade": "Manicoré",
+    "estado": "AM",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:39:11.068816",
+    "timestamp": "2026-01-27T17:00:46.128712",
     "level": "INFO",
-    "message": "Licitação 18480268 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:39:15.307554",
-    "level": "DEBUG",
-    "message": "Bidding 18480268: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:39:15.326706",
-    "level": "INFO",
-    "message": "Processando boletim 136018759 (14/22)"
-  },
-  {
-    "timestamp": "2026-01-20T09:39:17.711522",
-    "level": "INFO",
-    "message": "Boletim 136018759: 53 licitações encontradas"
-  },
-  {
-    "timestamp": "2026-01-20T09:39:17.712182",
-    "level": "INFO",
-    "message": "Licitação 18545598 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:39:21.329685",
-    "level": "DEBUG",
-    "message": "Bidding 18545598: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:39:21.341516",
-    "level": "INFO",
-    "message": "Licitação 18546366 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:39:23.950005",
-    "level": "DEBUG",
-    "message": "Bidding 18546366: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:39:23.972507",
-    "level": "INFO",
-    "message": "Licitação 18545782 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:39:26.393832",
-    "level": "DEBUG",
-    "message": "Bidding 18545782: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:39:26.414006",
-    "level": "INFO",
-    "message": "Licitação 18545476 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:39:29.252805",
-    "level": "DEBUG",
-    "message": "Bidding 18545476: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:39:29.273878",
-    "level": "INFO",
-    "message": "Licitação 18545496 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:39:33.197521",
-    "level": "DEBUG",
-    "message": "Bidding 18545496: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:39:33.219042",
-    "level": "INFO",
-    "message": "Licitação 18545801 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:39:35.792984",
-    "level": "DEBUG",
-    "message": "Bidding 18545801: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:39:35.810715",
-    "level": "INFO",
-    "message": "Licitação 18545410 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:39:39.806656",
-    "level": "DEBUG",
-    "message": "Bidding 18545410: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:39:39.818247",
-    "level": "INFO",
-    "message": "Licitação 18545319 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:39:43.594059",
-    "level": "DEBUG",
-    "message": "Bidding 18545319: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:39:43.607842",
-    "level": "INFO",
-    "message": "Licitação 18212088 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:39:47.434045",
-    "level": "DEBUG",
-    "message": "Bidding 18212088: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:39:47.446842",
-    "level": "INFO",
-    "message": "Processando boletim 136042895 (15/22)"
-  },
-  {
-    "timestamp": "2026-01-20T09:39:50.781800",
-    "level": "INFO",
-    "message": "Boletim 136042895: 58 licitações encontradas"
-  },
-  {
-    "timestamp": "2026-01-20T09:39:50.782776",
-    "level": "INFO",
-    "message": "Licitação 18545598 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:39:56.926675",
-    "level": "DEBUG",
-    "message": "Bidding 18545598: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:39:56.937151",
-    "level": "INFO",
-    "message": "Licitação 18547419 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:39:59.579143",
-    "level": "DEBUG",
-    "message": "Bidding 18547419: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:39:59.595713",
-    "level": "INFO",
-    "message": "Licitação 18546556 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:40:03.201760",
-    "level": "DEBUG",
-    "message": "Bidding 18546556: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:40:03.214232",
-    "level": "INFO",
-    "message": "Licitação 18546728 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:40:06.734388",
-    "level": "DEBUG",
-    "message": "Bidding 18546728: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:40:06.744003",
-    "level": "INFO",
-    "message": "Licitação 18547117 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:40:11.513649",
-    "level": "DEBUG",
-    "message": "Bidding 18547117: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:40:11.531448",
-    "level": "INFO",
-    "message": "Licitação 18538367 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:40:15.546093",
-    "level": "DEBUG",
-    "message": "Bidding 18538367: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:40:15.555874",
-    "level": "INFO",
-    "message": "Licitação 18538801 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:40:19.154855",
-    "level": "DEBUG",
-    "message": "Bidding 18538801: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:40:19.163578",
-    "level": "INFO",
-    "message": "Licitação 18547420 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:40:23.006462",
-    "level": "DEBUG",
-    "message": "Bidding 18547420: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:40:23.017468",
-    "level": "INFO",
-    "message": "Licitação 18520666 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:40:26.725952",
-    "level": "DEBUG",
-    "message": "Bidding 18520666: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:40:26.737483",
-    "level": "INFO",
-    "message": "Licitação 18405889 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:40:29.290270",
-    "level": "DEBUG",
-    "message": "Bidding 18405889: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:40:29.310180",
-    "level": "INFO",
-    "message": "Processando boletim 136070613 (16/22)"
-  },
-  {
-    "timestamp": "2026-01-20T09:40:32.197357",
-    "level": "INFO",
-    "message": "Boletim 136070613: 54 licitações encontradas"
-  },
-  {
-    "timestamp": "2026-01-20T09:40:32.197948",
-    "level": "INFO",
-    "message": "Licitação 18466924 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:40:36.095059",
-    "level": "DEBUG",
-    "message": "Bidding 18466924: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:40:36.106101",
-    "level": "INFO",
-    "message": "Licitação 18548316 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:40:39.705163",
-    "level": "DEBUG",
-    "message": "Bidding 18548316: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:40:39.717637",
-    "level": "INFO",
-    "message": "Licitação 18548133 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:40:43.544458",
-    "level": "DEBUG",
-    "message": "Bidding 18548133: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:40:43.553284",
-    "level": "INFO",
-    "message": "Licitação 18548326 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:40:47.571458",
-    "level": "DEBUG",
-    "message": "Bidding 18548326: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:40:47.584375",
-    "level": "INFO",
-    "message": "Licitação 18548414 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:40:51.845550",
-    "level": "DEBUG",
-    "message": "Bidding 18548414: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:40:51.858422",
-    "level": "INFO",
-    "message": "Licitação 18548221 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:40:55.483163",
-    "level": "DEBUG",
-    "message": "Bidding 18548221: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:40:55.496174",
-    "level": "INFO",
-    "message": "Licitação 18542576 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:40:58.887754",
-    "level": "DEBUG",
-    "message": "Bidding 18542576: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:40:58.895912",
-    "level": "INFO",
-    "message": "Processando boletim 136093947 (17/22)"
-  },
-  {
-    "timestamp": "2026-01-20T09:41:01.185840",
-    "level": "INFO",
-    "message": "Boletim 136093947: 46 licitações encontradas"
-  },
-  {
-    "timestamp": "2026-01-20T09:41:01.186124",
-    "level": "INFO",
-    "message": "Licitação 18466924 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:41:03.765224",
-    "level": "DEBUG",
-    "message": "Bidding 18466924: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:41:03.811044",
-    "level": "INFO",
-    "message": "Licitação 18548895 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:41:06.583203",
-    "level": "DEBUG",
-    "message": "Bidding 18548895: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:41:06.601587",
-    "level": "INFO",
-    "message": "Licitação 18318987 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:41:10.577936",
-    "level": "DEBUG",
-    "message": "Bidding 18318987: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:41:10.592049",
-    "level": "INFO",
-    "message": "Licitação 18549445 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:41:14.295847",
-    "level": "DEBUG",
-    "message": "Bidding 18549445: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:41:14.305540",
-    "level": "INFO",
-    "message": "Licitação 18548316 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:41:18.695230",
-    "level": "DEBUG",
-    "message": "Bidding 18548316: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:41:18.707945",
-    "level": "INFO",
-    "message": "Licitação 18549258 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:41:22.465993",
-    "level": "DEBUG",
-    "message": "Bidding 18549258: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:41:22.476038",
-    "level": "INFO",
-    "message": "Licitação 18549361 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:41:26.140739",
-    "level": "DEBUG",
-    "message": "Bidding 18549361: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:41:26.150631",
-    "level": "INFO",
-    "message": "Licitação 18549209 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:41:29.856823",
-    "level": "DEBUG",
-    "message": "Bidding 18549209: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:41:29.868909",
-    "level": "INFO",
-    "message": "Processando boletim 136118593 (18/22)"
-  },
-  {
-    "timestamp": "2026-01-20T09:41:33.362048",
-    "level": "INFO",
-    "message": "Boletim 136118593: 59 licitações encontradas"
-  },
-  {
-    "timestamp": "2026-01-20T09:41:33.362927",
-    "level": "INFO",
-    "message": "Licitação 18550161 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:41:38.139444",
-    "level": "DEBUG",
-    "message": "Bidding 18550161: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:41:38.162744",
-    "level": "INFO",
-    "message": "Licitação 18551149 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:41:41.987489",
-    "level": "DEBUG",
-    "message": "Bidding 18551149: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:41:42.007733",
-    "level": "INFO",
-    "message": "Licitação 18546728 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:41:45.646891",
-    "level": "DEBUG",
-    "message": "Bidding 18546728: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:41:45.656179",
-    "level": "INFO",
-    "message": "Licitação 18550495 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:41:49.170858",
-    "level": "DEBUG",
-    "message": "Bidding 18550495: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:41:49.185850",
-    "level": "INFO",
-    "message": "Licitação 18550313 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:41:53.147369",
-    "level": "DEBUG",
-    "message": "Bidding 18550313: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:41:53.164684",
-    "level": "INFO",
-    "message": "Licitação 18520058 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:41:56.940787",
-    "level": "DEBUG",
-    "message": "Bidding 18520058: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:41:56.950956",
-    "level": "INFO",
-    "message": "Licitação 18473698 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:42:00.818058",
-    "level": "DEBUG",
-    "message": "Bidding 18473698: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:42:00.829065",
-    "level": "INFO",
-    "message": "Processando boletim 136142150 (19/22)"
-  },
-  {
-    "timestamp": "2026-01-20T09:42:03.553438",
-    "level": "INFO",
-    "message": "Boletim 136142150: 60 licitações encontradas"
-  },
-  {
-    "timestamp": "2026-01-20T09:42:03.554137",
-    "level": "INFO",
-    "message": "Licitação 18552125 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:42:07.549219",
-    "level": "DEBUG",
-    "message": "Bidding 18552125: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:42:07.563547",
-    "level": "INFO",
-    "message": "Licitação 18551527 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:42:11.438269",
-    "level": "DEBUG",
-    "message": "Bidding 18551527: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:42:11.462771",
-    "level": "INFO",
-    "message": "Licitação 18552193 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:42:15.253430",
-    "level": "DEBUG",
-    "message": "Bidding 18552193: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:42:15.277727",
-    "level": "INFO",
-    "message": "Licitação 18552038 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:42:18.941941",
-    "level": "DEBUG",
-    "message": "Bidding 18552038: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:42:18.955728",
-    "level": "INFO",
-    "message": "Licitação 18552585 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:42:23.505521",
-    "level": "DEBUG",
-    "message": "Bidding 18552585: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:42:23.533441",
-    "level": "INFO",
-    "message": "Licitação 18552146 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:42:27.179587",
-    "level": "DEBUG",
-    "message": "Bidding 18552146: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:42:27.192933",
-    "level": "INFO",
-    "message": "Licitação 18540629 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:42:30.486776",
-    "level": "DEBUG",
-    "message": "Bidding 18540629: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:42:30.497152",
-    "level": "INFO",
-    "message": "Licitação 18520666 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:42:34.060835",
-    "level": "DEBUG",
-    "message": "Bidding 18520666: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:42:34.073156",
-    "level": "INFO",
-    "message": "Licitação 18471622 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:42:42.038623",
-    "level": "DEBUG",
-    "message": "Bidding 18471622: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:42:42.065094",
-    "level": "INFO",
-    "message": "Licitação 18047490 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:42:45.474179",
-    "level": "DEBUG",
-    "message": "Bidding 18047490: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:42:45.488575",
-    "level": "INFO",
-    "message": "Licitação 18533209 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:42:50.017378",
-    "level": "DEBUG",
-    "message": "Bidding 18533209: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:42:50.027753",
-    "level": "INFO",
-    "message": "Processando boletim 136168955 (20/22)"
-  },
-  {
-    "timestamp": "2026-01-20T09:42:51.447464",
-    "level": "INFO",
-    "message": "Boletim 136168955: 41 licitações encontradas"
-  },
-  {
-    "timestamp": "2026-01-20T09:42:51.449675",
-    "level": "INFO",
-    "message": "Licitação 18553343 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:42:56.055895",
-    "level": "DEBUG",
-    "message": "Bidding 18553343: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:42:56.078806",
-    "level": "INFO",
-    "message": "Licitação 18552821 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:42:59.769888",
-    "level": "DEBUG",
-    "message": "Bidding 18552821: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:42:59.783875",
-    "level": "INFO",
-    "message": "Licitação 18553368 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:43:03.553763",
-    "level": "DEBUG",
-    "message": "Bidding 18553368: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:43:03.575578",
-    "level": "INFO",
-    "message": "Licitação 18553024 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:43:08.814255",
-    "level": "DEBUG",
-    "message": "Bidding 18553024: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:43:08.826795",
-    "level": "INFO",
-    "message": "Licitação 18493908 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:43:12.903226",
-    "level": "DEBUG",
-    "message": "Bidding 18493908: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:43:12.915315",
-    "level": "INFO",
-    "message": "Licitação 18191518 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:43:16.959131",
-    "level": "DEBUG",
-    "message": "Bidding 18191518: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:43:16.984915",
-    "level": "INFO",
-    "message": "Licitação 18492129 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:43:21.011578",
-    "level": "DEBUG",
-    "message": "Bidding 18492129: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:43:21.026690",
-    "level": "INFO",
-    "message": "Processando boletim 136193036 (21/22)"
-  },
-  {
-    "timestamp": "2026-01-20T09:43:23.433958",
-    "level": "INFO",
-    "message": "Boletim 136193036: 55 licitações encontradas"
-  },
-  {
-    "timestamp": "2026-01-20T09:43:23.435111",
-    "level": "INFO",
-    "message": "Licitação 18554994 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:43:27.366140",
-    "level": "DEBUG",
-    "message": "Bidding 18554994: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:43:27.376160",
-    "level": "INFO",
-    "message": "Licitação 18554277 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:43:31.243227",
-    "level": "DEBUG",
-    "message": "Bidding 18554277: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:43:31.257692",
-    "level": "INFO",
-    "message": "Licitação 18554979 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:43:35.145968",
-    "level": "DEBUG",
-    "message": "Bidding 18554979: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:43:35.155791",
-    "level": "INFO",
-    "message": "Licitação 18554055 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:43:38.944598",
-    "level": "DEBUG",
-    "message": "Bidding 18554055: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:43:38.963173",
-    "level": "INFO",
-    "message": "Licitação 18554324 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:43:42.453026",
-    "level": "DEBUG",
-    "message": "Bidding 18554324: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:43:42.464009",
-    "level": "INFO",
-    "message": "Licitação 18553923 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:43:46.300045",
-    "level": "DEBUG",
-    "message": "Bidding 18553923: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:43:46.310816",
-    "level": "INFO",
-    "message": "Licitação 18554773 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:43:50.067814",
-    "level": "DEBUG",
-    "message": "Bidding 18554773: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:43:50.080158",
-    "level": "INFO",
-    "message": "Licitação 18554925 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:43:53.656483",
-    "level": "DEBUG",
-    "message": "Bidding 18554925: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:43:53.665451",
-    "level": "INFO",
-    "message": "Licitação 18554249 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:43:57.239604",
-    "level": "DEBUG",
-    "message": "Bidding 18554249: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:43:57.256338",
-    "level": "INFO",
-    "message": "Licitação 18554687 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:44:00.876714",
-    "level": "DEBUG",
-    "message": "Bidding 18554687: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:44:00.886529",
-    "level": "INFO",
-    "message": "Licitação 18554699 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:44:05.104065",
-    "level": "DEBUG",
-    "message": "Bidding 18554699: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:44:05.123129",
-    "level": "INFO",
-    "message": "Licitação 18550545 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:44:08.972185",
-    "level": "DEBUG",
-    "message": "Bidding 18550545: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:44:08.987753",
-    "level": "INFO",
-    "message": "Licitação 18554047 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:44:12.658468",
-    "level": "DEBUG",
-    "message": "Bidding 18554047: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:44:12.668379",
-    "level": "INFO",
-    "message": "Licitação 18554624 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:44:16.694372",
-    "level": "DEBUG",
-    "message": "Bidding 18554624: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:44:16.712644",
-    "level": "INFO",
-    "message": "Licitação 18554083 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:44:20.613094",
-    "level": "DEBUG",
-    "message": "Bidding 18554083: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:44:20.630942",
-    "level": "INFO",
-    "message": "Licitação 18520666 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:44:24.302789",
-    "level": "DEBUG",
-    "message": "Bidding 18520666: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:44:24.319496",
-    "level": "INFO",
-    "message": "Licitação 15589178 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:44:28.198049",
-    "level": "DEBUG",
-    "message": "Bidding 15589178: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:44:28.217673",
-    "level": "INFO",
-    "message": "Licitação 18521144 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:44:31.850270",
-    "level": "DEBUG",
-    "message": "Bidding 18521144: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:44:31.866475",
-    "level": "INFO",
-    "message": "Licitação 18498224 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:44:35.444902",
-    "level": "DEBUG",
-    "message": "Bidding 18498224: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:44:35.452590",
-    "level": "INFO",
-    "message": "Processando boletim 136217439 (22/22)"
-  },
-  {
-    "timestamp": "2026-01-20T09:44:37.413444",
-    "level": "INFO",
-    "message": "Boletim 136217439: 42 licitações encontradas"
-  },
-  {
-    "timestamp": "2026-01-20T09:44:37.416261",
-    "level": "INFO",
-    "message": "Licitação 18554979 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:44:41.254956",
-    "level": "DEBUG",
-    "message": "Bidding 18554979: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:44:41.266031",
-    "level": "INFO",
-    "message": "Licitação 18555904 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:44:44.995660",
-    "level": "DEBUG",
-    "message": "Bidding 18555904: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:44:45.015986",
-    "level": "INFO",
-    "message": "Licitação 18555910 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:44:48.590107",
-    "level": "DEBUG",
-    "message": "Bidding 18555910: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:44:48.602045",
-    "level": "INFO",
-    "message": "Licitação 18556027 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:44:52.859773",
-    "level": "DEBUG",
-    "message": "Bidding 18556027: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:44:52.875691",
-    "level": "INFO",
-    "message": "Licitação 18555299 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:44:56.699911",
-    "level": "DEBUG",
-    "message": "Bidding 18555299: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:44:56.710000",
-    "level": "INFO",
-    "message": "Licitação 18555347 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:01.009286",
-    "level": "DEBUG",
-    "message": "Bidding 18555347: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:01.019124",
-    "level": "INFO",
-    "message": "Licitação 18555349 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:05.391683",
-    "level": "DEBUG",
-    "message": "Bidding 18555349: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:05.400282",
-    "level": "INFO",
-    "message": "Licitação 18555786 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:09.387485",
-    "level": "DEBUG",
-    "message": "Bidding 18555786: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:09.396317",
-    "level": "INFO",
-    "message": "Licitação 18547420 corresponde aos critérios"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.314483",
-    "level": "DEBUG",
-    "message": "Bidding 18547420: situacao=NORMAL, prazo=''"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.329330",
-    "level": "INFO",
-    "message": "Total de 219 licitações coletadas"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.499925",
-    "level": "INFO",
-    "message": "Conexão MySQL estabelecida com sucesso"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.499973",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18529915",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.500012",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18529563",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 17400000.0,
-    "valor_parsed": "174000000.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.500052",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18529559",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 2100000.0,
-    "valor_parsed": "21000000.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.500081",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18529552",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.500109",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18529542",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.500148",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18529547",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.500415",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18529570",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.500578",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18529579",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.500625",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18529585",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.500678",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18529588",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.500700",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18529589",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.500720",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18529537",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.500759",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18528829",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.500783",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18529196",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.500804",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18262312",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.500822",
-    "level": "DEBUG",
-    "message": "Processando Bidding 17675226",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.500919",
-    "level": "DEBUG",
-    "message": "Processando Bidding 17603929",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.500959",
-    "level": "DEBUG",
-    "message": "Processando Bidding 17818699",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.501005",
-    "level": "DEBUG",
-    "message": "Processando Bidding 17635677",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.501089",
-    "level": "DEBUG",
-    "message": "Processando Bidding 17635660",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.501166",
-    "level": "DEBUG",
-    "message": "Processando Bidding 17582418",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.501199",
-    "level": "DEBUG",
-    "message": "Processando Bidding 17635674",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.501241",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18528235",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 67744.2,
-    "valor_parsed": "677442.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.501276",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18226741",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 4288711.16,
-    "valor_parsed": "428871116.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.501446",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18500291",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.501504",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18530074",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 1300.0,
-    "valor_parsed": "13000.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.501531",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18526147",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 10000.0,
-    "valor_parsed": "100000.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.501561",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18530119",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.501590",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18530459",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 349564.8,
-    "valor_parsed": "3495648.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.501732",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18529927",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 1576901.31,
-    "valor_parsed": "157690131.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.501815",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18531045",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 461791.87,
-    "valor_parsed": "46179187.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.501849",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18531038",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 267396.6,
-    "valor_parsed": "2673966.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.501883",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18530582",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 57053004.88,
-    "valor_parsed": "5705300488.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.501916",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18530588",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 155700.0,
-    "valor_parsed": "1557000.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.501941",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18530561",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.501970",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18501348",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 217489.06,
-    "valor_parsed": "21748906.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.502002",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18521144",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.502033",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18531573",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 22500.0,
-    "valor_parsed": "225000.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.502062",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18532405",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 88975.3,
-    "valor_parsed": "889753.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.502086",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18531980",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.502118",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18531824",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 1636615780.32,
-    "valor_parsed": "163661578032.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.502155",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18531504",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.502186",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18532123",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 427570.0,
-    "valor_parsed": "4275700.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.502292",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18531513",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.502326",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18532467",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.502348",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18532873",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.502373",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18532947",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.502399",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18532880",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.502421",
-    "level": "DEBUG",
-    "message": "Processando Bidding 14047745",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.502453",
-    "level": "DEBUG",
-    "message": "Processando Bidding 17994457",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 1101500.0,
-    "valor_parsed": "11015000.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.502492",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18473916",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 2168856.96,
-    "valor_parsed": "216885696.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.502572",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18530561",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.502595",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18034890",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.502621",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18534012",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 5684446.0,
-    "valor_parsed": "56844460.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.502671",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18533533",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 540000.0,
-    "valor_parsed": "5400000.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.502692",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18533944",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.502719",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18533560",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 2352774.32,
-    "valor_parsed": "235277432.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.502746",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18533209",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 723992.0,
-    "valor_parsed": "7239920.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.502800",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18533883",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.502847",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18520775",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.502884",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18535002",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 70758.6,
-    "valor_parsed": "707586.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.502940",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18535215",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 59399.52,
-    "valor_parsed": "5939952.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.502964",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18535175",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.502996",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18534535",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.503023",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18535156",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.503048",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18534539",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.503074",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18528341",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 4335595.0,
-    "valor_parsed": "43355950.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.503224",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18527549",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.503262",
-    "level": "DEBUG",
-    "message": "Processando Bidding 17896913",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 94800.0,
-    "valor_parsed": "948000.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.503279",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18520058",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 6354409.98,
-    "valor_parsed": "635440998.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.503434",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18536310",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 5090822.24,
-    "valor_parsed": "509082224.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.503460",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18534916",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.503475",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18536176",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.503500",
-    "level": "DEBUG",
-    "message": "Processando Bidding 17676742",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 35520000.0,
-    "valor_parsed": "355200000.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.503530",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18473916",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 2168856.96,
-    "valor_parsed": "216885696.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.503622",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18451379",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.503656",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18536900",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 1625.0,
-    "valor_parsed": "16250.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.503687",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18537707",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 1925455.8,
-    "valor_parsed": "19254558.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.503716",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18537353",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.503967",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18527655",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.504023",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18533864",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 435693.9,
-    "valor_parsed": "4356939.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.504091",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18536949",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 1515999.96,
-    "valor_parsed": "151599996.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.504121",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18537469",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 2392914.6,
-    "valor_parsed": "23929146.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.504169",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18537485",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 134110.0,
-    "valor_parsed": "1341100.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.504214",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18473916",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 2168856.96,
-    "valor_parsed": "216885696.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.504297",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18538843",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 15153258.0,
-    "valor_parsed": "151532580.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.504474",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18539312",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 123187.12,
-    "valor_parsed": "12318712.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.504518",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18538801",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.504545",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18539117",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.504581",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18539562",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.504604",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18535156",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.504626",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18539222",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.504656",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18534535",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 428985.28,
-    "valor_parsed": "42898528.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.504734",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18537751",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 95980124.04,
-    "valor_parsed": "9598012404.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.504831",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18538754",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.504864",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18540629",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.504888",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18540687",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.504917",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18539991",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 415152.0,
-    "valor_parsed": "4151520.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.504941",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18541120",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 161780929.18,
-    "valor_parsed": "16178092918.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.505122",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18532880",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.505160",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18539222",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 117865.8,
-    "valor_parsed": "1178658.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.505196",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18540115",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.505221",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18540112",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.505246",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18540296",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 299215.08,
-    "valor_parsed": "29921508.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.505272",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18541589",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.505304",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18538464",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 450750.0,
-    "valor_parsed": "4507500.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.505357",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18541594",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.505386",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18541281",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 191199.96,
-    "valor_parsed": "19119996.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.505429",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18541883",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.505456",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18533209",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 723992.0,
-    "valor_parsed": "7239920.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.505487",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18536176",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.505510",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18543573",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.505535",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18519610",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 3320043.0,
-    "valor_parsed": "33200430.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.505567",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18541920",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 19076621.77,
-    "valor_parsed": "1907662177.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.505597",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18541925",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.505625",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18543468",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.505645",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18542438",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.505671",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18542469",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.505704",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18542866",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 793135.8,
-    "valor_parsed": "7931358.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.505729",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18540687",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 98070.0,
-    "valor_parsed": "980700.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.505762",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18542576",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.505793",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18543591",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 5243472.8,
-    "valor_parsed": "52434728.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.505843",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18543196",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 1680000.0,
-    "valor_parsed": "16800000.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.505871",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18531513",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 10418282688.0,
-    "valor_parsed": "104182826880.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.505899",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18454776",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 27993863.0,
-    "valor_parsed": "279938630.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.505927",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18444118",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 198480058.76,
-    "valor_parsed": "19848005876.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.505981",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18527791",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.506025",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18544607",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.506055",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18544631",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 206003.95,
-    "valor_parsed": "20600395.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.506092",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18544872",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 1.0,
-    "valor_parsed": "10.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.506117",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18544706",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.506144",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18480268",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 610664.0,
-    "valor_parsed": "6106640.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.506178",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18545598",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 5.8,
-    "valor_parsed": "58.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.506207",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18546366",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.506234",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18545782",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 24513624.0,
-    "valor_parsed": "245136240.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.506451",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18545476",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.506495",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18545496",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.506542",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18545801",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.506607",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18545410",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.506647",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18545319",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.506681",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18212088",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 4676000.0,
-    "valor_parsed": "46760000.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.506712",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18545598",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 5796387.84,
-    "valor_parsed": "579638784.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.506734",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18547419",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.506756",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18546556",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.506777",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18546728",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.506843",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18547117",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.506879",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18538367",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 20960.64,
-    "valor_parsed": "2096064.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.506903",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18538801",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 418320.0,
-    "valor_parsed": "4183200.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.506928",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18547420",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.507010",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18520666",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 1410372.66,
-    "valor_parsed": "141037266.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.507041",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18405889",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 1951686.2,
-    "valor_parsed": "19516862.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.507077",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18466924",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 58000001.64,
-    "valor_parsed": "5800000164.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.507118",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18548316",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 2046988.0,
-    "valor_parsed": "20469880.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.507165",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18548133",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 176530.0,
-    "valor_parsed": "1765300.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.507210",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18548326",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 264000.0,
-    "valor_parsed": "2640000.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.507284",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18548414",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.507400",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18548221",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 541687.2,
-    "valor_parsed": "5416872.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.507435",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18542576",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.507463",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18466924",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 58000001.64,
-    "valor_parsed": "5800000164.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.507502",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18548895",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 12250.0,
-    "valor_parsed": "122500.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.507530",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18318987",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.507553",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18549445",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.507579",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18548316",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 2046988.0,
-    "valor_parsed": "20469880.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.507625",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18549258",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 96780.96,
-    "valor_parsed": "9678096.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.507653",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18549361",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.507675",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18549209",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.507713",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18550161",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 1180800.0,
-    "valor_parsed": "11808000.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.507823",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18551149",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 1814500.0,
-    "valor_parsed": "18145000.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.507855",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18546728",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 8557758.36,
-    "valor_parsed": "855775836.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.507929",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18550495",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.507962",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18550313",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.507989",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18520058",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 6354409.98,
-    "valor_parsed": "635440998.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.508167",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18473698",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 714672.0,
-    "valor_parsed": "7146720.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.508201",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18552125",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.508259",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18551527",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 230000.0,
-    "valor_parsed": "2300000.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.508281",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18552193",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.508354",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18552038",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 237600.0,
-    "valor_parsed": "2376000.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.508401",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18552585",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 6974965.56,
-    "valor_parsed": "697496556.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.508433",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18552146",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.508477",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18540629",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.508512",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18520666",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 1410372.66,
-    "valor_parsed": "141037266.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.508541",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18471622",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.508637",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18047490",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.508665",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18533209",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 723992.0,
-    "valor_parsed": "7239920.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.508690",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18553343",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.508710",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18552821",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.508733",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18553368",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.508762",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18553024",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 57553.2,
-    "valor_parsed": "575532.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.508805",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18493908",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 136254.0,
-    "valor_parsed": "1362540.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.508828",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18191518",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.508856",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18492129",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.508884",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18554994",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.509055",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18554277",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.509082",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18554979",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.509099",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18554055",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 5957688.0,
-    "valor_parsed": "59576880.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.509133",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18554324",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.509148",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18553923",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.509170",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18554773",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 1151323.0,
-    "valor_parsed": "11513230.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.509212",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18554925",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.509237",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18554249",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 13500000.0,
-    "valor_parsed": "135000000.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.509307",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18554687",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 1056612.0,
-    "valor_parsed": "10566120.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.509337",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18554699",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 1902397.78,
-    "valor_parsed": "190239778.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.509363",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18550545",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 1100000.0,
-    "valor_parsed": "11000000.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.509376",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18554047",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.509392",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18554624",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.509433",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18554083",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.509459",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18520666",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 1410372.66,
-    "valor_parsed": "141037266.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.509485",
-    "level": "DEBUG",
-    "message": "Processando Bidding 15589178",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.509502",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18521144",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.509545",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18498224",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.509572",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18554979",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 30000.0,
-    "valor_parsed": "300000.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.509587",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18555904",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.510205",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18555910",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 342654.0,
-    "valor_parsed": "3426540.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.510268",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18556027",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 288000.0,
-    "valor_parsed": "2880000.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.510299",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18555299",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.510327",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18555347",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 5307483.6,
-    "valor_parsed": "53074836.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.510356",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18555349",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 1600000.0,
-    "valor_parsed": "16000000.0"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.510416",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18555786",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 0.0,
-    "valor_parsed": "None"
-  },
-  {
-    "timestamp": "2026-01-20T09:45:13.510474",
-    "level": "DEBUG",
-    "message": "Processando Bidding 18547420",
-    "data_abertura_raw": "",
-    "data_abertura_parsed": "None",
-    "prazo_raw": "",
-    "prazo_parsed": "None",
-    "valor_raw": 57553.2,
-    "valor_parsed": "575532.0"
+    "message": "Bidding 18537751 coletado",
+    "cidade": "Brasília",
+    "estado": "DF",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:45:13.640886",
+    "timestamp": "2026-01-27T17:00:46.128738",
     "level": "INFO",
-    "message": "184 registros inseridos no MySQL"
+    "message": "Bidding 18537793 coletado",
+    "cidade": "Campo Grande",
+    "estado": "MS",
+    "abertura": null,
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:45:13.641452",
+    "timestamp": "2026-01-27T17:00:46.128753",
     "level": "INFO",
-    "message": "Dados inseridos com sucesso no banco de dados"
+    "message": "Bidding 18570497 coletado",
+    "cidade": "Campestre",
+    "estado": "MG",
+    "abertura": "2026-02-09T08:30:00.000-03:00",
+    "prazo": null
   },
   {
-    "timestamp": "2026-01-20T09:45:13.643144",
+    "timestamp": "2026-01-27T17:00:46.350514",
     "level": "INFO",
-    "message": "Checkpoint atualizado: 136217439"
+    "message": "Conexão MySQL estabelecida"
   }
 ]
