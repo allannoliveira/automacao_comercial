@@ -422,6 +422,44 @@ def atualizar_status_planilha(sheet, bidding_id, aprovado, link_drive):
             sheet.update(f"N{linha}", link_drive)
             break
 
+def inserir_boletins_google_sheets(sheet, dados):
+
+    # Pega IDs já existentes na coluna 2 (idconlicitacao)
+    valores_coluna = sheet.col_values(2)
+    ids_existentes = set(valores_coluna[1:]) if len(valores_coluna) > 1 else set()
+
+    novas_linhas = []
+
+    for d in dados:
+
+        bidding_id = str(d.get("bidding_id")).strip()
+
+        # 🔒 Evita duplicar
+        if bidding_id in ids_existentes:
+            continue
+
+        novas_linhas.append([
+            d.get("boletim_id") or "",
+            bidding_id,
+            d.get("orgao_cidade") or "",
+            d.get("orgao_estado") or "",
+            d.get("edital") or "",
+            d.get("edital_site") or "",
+            d.get("itens") or "",
+            d.get("descricao") or "",
+            d.get("valor_estimado") or "",
+            d.get("datahora_abertura") or "",
+            d.get("datahora_prazo") or "",
+            datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            d.get("status_ia") or "",
+            d.get("link_drive") or "",
+            ""
+        ])
+
+    if novas_linhas:
+        sheet.append_rows(novas_linhas, value_input_option="USER_ENTERED")
+        print(f"{len(novas_linhas)} linhas inseridas na planilha")        
+
 # =====================================================
 # LOGIN
 # =====================================================
@@ -465,24 +503,43 @@ def ativar_boletim_html(context, boletim_id):
 # EXTRAIR BOLETINS
 # =====================================================
 def extrair_boletins(context):
+    log_message("INFO", "Extraindo boletins via Playwright (FullCalendar)")
+
     page = context.new_page()
     boletins = set()
 
     try:
-        page.goto(CALENDARIO_URL, wait_until="networkidle", timeout=30000)
-        page.wait_for_selector(".fc-event", timeout=30000)
-        page.wait_for_timeout(3000)
+        page.goto(
+            CALENDARIO_URL,
+            wait_until="networkidle",
+            timeout=60000
+        )
+
+        # 🔑 Espera o calendário existir (não precisa estar visível)
+        page.wait_for_selector(".fc-event", state="attached", timeout=60000)
+
+        # Tempo extra para JS renderizar eventos
+        page.wait_for_timeout(5000)
 
         eventos = page.locator(".fc-event").all()
 
         for ev in eventos:
-            html = ev.inner_html()
-            encontrados = re.findall(r"\b1\d{7,}\b", html)
-            for b in encontrados:
-                boletins.add(int(b))
+            try:
+                html = ev.inner_html()
+
+                encontrados = re.findall(r"\b1\d{7,}\b", html)
+                for b in encontrados:
+                    boletins.add(int(b))
+
+            except Exception:
+                continue
 
         log_message("INFO", f"{len(boletins)} boletins válidos encontrados")
         return sorted(boletins)
+
+    except Exception as e:
+        log_message("ERROR", f"Erro ao extrair boletins: {e}")
+        return []
 
     finally:
         page.close()
@@ -670,10 +727,17 @@ def coletar_licitacoes(context, boletins):
             resultados.append({
                 "boletim_id": boletim_id,
                 "bidding_id": bidding_id,
-                "status_ia": status_ia,
-                "link_drive": link_drive
+                "orgao_cidade": item.get("orgao_cidade"),
+                "orgao_estado": item.get("orgao_estado"),
+                "edital": item.get("edital"),
+                "edital_site": item.get("edital_site"),
+                "itens": item.get("itens"),
+                "descricao": item.get("descricao"),
+                "datahora_abertura": item.get("datahora_abertura"),
+                "datahora_prazo": item.get("datahora_prazo"),
+                "valor_estimado": item.get("valor_estimado"),
+                "arquivos_edital": arquivos_edital
             })
-
             contador_teste += 1
 
     return resultados
@@ -694,23 +758,19 @@ def main():
         novos = [b for b in boletins if b > ultimo]
 
         if not novos:
-            log_message("INFO", "Nenhum boletim novo")
+            log_message("INFO", "Nenhum boletim novo encontrado")
             return
 
         dados = coletar_licitacoes(context, novos)
 
         if dados:
+            sheet = conectar_google_sheets()
+            inserir_boletins_google_sheets(sheet, dados)
             salvar_ultimo_boletim(max(novos))
 
     finally:
         browser.close()
         p.stop()
-
-        os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
-        with open(LOG_FILE, "w", encoding="utf-8") as f:
-            json.dump(log_entries, f, indent=2, ensure_ascii=False)
-
-        log_message("INFO", "=== COLETA FINALIZADA ===")
 
 if __name__ == "__main__":
     main()

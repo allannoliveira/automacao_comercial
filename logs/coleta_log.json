@@ -1,17 +1,37 @@
 [
   {
-    "timestamp": "2026-02-26T12:35:15.101043",
+    "timestamp": "2026-02-26T15:52:28.503300",
     "level": "INFO",
     "message": "=== INICIANDO COLETA ==="
   },
   {
-    "timestamp": "2026-02-26T12:35:16.377402",
+    "timestamp": "2026-02-26T15:52:29.861988",
     "level": "INFO",
     "message": "Iniciando login..."
   },
   {
-    "timestamp": "2026-02-26T12:35:33.606874",
+    "timestamp": "2026-02-26T15:52:46.972243",
     "level": "INFO",
     "message": "Login concluído"
+  },
+  {
+    "timestamp": "2026-02-26T15:52:46.972435",
+    "level": "INFO",
+    "message": "Extraindo boletins via Playwright (FullCalendar)"
+  },
+  {
+    "timestamp": "2026-02-26T15:52:59.221495",
+    "level": "INFO",
+    "message": "50 boletins válidos encontrados"
+  },
+  {
+    "timestamp": "2026-02-26T15:53:36.353260",
+    "level": "INFO",
+    "message": "Bidding 18339042 - Status IA: NAO"
+  },
+  {
+    "timestamp": "2026-02-26T15:53:57.722940",
+    "level": "INFO",
+    "message": "Modo teste ativo - encerrando"
   }
 ]
