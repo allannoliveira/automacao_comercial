@@ -72,31 +72,35 @@ def upload_arquivo_para_pasta(caminho_arquivo, pasta_id):
         "parents": [pasta_id]
     }
 
-    media = MediaFileUpload(
-        caminho_arquivo,
-        resumable=True
-    )
-
-    request = service.files().create(
-        body=file_metadata,
-        media_body=media,
-        fields="id",
-        supportsAllDrives=True
-    )
-
-    response = None
-    tentativa = 0
     max_tentativas = 3
 
-    while response is None and tentativa < max_tentativas:
+    for tentativa in range(1, max_tentativas + 1):
         try:
-            status, response = request.next_chunk()
-        except Exception:
-            tentativa += 1
-            print(f"Tentativa {tentativa} falhou no upload. Retentando...")
-            time.sleep(5)
+            media = MediaFileUpload(
+                caminho_arquivo,
+                resumable=True
+            )
 
-    if response is None:
-        raise Exception("Falha definitiva no upload após 3 tentativas.")
+            request = service.files().create(
+                body=file_metadata,
+                media_body=media,
+                fields="id",
+                supportsAllDrives=True
+            )
 
-    return response.get("id")
+            response = None
+
+            while response is None:
+                status, response = request.next_chunk()
+                if status:
+                    print(f"Upload {int(status.progress() * 100)}%")
+
+            print(f"Upload concluído: {pathlib.Path(caminho_arquivo).name}")
+            return response.get("id")
+
+        except Exception as e:
+            print(f"Tentativa {tentativa}/{max_tentativas} falhou: {type(e).__name__}: {e}")
+            if tentativa < max_tentativas:
+                time.sleep(5 * tentativa)
+            else:
+                raise Exception(f"Falha definitiva no upload após {max_tentativas} tentativas: {e}")

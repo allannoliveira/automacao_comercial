@@ -9,8 +9,10 @@ import requests
 import pathlib
 import zipfile
 
-from services.gemini_service import analisar_edital
+#from services.gemini_service import analisar_edital
 from services.drive_service import criar_pasta, upload_arquivo_para_pasta, SHARED_DRIVE_ID
+from services.gemini_queue import GeminiQueue
+
 
 # =====================================================
 # CONFIGURAÇÕES
@@ -24,7 +26,7 @@ LOG_FILE = "logs/coleta_log.json"
 
 SHEET_ID = "1yJmxxKcTjJFqlci3UEUa54BwhvCY_KaLaAxhEsgdvyo"
 SHEET_NAME = "licitacao"
-
+gemini_queue = GeminiQueue(delay=15)  # 15 segundos entre envios
 PROMPT_GERED = """GERED (Gerador de Informações dos Editais)
 Você é o GERED, um agente especialista em licitações públicas na área da saúde.
 Você opera em BLOCOS SEQUENCIAIS COM VALIDAÇÃO AUTOMÁTICA.
@@ -108,8 +110,8 @@ Inferir
 Interpretar além do texto
 Classificar exigências
 Resumir estrategicamente
-Se uma informação não estiver explícita, escrever exatamente: “Informação não
-identificada nos documentos enviados.”
+Se uma informação não estiver explícita, escrever exatamente: "Informação não
+identificada nos documentos enviados."
 OUTPUT DO BLOCO 1 — FORMATO FIXO
 Não alterar a ordem
 Não adicionar comentários
@@ -271,8 +273,8 @@ REGRAS ABSOLUTAS DO BLOCO 4
 Cada pergunta deve gerar uma única resposta
 Cada resposta deve ocupar uma única linha
 Quando houver mais de um item, usar tópicos na mesma linha
-Se a informação não estiver explícita, escrever exatamente: “Informação não
-identificada nos documentos enviados.”
+Se a informação não estiver explícita, escrever exatamente: "Informação não
+identificada nos documentos enviados."
 Não misturar respostas
 Não repetir texto do prompt
 Não criar títulos adicionais
@@ -355,7 +357,7 @@ O BLOCO 5 é condicional e só deve ser renderizado se o objeto da licitação f
 Telemedicina
 Nunca esqueça o negrito e se APROVADO OU REPROVADO"""
 
-MODO_TESTE = True
+MODO_TESTE = False
 TESTE_LIMITE = 1
 
 log_entries = []
@@ -412,29 +414,46 @@ def conectar_google_sheets():
     client = gspread.authorize(creds)
     return client.open_by_key(SHEET_ID).worksheet(SHEET_NAME)
 
-def atualizar_status_planilha(sheet, bidding_id, aprovado, link_drive):
+def atualizar_status_planilha(sheet, bidding_id, aprovado, link_drive, link_txt):
+    """
+    Colunas da planilha:
+    1  boletim_id
+    2  idconlicitacao
+    3  orgao_cidade
+    4  orgao_estado
+    5  edital
+    6  edital_site
+    7  itens
+    8  descricao
+    9  valor_estimado
+    10 datahora_abertura
+    11 datahora_prazo
+    12 data_coleta
+    13 aprovado_ia
+    14 link_drive_edital
+    15 importado_pipedrive
+    16 resumo_ia  ← salva o link do TXT aqui
+    """
     col_ids = sheet.col_values(2)
 
     for i, val in enumerate(col_ids):
         if val == str(bidding_id):
             linha = i + 1
-            sheet.update(f"M{linha}", aprovado)
-            sheet.update(f"N{linha}", link_drive)
+            sheet.update_cell(linha, 13, aprovado)    # aprovado_ia
+            sheet.update_cell(linha, 14, link_drive)  # link_drive_edital
+            sheet.update_cell(linha, 16, link_txt)    # resumo_ia ← link do TXT
             break
 
 def inserir_boletins_google_sheets(sheet, dados):
 
-    # Pega IDs já existentes na coluna 2 (idconlicitacao)
     valores_coluna = sheet.col_values(2)
     ids_existentes = set(valores_coluna[1:]) if len(valores_coluna) > 1 else set()
 
     novas_linhas = []
 
     for d in dados:
-
         bidding_id = str(d.get("bidding_id")).strip()
 
-        # 🔒 Evita duplicar
         if bidding_id in ids_existentes:
             continue
 
@@ -453,12 +472,13 @@ def inserir_boletins_google_sheets(sheet, dados):
             datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
             d.get("status_ia") or "",
             d.get("link_drive") or "",
-            ""
+            "",                            # importado_pipedrive (col 15) — vazio
+            d.get("link_txt") or "",       # resumo_ia (col 16) ← link do TXT
         ])
 
     if novas_linhas:
         sheet.append_rows(novas_linhas, value_input_option="USER_ENTERED")
-        print(f"{len(novas_linhas)} linhas inseridas na planilha")        
+        print(f"{len(novas_linhas)} linhas inseridas na planilha")
 
 # =====================================================
 # LOGIN
@@ -515,10 +535,7 @@ def extrair_boletins(context):
             timeout=60000
         )
 
-        # 🔑 Espera o calendário existir (não precisa estar visível)
         page.wait_for_selector(".fc-event", state="attached", timeout=60000)
-
-        # Tempo extra para JS renderizar eventos
         page.wait_for_timeout(5000)
 
         eventos = page.locator(".fc-event").all()
@@ -526,11 +543,9 @@ def extrair_boletins(context):
         for ev in eventos:
             try:
                 html = ev.inner_html()
-
                 encontrados = re.findall(r"\b1\d{7,}\b", html)
                 for b in encontrados:
                     boletins.add(int(b))
-
             except Exception:
                 continue
 
@@ -611,24 +626,13 @@ def coletar_licitacoes(context, boletins):
 
     for boletim_id in boletins:
 
-        # 🔥 Ativa o boletim primeiro
         ativar_boletim_html(context, boletim_id)
 
-        # 🔥 Cria nova session após ativação
         session = requests.Session()
-
-        # 🔥 Copia cookies atualizados do Playwright
         for c in context.cookies():
-            session.cookies.set(
-                c["name"],
-                c["value"],
-                domain=c.get("domain")
-            )
+            session.cookies.set(c["name"], c["value"], domain=c.get("domain"))
 
-        resp = session.get(
-            BIDDINGS_API.format(boletim_id),
-            timeout=30
-        )
+        resp = session.get(BIDDINGS_API.format(boletim_id), timeout=30)
 
         if resp.status_code != 200:
             log_message("WARNING", f"API falhou {boletim_id}")
@@ -637,10 +641,7 @@ def coletar_licitacoes(context, boletins):
         try:
             dados_json = resp.json()
         except Exception:
-            log_message(
-                "ERROR",
-                f"Resposta inválida API {boletim_id} | Conteúdo: {resp.text[:200]}"
-            )
+            log_message("ERROR", f"Resposta inválida API {boletim_id} | Conteúdo: {resp.text[:200]}")
             continue
 
         biddings = dados_json.get("biddings", [])
@@ -660,54 +661,62 @@ def coletar_licitacoes(context, boletins):
             for arquivo in item.get("edicts", []):
                 if arquivo.get("filename", "").lower() == "edital.zip":
                     arquivos_edital = baixar_edital_por_json(
-                        context,
-                        boletim_id,
-                        bidding_id,
-                        arquivo
+                        context, boletim_id, bidding_id, arquivo
                     )
                     break
 
             # --------------------------------------------
             # PROCESSAMENTO IA
             # --------------------------------------------
+            # Inicializa sempre para evitar NameError
+            texto_ia = ""
+            status_ia = "NAO"
+
             pdf_principal = next(
                 (a for a in arquivos_edital if a.lower().endswith(".pdf")),
                 None
             )
 
             if pdf_principal:
-                texto_ia, status_ia = analisar_edital(
-                    pdf_principal,
-                    PROMPT_GERED
-                )
+                texto_ia, status_ia = gemini_queue.processar(pdf_principal, PROMPT_GERED)
+                log_message("INFO", f"Gemini retornou - Status: {status_ia} | Chars: {len(texto_ia or '')}")
             else:
-                status_ia = "NAO"
-
-            log_message(
-                "INFO",
-                f"Bidding {bidding_id} - Status IA: {status_ia}"
-            )
+                log_message("WARNING", f"Nenhum PDF encontrado para bidding {bidding_id}")
 
             # --------------------------------------------
             # DRIVE
             # --------------------------------------------
             link_drive = ""
+            link_txt = ""
 
             if status_ia in ["SIM", "NAO"]:
 
-                pasta_raiz = SHARED_DRIVE_ID
-
                 if status_ia == "SIM":
-                    pasta_tipo_id = criar_pasta("APROVADOS", pasta_raiz)
+                    pasta_tipo_id = criar_pasta("APROVADOS", SHARED_DRIVE_ID)
                 else:
-                    pasta_tipo_id = criar_pasta("REPROVADOS", pasta_raiz)
+                    pasta_tipo_id = criar_pasta("REPROVADOS", SHARED_DRIVE_ID)
 
                 nome_pasta = montar_nome_pasta(item)
                 pasta_id = criar_pasta(nome_pasta, pasta_tipo_id)
 
-                # Upload dos arquivos
+                # Gera TXT com resposta do Gemini e adiciona à lista de upload
+                if texto_ia:
+                    caminho_txt = pathlib.Path("downloads") / str(boletim_id) / str(bidding_id) / "resumo_gemini.txt"
+                    caminho_txt.parent.mkdir(parents=True, exist_ok=True)
+                    with open(caminho_txt, "w", encoding="utf-8") as f:
+                        f.write(texto_ia)
+                    arquivos_edital.append(str(caminho_txt))
+
+                # Upload de todos os arquivos (edital + TXT)
+                file_id_txt = None
                 for arquivo in arquivos_edital:
-                    upload_arquivo_para_pasta(arquivo, pasta_id)
+                    file_id = upload_arquivo_para_pasta(arquivo, pasta_id)
+                    if arquivo.endswith("resumo_gemini.txt"):
+                        file_id_txt = file_id
+
+                # Link direto para o TXT no Drive
+                if file_id_txt:
+                    link_txt = f"https://drive.google.com/file/d/{file_id_txt}/view"
 
                 link_drive = f"https://drive.google.com/drive/folders/{pasta_id}"
 
@@ -721,7 +730,8 @@ def coletar_licitacoes(context, boletins):
                 sheet,
                 bidding_id,
                 status_ia,
-                link_drive
+                link_drive,
+                link_txt       # ← link do TXT vai para coluna resumo_ia (col 16)
             )
 
             resultados.append({
@@ -733,10 +743,12 @@ def coletar_licitacoes(context, boletins):
                 "edital_site": item.get("edital_site"),
                 "itens": item.get("itens"),
                 "descricao": item.get("descricao"),
+                "valor_estimado": item.get("valor_estimado"),
                 "datahora_abertura": item.get("datahora_abertura"),
                 "datahora_prazo": item.get("datahora_prazo"),
-                "valor_estimado": item.get("valor_estimado"),
-                "arquivos_edital": arquivos_edital
+                "status_ia": status_ia,
+                "link_drive": link_drive,
+                "link_txt": link_txt,      # ← link do TXT para inserir na planilha
             })
             contador_teste += 1
 
