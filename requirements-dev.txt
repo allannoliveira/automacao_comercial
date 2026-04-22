@@ -5,6 +5,15 @@ requests>=2.31.0
 beautifulsoup4>=4.12.2
 playwright>=1.42.0
 
+# Google APIs (Drive, etc)
+google-api-python-client>=2.120.0
+google-auth>=2.29.0
+google-auth-oauthlib>=1.2.0
+google-auth-httplib2>=0.2.0
+
+# Gemini (SDK nova correta)
+google-genai>=0.3.0
+
 # =========================
 # Desenvolvimento / Qualidade
 # =========================
