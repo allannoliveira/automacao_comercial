@@ -15,7 +15,7 @@ MODELOS_FALLBACK = [
     "gemini-2.5-flash",
 ]
 
-MAX_OUTPUT_TOKENS = 4000
+MAX_OUTPUT_TOKENS = 5000
 TEMPO_RETRY = 2  # segundos
 MAX_RETRIES = 2
 
