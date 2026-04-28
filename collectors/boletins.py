@@ -22,10 +22,13 @@ CALENDARIO_URL = "https://consulteonline.conlicitacao.com.br/boletim_web/public/
 BIDDINGS_API = "https://consultaonline.conlicitacao.com.br/boletim_web/public/boletins/{}/biddings.json"
 
 CHECKPOINT_FILE = "logs/ultimo_boletim.json"
+CHECKPOINT_LICITACOES_FILE = "logs/licitacoes_processadas.json"
 LOG_FILE = "logs/coleta_log.json"
+GEMINI_MEMORY_FILE = "memory/gemini_memoria.md"
 
 SHEET_ID = "1yJmxxKcTjJFqlci3UEUa54BwhvCY_KaLaAxhEsgdvyo"
-SHEET_NAME = "licitacao"
+SHEET_APROVADOS = "aprovados"
+SHEET_REPROVADOS = "reprovados"
 gemini_queue = GeminiQueue(delay=15)  # 15 segundos entre envios
 PROMPT_GERED = PROMPT_GERED = """GERED (Gerador de Informações dos Editais)
 Você é o GERED, um agente especialista em licitações públicas na área da saúde.
@@ -53,7 +56,7 @@ Se a informação não estiver claramente definida/ambígua: NÃO ESPECIFICADO
 OBJETIVO: Extrair dados literais sem interpretação estratégica.
 OUTPUT DO BLOCO 1 — FORMATO FIXO
 IDENTIFICAÇÃO DA ATA / EDITAL
-📌ATA LICITATÓRIA: <Cidade - UF - Órgão - Especialidade/Objeto>
+ATA LICITATORIA: <Cidade - UF - Orgao - Especialidade/Objeto>
 OBJETO DA DISPUTA: <Texto literal sintetizado>
 DATA PUBLICAÇÃO EDITAL: <DD/MM/AAAA ou NÃO CONSTA>
 DATA E HORÁRIO DISPUTA: <DD/MM/AAAA – Horário ou NÃO CONSTA>
@@ -363,6 +366,34 @@ TESTE_LIMITE = 1
 log_entries = []
 
 # =====================================================
+# MEMORIA GEMINI
+# =====================================================
+def carregar_memoria_gemini():
+    if not os.path.exists(GEMINI_MEMORY_FILE):
+        return ""
+
+    with open(GEMINI_MEMORY_FILE, "r", encoding="utf-8") as f:
+        return f.read().strip()
+
+def montar_prompt_gemini():
+    memoria = carregar_memoria_gemini()
+
+    if not memoria:
+        return PROMPT_GERED
+
+    return f"""{PROMPT_GERED}
+
+========================================
+MEMORIA OPERACIONAL OBRIGATORIA
+========================================
+As regras abaixo foram adicionadas pelo usuario a partir de analises anteriores.
+Elas corrigem erros recorrentes e devem prevalecer quando nao conflitarem com o edital.
+Se houver conflito entre esta memoria e o documento oficial, o documento oficial prevalece.
+
+{memoria}
+"""
+
+# =====================================================
 # LOG
 # =====================================================
 def log_message(level, message, extra=None):
@@ -397,6 +428,30 @@ def salvar_ultimo_boletim(boletim_id):
             "data_processamento": datetime.now().isoformat()
         }, f, indent=2, ensure_ascii=False)
 
+def carregar_licitacoes_processadas():
+    if os.path.exists(CHECKPOINT_LICITACOES_FILE):
+        try:
+            with open(CHECKPOINT_LICITACOES_FILE, "r", encoding="utf-8") as f:
+                dados = json.load(f)
+                return dados if isinstance(dados, dict) else {}
+        except Exception:
+            return {}
+    return {}
+
+def salvar_licitacao_processada(bidding_id, dados):
+    os.makedirs(os.path.dirname(CHECKPOINT_LICITACOES_FILE), exist_ok=True)
+    processadas = carregar_licitacoes_processadas()
+    processadas[str(bidding_id)] = {
+        "boletim_id": dados.get("boletim_id"),
+        "status_ia": dados.get("status_ia"),
+        "link_drive": dados.get("link_drive"),
+        "link_txt": dados.get("link_txt"),
+        "data_processamento": datetime.now().isoformat()
+    }
+
+    with open(CHECKPOINT_LICITACOES_FILE, "w", encoding="utf-8") as f:
+        json.dump(processadas, f, indent=2, ensure_ascii=False)
+
 # =====================================================
 # GOOGLE SHEETS
 # =====================================================
@@ -412,73 +467,56 @@ def conectar_google_sheets():
     )
 
     client = gspread.authorize(creds)
-    return client.open_by_key(SHEET_ID).worksheet(SHEET_NAME)
+    return client.open_by_key(SHEET_ID)
 
-def atualizar_status_planilha(sheet, bidding_id, aprovado, link_drive, link_txt):
-    """
-    Colunas da planilha:
-    1  boletim_id
-    2  idconlicitacao
-    3  orgao_cidade
-    4  orgao_estado
-    5  edital
-    6  edital_site
-    7  itens
-    8  descricao
-    9  valor_estimado
-    10 datahora_abertura
-    11 datahora_prazo
-    12 data_coleta
-    13 aprovado_ia
-    14 link_drive_edital
-    15 importado_pipedrive
-    16 resumo_ia  ← salva o link do TXT aqui
-    """
-    col_ids = sheet.col_values(2)
+def obter_ids_existentes(spreadsheet):
+    ids_existentes = set()
 
-    for i, val in enumerate(col_ids):
-        if val == str(bidding_id):
-            linha = i + 1
-            sheet.update_cell(linha, 13, aprovado)    # aprovado_ia
-            sheet.update_cell(linha, 14, link_drive)  # link_drive_edital
-            sheet.update_cell(linha, 16, link_txt)    # resumo_ia ← link do TXT
-            break
+    for nome_aba in [SHEET_APROVADOS, SHEET_REPROVADOS]:
+        sheet = spreadsheet.worksheet(nome_aba)
+        valores_coluna = sheet.col_values(2)
+        ids_existentes.update(v.strip() for v in valores_coluna[1:] if v)
 
-def inserir_boletins_google_sheets(sheet, dados):
+    return ids_existentes
 
-    valores_coluna = sheet.col_values(2)
-    ids_existentes = set(valores_coluna[1:]) if len(valores_coluna) > 1 else set()
+def montar_linha_planilha(dados):
+    return [
+        dados.get("boletim_id") or "",
+        str(dados.get("bidding_id")).strip(),
+        dados.get("orgao_cidade") or "",
+        dados.get("orgao_estado") or "",
+        dados.get("edital") or "",
+        dados.get("edital_site") or "",
+        dados.get("itens") or "",
+        dados.get("descricao") or "",
+        dados.get("valor_estimado") or "",
+        dados.get("datahora_abertura") or "",
+        dados.get("datahora_prazo") or "",
+        datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        dados.get("status_ia") or "",
+        dados.get("link_drive") or "",
+        "",
+        dados.get("link_txt") or "",
+    ]
 
-    novas_linhas = []
+def inserir_boletim_google_sheets(spreadsheet, dados, ids_existentes):
+    bidding_id = str(dados.get("bidding_id")).strip()
+
+    if bidding_id in ids_existentes:
+        return False
+
+    nome_aba = SHEET_APROVADOS if dados.get("status_ia") == "SIM" else SHEET_REPROVADOS
+    sheet = spreadsheet.worksheet(nome_aba)
+    sheet.append_row(montar_linha_planilha(dados), value_input_option="USER_ENTERED")
+    ids_existentes.add(bidding_id)
+    print(f"1 linha inserida na aba {nome_aba}")
+    return True
+
+def inserir_boletins_google_sheets(spreadsheet, dados):
+    ids_existentes = obter_ids_existentes(spreadsheet)
 
     for d in dados:
-        bidding_id = str(d.get("bidding_id")).strip()
-
-        if bidding_id in ids_existentes:
-            continue
-
-        novas_linhas.append([
-            d.get("boletim_id") or "",
-            bidding_id,
-            d.get("orgao_cidade") or "",
-            d.get("orgao_estado") or "",
-            d.get("edital") or "",
-            d.get("edital_site") or "",
-            d.get("itens") or "",
-            d.get("descricao") or "",
-            d.get("valor_estimado") or "",
-            d.get("datahora_abertura") or "",
-            d.get("datahora_prazo") or "",
-            datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-            d.get("status_ia") or "",
-            d.get("link_drive") or "",
-            "",                            # importado_pipedrive (col 15) — vazio
-            d.get("link_txt") or "",       # resumo_ia (col 16) ← link do TXT
-        ])
-
-    if novas_linhas:
-        sheet.append_rows(novas_linhas, value_input_option="USER_ENTERED")
-        print(f"{len(novas_linhas)} linhas inseridas na planilha")
+        inserir_boletim_google_sheets(spreadsheet, d, ids_existentes)
 
 # =====================================================
 # LOGIN
@@ -621,7 +659,9 @@ def montar_nome_pasta(dados):
 def coletar_licitacoes(context, boletins):
 
     resultados = []
-    sheet = conectar_google_sheets()
+    spreadsheet = conectar_google_sheets()
+    ids_existentes = obter_ids_existentes(spreadsheet)
+    licitacoes_processadas = carregar_licitacoes_processadas()
     contador_teste = 0
 
     for boletim_id in boletins:
@@ -653,6 +693,17 @@ def coletar_licitacoes(context, boletins):
                 return resultados
 
             bidding_id = item.get("bidding_id")
+            bidding_id_str = str(bidding_id).strip()
+
+            if bidding_id_str in ids_existentes or bidding_id_str in licitacoes_processadas:
+                log_message("INFO", f"Bidding {bidding_id} ja processado, pulando")
+                resultados.append({
+                    "boletim_id": boletim_id,
+                    "bidding_id": bidding_id,
+                    "skipped": True
+                })
+                continue
+
             arquivos_edital = []
 
             # --------------------------------------------
@@ -678,7 +729,7 @@ def coletar_licitacoes(context, boletins):
             )
 
             if pdf_principal:
-                texto_ia, status_ia = gemini_queue.processar(pdf_principal, PROMPT_GERED)
+                texto_ia, status_ia = gemini_queue.processar(pdf_principal, montar_prompt_gemini())
                 log_message("INFO", f"Gemini retornou - Status: {status_ia} | Chars: {len(texto_ia or '')}")
             else:
                 log_message("WARNING", f"Nenhum PDF encontrado para bidding {bidding_id}")
@@ -723,18 +774,7 @@ def coletar_licitacoes(context, boletins):
             else:
                 log_message("WARNING", f"IA falhou para {bidding_id}, upload ignorado.")
 
-            # --------------------------------------------
-            # PLANILHA
-            # --------------------------------------------
-            atualizar_status_planilha(
-                sheet,
-                bidding_id,
-                status_ia,
-                link_drive,
-                link_txt       # ← link do TXT vai para coluna resumo_ia (col 16)
-            )
-
-            resultados.append({
+            licitacao_dados = {
                 "boletim_id": boletim_id,
                 "bidding_id": bidding_id,
                 "orgao_cidade": item.get("orgao_cidade"),
@@ -748,8 +788,15 @@ def coletar_licitacoes(context, boletins):
                 "datahora_prazo": item.get("datahora_prazo"),
                 "status_ia": status_ia,
                 "link_drive": link_drive,
-                "link_txt": link_txt,      # ← link do TXT para inserir na planilha
-            })
+                "link_txt": link_txt,
+            }
+
+            inserido = inserir_boletim_google_sheets(spreadsheet, licitacao_dados, ids_existentes)
+            if inserido:
+                salvar_licitacao_processada(bidding_id, licitacao_dados)
+                licitacoes_processadas[bidding_id_str] = licitacao_dados
+
+            resultados.append(licitacao_dados)
             contador_teste += 1
 
     return resultados
@@ -776,8 +823,6 @@ def main():
         dados = coletar_licitacoes(context, novos)
 
         if dados:
-            sheet = conectar_google_sheets()
-            inserir_boletins_google_sheets(sheet, dados)
             salvar_ultimo_boletim(max(novos))
 
     finally:

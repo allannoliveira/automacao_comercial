@@ -16,13 +16,43 @@ def conectar_drive():
     return build("drive", "v3", credentials=creds)
 
 
+def escapar_texto_query_drive(valor):
+    return str(valor).replace("\\", "\\\\").replace("'", "\\'")
+
+
 def buscar_pasta_por_nome(nome, parent_id):
     service = conectar_drive()
+    nome_query = escapar_texto_query_drive(nome)
 
     query = (
-        f"name = '{nome}' "
+        f"name = '{nome_query}' "
         f"and '{parent_id}' in parents "
         f"and mimeType = 'application/vnd.google-apps.folder' "
+        f"and trashed = false"
+    )
+
+    results = service.files().list(
+        q=query,
+        fields="files(id, name)",
+        supportsAllDrives=True,
+        includeItemsFromAllDrives=True
+    ).execute()
+
+    arquivos = results.get("files", [])
+
+    if arquivos:
+        return arquivos[0]["id"]
+
+    return None
+
+
+def buscar_arquivo_por_nome(nome, parent_id):
+    service = conectar_drive()
+    nome_query = escapar_texto_query_drive(nome)
+
+    query = (
+        f"name = '{nome_query}' "
+        f"and '{parent_id}' in parents "
         f"and trashed = false"
     )
 
@@ -66,9 +96,15 @@ def criar_pasta(nome, parent_id):
 
 def upload_arquivo_para_pasta(caminho_arquivo, pasta_id):
     service = conectar_drive()
+    nome_arquivo = pathlib.Path(caminho_arquivo).name
+    arquivo_existente = buscar_arquivo_por_nome(nome_arquivo, pasta_id)
+
+    if arquivo_existente:
+        print(f"Arquivo ja existe no Drive: {nome_arquivo}")
+        return arquivo_existente
 
     file_metadata = {
-        "name": pathlib.Path(caminho_arquivo).name,
+        "name": nome_arquivo,
         "parents": [pasta_id]
     }
 
@@ -95,7 +131,7 @@ def upload_arquivo_para_pasta(caminho_arquivo, pasta_id):
                 if status:
                     print(f"Upload {int(status.progress() * 100)}%")
 
-            print(f"Upload concluído: {pathlib.Path(caminho_arquivo).name}")
+            print(f"Upload concluído: {nome_arquivo}")
             return response.get("id")
 
         except Exception as e:

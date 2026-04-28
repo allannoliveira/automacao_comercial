@@ -83,7 +83,7 @@ def analisar_edital(caminho_pdf, prompt):
     cache = carregar_cache(hash_arquivo)
 
     if cache:
-        print("[GEMINI] Cache encontrado, evitando custo 🚀")
+        print("[GEMINI] Cache encontrado, evitando custo")
         return cache["texto"], cache["status"]
 
     ultimo_erro = None

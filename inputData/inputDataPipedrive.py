@@ -1,7 +1,7 @@
 import requests
 from datetime import datetime
 import gspread
-from oauth2client.service_account import ServiceAccountCredentials
+from google.oauth2.service_account import Credentials
 
 # =========================
 # CONFIG
@@ -13,25 +13,27 @@ BASE_URL = "https://api.pipedrive.com/v1"
 PIPELINE_ID = 3
 STAGE_ID = 23
 
-GOOGLE_SHEET_NAME = "licitacoes"
-ABA = "Página1"
+SHEET_ID = "1yJmxxKcTjJFqlci3UEUa54BwhvCY_KaLaAxhEsgdvyo"
+ABA = "aprovados"
+CREDENTIALS_FILE = "credentials/google_service_account.json"
 
 # =========================
 # GOOGLE SHEETS
 # =========================
 
 def conectar_sheet():
-    scope = [
-        "https://spreadsheets.google.com/feeds",
+    scopes = [
+        "https://www.googleapis.com/auth/spreadsheets",
         "https://www.googleapis.com/auth/drive"
     ]
 
-    creds = ServiceAccountCredentials.from_json_keyfile_name(
-        "credentials.json", scope
+    creds = Credentials.from_service_account_file(
+        CREDENTIALS_FILE,
+        scopes=scopes
     )
 
     client = gspread.authorize(creds)
-    sheet = client.open(GOOGLE_SHEET_NAME).worksheet(ABA)
+    sheet = client.open_by_key(SHEET_ID).worksheet(ABA)
 
     return sheet
 
@@ -57,10 +59,17 @@ def formatar_data(data_str):
     if not data_str:
         return None
 
+    if isinstance(data_str, datetime):
+        return data_str.strftime("%Y-%m-%d")
+
+    data_str = str(data_str).strip()
+
     formatos = [
         "%Y-%m-%d",
         "%d/%m/%Y",
-        "%Y-%m-%d %H:%M:%S"
+        "%Y-%m-%d %H:%M:%S",
+        "%d/%m/%Y %H:%M:%S",
+        "%d/%m/%Y %H:%M",
     ]
 
     for fmt in formatos:
@@ -76,7 +85,15 @@ def converter_valor(valor):
     if not valor:
         return 0
 
-    valor = valor.replace("R$", "").replace(".", "").replace(",", ".")
+    if isinstance(valor, (int, float)):
+        return float(valor)
+
+    valor = str(valor).strip()
+    valor = valor.replace("R$", "").replace(" ", "")
+
+    if "," in valor:
+        valor = valor.replace(".", "").replace(",", ".")
+
     try:
         return float(valor)
     except:
@@ -189,7 +206,7 @@ def processar():
         # 7 - marcar planilha
         atualizar_flag_importado(sheet, i)
 
-        print("FINALIZADO 🚀")
+        print("FINALIZADO")
 
 
 # =========================
