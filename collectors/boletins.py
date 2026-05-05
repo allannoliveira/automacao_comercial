@@ -562,9 +562,10 @@ def ativar_boletim_html(context, boletim_id):
 # =====================================================
 def extrair_boletins(context):
     log_message("INFO", "Extraindo boletins via Playwright (FullCalendar)")
-
+    
     page = context.new_page()
     boletins = set()
+    log_message("INFO", f"Boletins encontrados: {boletins}")
 
     try:
         page.goto(
@@ -581,7 +582,7 @@ def extrair_boletins(context):
         for ev in eventos:
             try:
                 html = ev.inner_html()
-                encontrados = re.findall(r"\b1\d{7,}\b", html)
+                encontrados = re.findall(r"boletins/(\d+)", html)
                 for b in encontrados:
                     boletins.add(int(b))
             except Exception:
@@ -597,13 +598,20 @@ def extrair_boletins(context):
     finally:
         page.close()
 
+
 # =====================================================
 # DOWNLOAD EDITAL
 # =====================================================
 def baixar_edital_por_json(context, boletim_id, bidding_id, arquivo_json):
 
     url_relativa = arquivo_json.get("url")
-    filename = arquivo_json.get("filename")
+    filename = arquivo_json.get("filename") or "arquivo"
+
+    # remove query string (?path=...)
+    filename = filename.split("?")[0]
+
+    # remove caracteres inválidos do Windows
+    filename = re.sub(r'[\\/*?:"<>|]', "_", filename)
 
     if not url_relativa or not filename:
         return []
@@ -760,8 +768,20 @@ def coletar_licitacoes(context, boletins):
 
                 # Upload de todos os arquivos (edital + TXT)
                 file_id_txt = None
+
                 for arquivo in arquivos_edital:
+
+                    # 🔥 evita erro de arquivo inválido
+                    if not arquivo or "?" in arquivo:
+                        log_message("WARNING", f"Arquivo inválido ignorado: {arquivo}")
+                        continue
+
+                    if not os.path.exists(arquivo):
+                        log_message("WARNING", f"Arquivo não encontrado: {arquivo}")
+                        continue
+
                     file_id = upload_arquivo_para_pasta(arquivo, pasta_id)
+
                     if arquivo.endswith("resumo_gemini.txt"):
                         file_id_txt = file_id
 
@@ -814,7 +834,7 @@ def main():
 
     try:
         boletins = extrair_boletins(context)
-        novos = [b for b in boletins if b > ultimo]
+        novos = sorted([b for b in boletins if b > ultimo])
 
         if not novos:
             log_message("INFO", "Nenhum boletim novo encontrado")
