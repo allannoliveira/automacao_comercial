@@ -1,11 +1,18 @@
+import os
 import pathlib
 import time
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
 from google.oauth2.service_account import Credentials
+from dotenv import load_dotenv
+
+load_dotenv()
 
 SCOPES = ["https://www.googleapis.com/auth/drive"]
-SHARED_DRIVE_ID = "0ANze95S0dm6BUk9PVA"
+SHARED_DRIVE_ID = os.getenv("GOOGLE_SHARED_DRIVE_ID")
+
+if not SHARED_DRIVE_ID:
+    raise EnvironmentError("GOOGLE_SHARED_DRIVE_ID não definido no .env")
 
 
 def conectar_drive():

@@ -12,13 +12,15 @@ class GeminiQueue:
 
         tentativa = 0
 
+        _tokens_zerado = {"prompt_tokens": 0, "output_tokens": 0, "cache_hit": False}
+
         while tentativa < self.max_retries:
             try:
-                texto, status = analisar_edital(pdf_path, prompt)
+                texto, status, tokens_info = analisar_edital(pdf_path, prompt)
 
                 time.sleep(self.delay)
 
-                return texto, status
+                return texto, status, tokens_info
 
             except Exception as e:
                 tentativa += 1
@@ -28,4 +30,4 @@ class GeminiQueue:
                 time.sleep(espera)
 
         print(f"[GEMINI QUEUE] Todas as tentativas falharam para: {pdf_path}")
-        return "", "ERRO"
+        return "", "ERRO", _tokens_zerado

@@ -33,5 +33,5065 @@
     "timestamp": "2026-02-26T15:53:57.722940",
     "level": "INFO",
     "message": "Modo teste ativo - encerrando"
+  },
+  {
+    "timestamp": "2026-05-07T14:36:54.810589",
+    "level": "INFO",
+    "message": "=== INICIANDO COLETA ==="
+  },
+  {
+    "timestamp": "2026-05-07T14:37:20.073928",
+    "level": "INFO",
+    "message": "Iniciando login..."
+  },
+  {
+    "timestamp": "2026-05-07T14:37:36.146162",
+    "level": "INFO",
+    "message": "Login concluído"
+  },
+  {
+    "timestamp": "2026-05-07T14:37:36.147290",
+    "level": "INFO",
+    "message": "Extraindo boletins via Playwright (FullCalendar)"
+  },
+  {
+    "timestamp": "2026-05-07T14:37:50.089907",
+    "level": "INFO",
+    "message": "11 boletins válidos encontrados"
+  },
+  {
+    "timestamp": "2026-05-07T14:37:50.090570",
+    "level": "INFO",
+    "message": "Boletins encontrados: [141279335, 141300905, 141325981, 141350078, 141374977, 141397386, 141421695, 141443735, 141469358, 141492124, 141514617]"
+  },
+  {
+    "timestamp": "2026-05-07T14:37:50.102173",
+    "level": "INFO",
+    "message": "Último salvo: 141492124"
+  },
+  {
+    "timestamp": "2026-05-07T14:37:50.102894",
+    "level": "INFO",
+    "message": "Boletins novos: [141514617]"
+  },
+  {
+    "timestamp": "2026-05-07T14:37:59.613081",
+    "level": "INFO",
+    "message": "Bidding 18897772 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:37:59.616025",
+    "level": "INFO",
+    "message": "Bidding 18899217 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:37:59.616775",
+    "level": "INFO",
+    "message": "Bidding 18898792 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:37:59.617301",
+    "level": "INFO",
+    "message": "Bidding 18899405 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:37:59.617849",
+    "level": "INFO",
+    "message": "Bidding 18886438 relevante — termo: 'medicos'"
+  },
+  {
+    "timestamp": "2026-05-07T14:38:53.784110",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: NAO | Chars: 700"
+  },
+  {
+    "timestamp": "2026-05-07T14:39:40.567363",
+    "level": "INFO",
+    "message": "Bidding 18897754 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:39:40.570298",
+    "level": "INFO",
+    "message": "Bidding 18874239 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:39:40.572841",
+    "level": "INFO",
+    "message": "Bidding 18899398 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:39:40.574291",
+    "level": "INFO",
+    "message": "Bidding 18899976 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:39:40.576368",
+    "level": "INFO",
+    "message": "Bidding 18899826 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:39:40.579018",
+    "level": "INFO",
+    "message": "Bidding 18898745 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:39:40.583033",
+    "level": "INFO",
+    "message": "Bidding 18897688 relevante — termo: 'medicos'"
+  },
+  {
+    "timestamp": "2026-05-07T14:40:33.630491",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: NAO | Chars: 731"
+  },
+  {
+    "timestamp": "2026-05-07T14:40:45.982185",
+    "level": "INFO",
+    "message": "Bidding 18899006 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:40:45.982862",
+    "level": "INFO",
+    "message": "Bidding 18898173 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:40:45.983806",
+    "level": "INFO",
+    "message": "Bidding 18890806 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:40:45.985530",
+    "level": "INFO",
+    "message": "Bidding 18895747 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:40:45.987684",
+    "level": "INFO",
+    "message": "Bidding 18899710 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:40:45.989254",
+    "level": "INFO",
+    "message": "Bidding 18899747 relevante — termo: 'consultas'"
+  },
+  {
+    "timestamp": "2026-05-07T14:41:53.156463",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: NAO | Chars: 655"
+  },
+  {
+    "timestamp": "2026-05-07T14:42:05.758970",
+    "level": "INFO",
+    "message": "Bidding 18897042 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:42:05.760119",
+    "level": "INFO",
+    "message": "Bidding 18897090 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:42:05.761478",
+    "level": "INFO",
+    "message": "Bidding 18899194 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:42:05.762846",
+    "level": "INFO",
+    "message": "Bidding 18899271 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:42:05.763920",
+    "level": "INFO",
+    "message": "Bidding 18899119 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:42:05.766593",
+    "level": "INFO",
+    "message": "Bidding 18897598 relevante — termo: 'consulta'"
+  },
+  {
+    "timestamp": "2026-05-07T14:43:24.512206",
+    "level": "INFO",
+    "message": "=== INICIANDO COLETA ==="
+  },
+  {
+    "timestamp": "2026-05-07T14:43:25.198432",
+    "level": "INFO",
+    "message": "Iniciando login..."
+  },
+  {
+    "timestamp": "2026-05-07T14:43:40.678738",
+    "level": "INFO",
+    "message": "Login concluído"
+  },
+  {
+    "timestamp": "2026-05-07T14:43:40.680829",
+    "level": "INFO",
+    "message": "Extraindo boletins via Playwright (FullCalendar)"
+  },
+  {
+    "timestamp": "2026-05-07T14:43:48.625573",
+    "level": "INFO",
+    "message": "11 boletins válidos encontrados"
+  },
+  {
+    "timestamp": "2026-05-07T14:43:48.626660",
+    "level": "INFO",
+    "message": "Boletins encontrados: [141279335, 141300905, 141325981, 141350078, 141374977, 141397386, 141421695, 141443735, 141469358, 141492124, 141514617]"
+  },
+  {
+    "timestamp": "2026-05-07T14:43:48.639261",
+    "level": "INFO",
+    "message": "Último salvo: 141492124"
+  },
+  {
+    "timestamp": "2026-05-07T14:43:48.640223",
+    "level": "INFO",
+    "message": "Boletins novos: [141514617]"
+  },
+  {
+    "timestamp": "2026-05-07T14:44:00.486166",
+    "level": "WARNING",
+    "message": "API falhou 141514617"
+  },
+  {
+    "timestamp": "2026-05-07T14:44:00.488104",
+    "level": "INFO",
+    "message": "Nenhuma licitação aprovada — importação Pipedrive ignorada"
+  },
+  {
+    "timestamp": "2026-05-07T14:44:29.935317",
+    "level": "INFO",
+    "message": "=== INICIANDO COLETA ==="
+  },
+  {
+    "timestamp": "2026-05-07T14:44:30.596671",
+    "level": "INFO",
+    "message": "Iniciando login..."
+  },
+  {
+    "timestamp": "2026-05-07T14:44:47.413713",
+    "level": "INFO",
+    "message": "Login concluído"
+  },
+  {
+    "timestamp": "2026-05-07T14:44:47.414875",
+    "level": "INFO",
+    "message": "Extraindo boletins via Playwright (FullCalendar)"
+  },
+  {
+    "timestamp": "2026-05-07T14:44:59.252708",
+    "level": "INFO",
+    "message": "11 boletins válidos encontrados"
+  },
+  {
+    "timestamp": "2026-05-07T14:44:59.253532",
+    "level": "INFO",
+    "message": "Boletins encontrados: [141279335, 141300905, 141325981, 141350078, 141374977, 141397386, 141421695, 141443735, 141469358, 141492124, 141514617]"
+  },
+  {
+    "timestamp": "2026-05-07T14:44:59.263714",
+    "level": "INFO",
+    "message": "Último salvo: 141492124"
+  },
+  {
+    "timestamp": "2026-05-07T14:44:59.265686",
+    "level": "INFO",
+    "message": "Boletins novos: [141514617]"
+  },
+  {
+    "timestamp": "2026-05-07T14:45:08.188577",
+    "level": "INFO",
+    "message": "Bidding 18897772 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:45:08.189526",
+    "level": "INFO",
+    "message": "Bidding 18899217 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:45:08.190215",
+    "level": "INFO",
+    "message": "Bidding 18898792 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:45:08.190932",
+    "level": "INFO",
+    "message": "Bidding 18899405 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:45:08.191583",
+    "level": "INFO",
+    "message": "Bidding 18886438 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-07T14:45:08.192259",
+    "level": "INFO",
+    "message": "Bidding 18897754 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:45:08.192966",
+    "level": "INFO",
+    "message": "Bidding 18874239 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:45:08.193824",
+    "level": "INFO",
+    "message": "Bidding 18899398 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:45:08.194565",
+    "level": "INFO",
+    "message": "Bidding 18899976 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:45:08.195218",
+    "level": "INFO",
+    "message": "Bidding 18899826 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:45:08.195895",
+    "level": "INFO",
+    "message": "Bidding 18898745 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:45:08.196694",
+    "level": "INFO",
+    "message": "Bidding 18897688 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-07T14:45:08.198507",
+    "level": "INFO",
+    "message": "Bidding 18899006 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:45:08.199453",
+    "level": "INFO",
+    "message": "Bidding 18898173 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:45:08.200361",
+    "level": "INFO",
+    "message": "Bidding 18890806 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:45:08.201230",
+    "level": "INFO",
+    "message": "Bidding 18895747 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:45:08.202111",
+    "level": "INFO",
+    "message": "Bidding 18899710 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:45:08.203398",
+    "level": "INFO",
+    "message": "Bidding 18899747 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-07T14:45:08.204331",
+    "level": "INFO",
+    "message": "Bidding 18897042 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:45:08.205128",
+    "level": "INFO",
+    "message": "Bidding 18897090 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:45:08.205876",
+    "level": "INFO",
+    "message": "Bidding 18899194 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:45:08.206585",
+    "level": "INFO",
+    "message": "Bidding 18899271 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:45:08.207454",
+    "level": "INFO",
+    "message": "Bidding 18899119 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:45:08.208151",
+    "level": "INFO",
+    "message": "Bidding 18897598 relevante — termo: 'consulta'"
+  },
+  {
+    "timestamp": "2026-05-07T14:45:56.794186",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: NAO | Chars: 753"
+  },
+  {
+    "timestamp": "2026-05-07T14:46:09.203233",
+    "level": "INFO",
+    "message": "Bidding 18898276 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:46:09.205394",
+    "level": "INFO",
+    "message": "Bidding 18893836 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:46:09.207540",
+    "level": "INFO",
+    "message": "Bidding 18899298 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:46:09.210130",
+    "level": "INFO",
+    "message": "Bidding 18900046 relevante — termo: 'medico'"
+  },
+  {
+    "timestamp": "2026-05-07T14:47:08.729413",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: NAO | Chars: 686"
+  },
+  {
+    "timestamp": "2026-05-07T14:47:33.520055",
+    "level": "INFO",
+    "message": "Bidding 18900074 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:47:33.525706",
+    "level": "INFO",
+    "message": "Bidding 18897909 relevante — termo: 'medico'"
+  },
+  {
+    "timestamp": "2026-05-07T14:48:24.644402",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: NAO | Chars: 655"
+  },
+  {
+    "timestamp": "2026-05-07T14:48:50.225004",
+    "level": "INFO",
+    "message": "Bidding 18898849 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:48:50.225979",
+    "level": "INFO",
+    "message": "Bidding 18899530 relevante — termo: 'medicos'"
+  },
+  {
+    "timestamp": "2026-05-07T14:50:05.313058",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: NAO | Chars: 545"
+  },
+  {
+    "timestamp": "2026-05-07T14:50:17.524253",
+    "level": "INFO",
+    "message": "Bidding 18899437 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:50:17.525783",
+    "level": "INFO",
+    "message": "Bidding 18898826 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:50:17.526890",
+    "level": "INFO",
+    "message": "Bidding 18899919 relevante — termo: 'enfermagem'"
+  },
+  {
+    "timestamp": "2026-05-07T14:52:05.895647",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: NAO | Chars: 612"
+  },
+  {
+    "timestamp": "2026-05-07T14:52:27.242498",
+    "level": "INFO",
+    "message": "Bidding 18899906 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:52:27.244945",
+    "level": "INFO",
+    "message": "Bidding 18886229 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:52:27.246116",
+    "level": "INFO",
+    "message": "Bidding 18899096 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:52:27.247744",
+    "level": "INFO",
+    "message": "Bidding 18899099 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:52:27.249014",
+    "level": "INFO",
+    "message": "Bidding 18899185 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T14:52:27.250546",
+    "level": "INFO",
+    "message": "Bidding 18899528 relevante — termo: 'consulta'"
+  },
+  {
+    "timestamp": "2026-05-07T14:53:13.404217",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: NAO | Chars: 635"
+  },
+  {
+    "timestamp": "2026-05-07T14:53:24.853543",
+    "level": "INFO",
+    "message": "Bidding 18899623 relevante — termo: 'medicos'"
+  },
+  {
+    "timestamp": "2026-05-07T14:54:56.121829",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: NAO | Chars: 693"
+  },
+  {
+    "timestamp": "2026-05-07T15:03:32.637476",
+    "level": "INFO",
+    "message": "=== INICIANDO COLETA ==="
+  },
+  {
+    "timestamp": "2026-05-07T15:03:33.473848",
+    "level": "INFO",
+    "message": "Iniciando login..."
+  },
+  {
+    "timestamp": "2026-05-07T15:04:53.345123",
+    "level": "INFO",
+    "message": "=== INICIANDO COLETA ==="
+  },
+  {
+    "timestamp": "2026-05-07T15:04:54.096050",
+    "level": "INFO",
+    "message": "Iniciando login..."
+  },
+  {
+    "timestamp": "2026-05-07T15:05:10.038051",
+    "level": "INFO",
+    "message": "Login concluído"
+  },
+  {
+    "timestamp": "2026-05-07T15:05:10.039669",
+    "level": "INFO",
+    "message": "Extraindo boletins via Playwright (FullCalendar)"
+  },
+  {
+    "timestamp": "2026-05-07T15:05:59.093466",
+    "level": "INFO",
+    "message": "11 boletins válidos encontrados"
+  },
+  {
+    "timestamp": "2026-05-07T15:05:59.095193",
+    "level": "INFO",
+    "message": "Boletins encontrados: [141279335, 141300905, 141325981, 141350078, 141374977, 141397386, 141421695, 141443735, 141469358, 141492124, 141514617]"
+  },
+  {
+    "timestamp": "2026-05-07T15:05:59.112300",
+    "level": "INFO",
+    "message": "Último salvo: 141492124"
+  },
+  {
+    "timestamp": "2026-05-07T15:05:59.113690",
+    "level": "INFO",
+    "message": "Boletins novos: [141514617]"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.679956",
+    "level": "INFO",
+    "message": "Bidding 18897772 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.681178",
+    "level": "INFO",
+    "message": "Bidding 18899217 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.682264",
+    "level": "INFO",
+    "message": "Bidding 18898792 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.683834",
+    "level": "INFO",
+    "message": "Bidding 18899405 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.684703",
+    "level": "INFO",
+    "message": "Bidding 18886438 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.685884",
+    "level": "INFO",
+    "message": "Bidding 18897754 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.687090",
+    "level": "INFO",
+    "message": "Bidding 18874239 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.688397",
+    "level": "INFO",
+    "message": "Bidding 18899398 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.689951",
+    "level": "INFO",
+    "message": "Bidding 18899976 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.691476",
+    "level": "INFO",
+    "message": "Bidding 18899826 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.693934",
+    "level": "INFO",
+    "message": "Bidding 18898745 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.695693",
+    "level": "INFO",
+    "message": "Bidding 18897688 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.700973",
+    "level": "INFO",
+    "message": "Bidding 18899006 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.703453",
+    "level": "INFO",
+    "message": "Bidding 18898173 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.704578",
+    "level": "INFO",
+    "message": "Bidding 18890806 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.705671",
+    "level": "INFO",
+    "message": "Bidding 18895747 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.706940",
+    "level": "INFO",
+    "message": "Bidding 18899710 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.708011",
+    "level": "INFO",
+    "message": "Bidding 18899747 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.709121",
+    "level": "INFO",
+    "message": "Bidding 18897042 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.710222",
+    "level": "INFO",
+    "message": "Bidding 18897090 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.711259",
+    "level": "INFO",
+    "message": "Bidding 18899194 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.712956",
+    "level": "INFO",
+    "message": "Bidding 18899271 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.714065",
+    "level": "INFO",
+    "message": "Bidding 18899119 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.715860",
+    "level": "INFO",
+    "message": "Bidding 18897598 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.718658",
+    "level": "INFO",
+    "message": "Bidding 18898276 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.720178",
+    "level": "INFO",
+    "message": "Bidding 18893836 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.722478",
+    "level": "INFO",
+    "message": "Bidding 18899298 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.723892",
+    "level": "INFO",
+    "message": "Bidding 18900046 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.725011",
+    "level": "INFO",
+    "message": "Bidding 18900074 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.727404",
+    "level": "INFO",
+    "message": "Bidding 18897909 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.729004",
+    "level": "INFO",
+    "message": "Bidding 18898849 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.731449",
+    "level": "INFO",
+    "message": "Bidding 18899530 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.734557",
+    "level": "INFO",
+    "message": "Bidding 18899437 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.736653",
+    "level": "INFO",
+    "message": "Bidding 18898826 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.738261",
+    "level": "INFO",
+    "message": "Bidding 18899919 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.739979",
+    "level": "INFO",
+    "message": "Bidding 18899906 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.741808",
+    "level": "INFO",
+    "message": "Bidding 18886229 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.744791",
+    "level": "INFO",
+    "message": "Bidding 18899096 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.746228",
+    "level": "INFO",
+    "message": "Bidding 18899099 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.747978",
+    "level": "INFO",
+    "message": "Bidding 18899185 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.750807",
+    "level": "INFO",
+    "message": "Bidding 18899528 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-07T15:06:12.759429",
+    "level": "INFO",
+    "message": "Bidding 18899623 relevante — termo: 'medicos'"
+  },
+  {
+    "timestamp": "2026-05-07T15:08:11.386873",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: ERRO | Chars: 0"
+  },
+  {
+    "timestamp": "2026-05-07T15:08:11.389003",
+    "level": "WARNING",
+    "message": "IA falhou para 18899623, upload ignorado."
+  },
+  {
+    "timestamp": "2026-05-07T15:08:12.151972",
+    "level": "INFO",
+    "message": "Bidding 18899789 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:08:12.154071",
+    "level": "INFO",
+    "message": "Bidding 18899043 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:08:12.155853",
+    "level": "INFO",
+    "message": "Bidding 18897352 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:08:12.157205",
+    "level": "INFO",
+    "message": "Bidding 18899799 relevante — termo: 'consulta'"
+  },
+  {
+    "timestamp": "2026-05-07T15:08:30.918646",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 3265"
+  },
+  {
+    "timestamp": "2026-05-07T15:09:15.235244",
+    "level": "INFO",
+    "message": "Bidding 18898388 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:09:15.236947",
+    "level": "INFO",
+    "message": "Bidding 18899796 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:09:15.238673",
+    "level": "INFO",
+    "message": "Bidding 18899794 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:09:15.240397",
+    "level": "INFO",
+    "message": "Bidding 18898785 relevante — termo: 'consultas'"
+  },
+  {
+    "timestamp": "2026-05-07T15:10:17.012673",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 1089"
+  },
+  {
+    "timestamp": "2026-05-07T15:10:34.446411",
+    "level": "INFO",
+    "message": "Bidding 18850791 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:10:34.449434",
+    "level": "INFO",
+    "message": "Bidding 18856376 relevante — termo: 'enfermagem'"
+  },
+  {
+    "timestamp": "2026-05-07T15:14:17.641159",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: ERRO | Chars: 0"
+  },
+  {
+    "timestamp": "2026-05-07T15:14:17.642572",
+    "level": "WARNING",
+    "message": "IA falhou para 18856376, upload ignorado."
+  },
+  {
+    "timestamp": "2026-05-07T15:14:18.594378",
+    "level": "INFO",
+    "message": "Bidding 18750437 relevante — termo: 'consultas'"
+  },
+  {
+    "timestamp": "2026-05-07T15:17:40.036129",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: ERRO | Chars: 0"
+  },
+  {
+    "timestamp": "2026-05-07T15:17:40.038032",
+    "level": "WARNING",
+    "message": "IA falhou para 18750437, upload ignorado."
+  },
+  {
+    "timestamp": "2026-05-07T15:17:40.838832",
+    "level": "INFO",
+    "message": "Bidding 18876518 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:17:40.841581",
+    "level": "INFO",
+    "message": "Bidding 18876539 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:17:40.846226",
+    "level": "INFO",
+    "message": "Bidding 18876611 relevante — termo: 'consulta'"
+  },
+  {
+    "timestamp": "2026-05-07T15:19:56.777918",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: ERRO | Chars: 0"
+  },
+  {
+    "timestamp": "2026-05-07T15:19:56.787249",
+    "level": "WARNING",
+    "message": "IA falhou para 18876611, upload ignorado."
+  },
+  {
+    "timestamp": "2026-05-07T15:19:57.609289",
+    "level": "INFO",
+    "message": "Bidding 18820064 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:19:57.614764",
+    "level": "INFO",
+    "message": "Bidding 18002507 relevante — termo: 'medico'"
+  },
+  {
+    "timestamp": "2026-05-07T15:21:16.509585",
+    "level": "INFO",
+    "message": "=== INICIANDO COLETA ==="
+  },
+  {
+    "timestamp": "2026-05-07T15:21:17.273672",
+    "level": "INFO",
+    "message": "Iniciando login..."
+  },
+  {
+    "timestamp": "2026-05-07T15:21:32.120222",
+    "level": "INFO",
+    "message": "Login concluído"
+  },
+  {
+    "timestamp": "2026-05-07T15:21:32.123852",
+    "level": "INFO",
+    "message": "Extraindo boletins via Playwright (FullCalendar)"
+  },
+  {
+    "timestamp": "2026-05-07T15:21:43.395617",
+    "level": "INFO",
+    "message": "0 boletins válidos encontrados"
+  },
+  {
+    "timestamp": "2026-05-07T15:21:43.399786",
+    "level": "INFO",
+    "message": "Boletins encontrados: []"
+  },
+  {
+    "timestamp": "2026-05-07T15:21:43.428018",
+    "level": "INFO",
+    "message": "Último salvo: 141492124"
+  },
+  {
+    "timestamp": "2026-05-07T15:21:43.433566",
+    "level": "INFO",
+    "message": "Boletins novos: []"
+  },
+  {
+    "timestamp": "2026-05-07T15:21:43.437422",
+    "level": "INFO",
+    "message": "Nenhum boletim novo encontrado"
+  },
+  {
+    "timestamp": "2026-05-07T15:21:53.899818",
+    "level": "INFO",
+    "message": "=== INICIANDO COLETA ==="
+  },
+  {
+    "timestamp": "2026-05-07T15:21:54.706147",
+    "level": "INFO",
+    "message": "Iniciando login..."
+  },
+  {
+    "timestamp": "2026-05-07T15:22:08.521081",
+    "level": "INFO",
+    "message": "Login concluído"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:08.524919",
+    "level": "INFO",
+    "message": "Extraindo boletins via Playwright (FullCalendar)"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:19.845915",
+    "level": "INFO",
+    "message": "11 boletins válidos encontrados"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:19.851248",
+    "level": "INFO",
+    "message": "Boletins encontrados: [141279335, 141300905, 141325981, 141350078, 141374977, 141397386, 141421695, 141443735, 141469358, 141492124, 141514617]"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:19.889973",
+    "level": "INFO",
+    "message": "Último salvo: 141492124"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:19.893768",
+    "level": "INFO",
+    "message": "Boletins novos: [141514617]"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.189580",
+    "level": "INFO",
+    "message": "Bidding 18897772 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.194641",
+    "level": "INFO",
+    "message": "Bidding 18899217 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.201527",
+    "level": "INFO",
+    "message": "Bidding 18898792 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.206651",
+    "level": "INFO",
+    "message": "Bidding 18899405 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.211881",
+    "level": "INFO",
+    "message": "Bidding 18886438 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.215579",
+    "level": "INFO",
+    "message": "Bidding 18897754 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.218774",
+    "level": "INFO",
+    "message": "Bidding 18874239 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.225069",
+    "level": "INFO",
+    "message": "Bidding 18899398 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.229420",
+    "level": "INFO",
+    "message": "Bidding 18899976 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.233233",
+    "level": "INFO",
+    "message": "Bidding 18899826 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.235964",
+    "level": "INFO",
+    "message": "Bidding 18898745 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.247290",
+    "level": "INFO",
+    "message": "Bidding 18897688 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.258770",
+    "level": "INFO",
+    "message": "Bidding 18899006 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.263300",
+    "level": "INFO",
+    "message": "Bidding 18898173 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.266147",
+    "level": "INFO",
+    "message": "Bidding 18890806 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.275445",
+    "level": "INFO",
+    "message": "Bidding 18895747 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.279826",
+    "level": "INFO",
+    "message": "Bidding 18899710 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.282497",
+    "level": "INFO",
+    "message": "Bidding 18899747 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.286769",
+    "level": "INFO",
+    "message": "Bidding 18897042 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.292079",
+    "level": "INFO",
+    "message": "Bidding 18897090 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.296863",
+    "level": "INFO",
+    "message": "Bidding 18899194 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.301068",
+    "level": "INFO",
+    "message": "Bidding 18899271 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.307986",
+    "level": "INFO",
+    "message": "Bidding 18899119 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.311631",
+    "level": "INFO",
+    "message": "Bidding 18897598 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.317008",
+    "level": "INFO",
+    "message": "Bidding 18898276 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.321808",
+    "level": "INFO",
+    "message": "Bidding 18893836 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.326653",
+    "level": "INFO",
+    "message": "Bidding 18899298 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.330452",
+    "level": "INFO",
+    "message": "Bidding 18900046 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.334020",
+    "level": "INFO",
+    "message": "Bidding 18900074 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.338978",
+    "level": "INFO",
+    "message": "Bidding 18897909 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.341698",
+    "level": "INFO",
+    "message": "Bidding 18898849 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.344477",
+    "level": "INFO",
+    "message": "Bidding 18899530 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.347945",
+    "level": "INFO",
+    "message": "Bidding 18899437 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.350946",
+    "level": "INFO",
+    "message": "Bidding 18898826 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.355447",
+    "level": "INFO",
+    "message": "Bidding 18899919 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.361908",
+    "level": "INFO",
+    "message": "Bidding 18899906 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.365033",
+    "level": "INFO",
+    "message": "Bidding 18886229 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.369159",
+    "level": "INFO",
+    "message": "Bidding 18899096 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.376304",
+    "level": "INFO",
+    "message": "Bidding 18899099 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.379764",
+    "level": "INFO",
+    "message": "Bidding 18899185 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.382720",
+    "level": "INFO",
+    "message": "Bidding 18899528 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.386909",
+    "level": "INFO",
+    "message": "Bidding 18899623 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.393000",
+    "level": "INFO",
+    "message": "Bidding 18899789 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.398581",
+    "level": "INFO",
+    "message": "Bidding 18899043 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.403467",
+    "level": "INFO",
+    "message": "Bidding 18897352 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.408077",
+    "level": "INFO",
+    "message": "Bidding 18899799 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.411912",
+    "level": "INFO",
+    "message": "Bidding 18898388 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.415466",
+    "level": "INFO",
+    "message": "Bidding 18899796 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.419553",
+    "level": "INFO",
+    "message": "Bidding 18899794 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.426530",
+    "level": "INFO",
+    "message": "Bidding 18898785 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.430431",
+    "level": "INFO",
+    "message": "Bidding 18850791 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.433674",
+    "level": "INFO",
+    "message": "Bidding 18856376 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.458303",
+    "level": "INFO",
+    "message": "Bidding 18750437 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.463723",
+    "level": "INFO",
+    "message": "Bidding 18876518 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.469325",
+    "level": "INFO",
+    "message": "Bidding 18876539 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.477311",
+    "level": "INFO",
+    "message": "Bidding 18876611 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.482524",
+    "level": "INFO",
+    "message": "Bidding 18820064 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:22:30.486846",
+    "level": "INFO",
+    "message": "Bidding 18002507 relevante — termo: 'medico'"
+  },
+  {
+    "timestamp": "2026-05-07T15:30:24.100203",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: ERRO | Chars: 0"
+  },
+  {
+    "timestamp": "2026-05-07T15:30:24.102388",
+    "level": "WARNING",
+    "message": "IA falhou para 18002507, upload ignorado."
+  },
+  {
+    "timestamp": "2026-05-07T15:30:25.478142",
+    "level": "INFO",
+    "message": "Bidding 18850203 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:30:25.480668",
+    "level": "INFO",
+    "message": "Bidding 18859856 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:30:25.482318",
+    "level": "INFO",
+    "message": "Bidding 18881494 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:30:25.484202",
+    "level": "INFO",
+    "message": "Bidding 18884708 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:30:25.486239",
+    "level": "INFO",
+    "message": "Bidding 18674050 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:30:25.487836",
+    "level": "INFO",
+    "message": "Bidding 18794152 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:30:25.489533",
+    "level": "INFO",
+    "message": "Bidding 18885820 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:30:25.491212",
+    "level": "INFO",
+    "message": "Bidding 18277358 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:30:25.493223",
+    "level": "INFO",
+    "message": "Bidding 18687725 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:30:25.495764",
+    "level": "INFO",
+    "message": "Bidding 18807405 relevante — termo: 'medico'"
+  },
+  {
+    "timestamp": "2026-05-07T15:31:23.144733",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: ERRO | Chars: 0"
+  },
+  {
+    "timestamp": "2026-05-07T15:31:23.149616",
+    "level": "WARNING",
+    "message": "IA falhou para 18807405, upload ignorado."
+  },
+  {
+    "timestamp": "2026-05-07T15:31:24.013889",
+    "level": "INFO",
+    "message": "Bidding 18791999 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:31:24.021156",
+    "level": "INFO",
+    "message": "Bidding 18775692 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:31:24.028051",
+    "level": "INFO",
+    "message": "Bidding 18859904 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:31:24.034102",
+    "level": "INFO",
+    "message": "Bidding 18704660 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-07T15:31:24.038991",
+    "level": "INFO",
+    "message": "Bidding 18857456 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-07T15:31:24.048718",
+    "level": "INFO",
+    "message": "Nenhuma licitação aprovada — importação Pipedrive ignorada"
+  },
+  {
+    "timestamp": "2026-05-20T09:09:56.055443",
+    "level": "INFO",
+    "message": "=== INICIANDO COLETA ==="
+  },
+  {
+    "timestamp": "2026-05-20T09:10:11.622916",
+    "level": "INFO",
+    "message": "Iniciando login..."
+  },
+  {
+    "timestamp": "2026-05-20T09:10:28.833133",
+    "level": "INFO",
+    "message": "Login concluído"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:28.853931",
+    "level": "INFO",
+    "message": "Extraindo boletins via Playwright (FullCalendar)"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:38.511127",
+    "level": "INFO",
+    "message": "36 boletins válidos encontrados"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:38.512885",
+    "level": "INFO",
+    "message": "Boletins encontrados: [141279335, 141300905, 141325981, 141350078, 141374977, 141397386, 141421695, 141443735, 141469358, 141492124, 141514617, 141536581, 141562542, 141585039, 141610286, 141633813, 141657598, 141679840, 141705715, 141728108, 141752658, 141775815, 141798606, 141820579, 141846300, 141868812, 141893702, 141915632, 141939904, 141963248, 141987770, 142011376, 142035306, 142058388, 142079948, 142104075]"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:38.538594",
+    "level": "INFO",
+    "message": "Último salvo: 42079948"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:38.542476",
+    "level": "INFO",
+    "message": "Boletins novos: [141279335, 141300905, 141325981, 141350078, 141374977, 141397386, 141421695, 141443735, 141469358, 141492124, 141514617, 141536581, 141562542, 141585039, 141610286, 141633813, 141657598, 141679840, 141705715, 141728108, 141752658, 141775815, 141798606, 141820579, 141846300, 141868812, 141893702, 141915632, 141939904, 141963248, 141987770, 142011376, 142035306, 142058388, 142079948, 142104075]"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.662979",
+    "level": "INFO",
+    "message": "Bidding 18339042 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.667018",
+    "level": "INFO",
+    "message": "Bidding 18881610 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.669656",
+    "level": "INFO",
+    "message": "Bidding 18882048 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.672486",
+    "level": "INFO",
+    "message": "Bidding 18881853 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.675058",
+    "level": "INFO",
+    "message": "Bidding 18882562 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.677823",
+    "level": "INFO",
+    "message": "Bidding 18876110 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.681908",
+    "level": "INFO",
+    "message": "Bidding 18882053 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.686320",
+    "level": "INFO",
+    "message": "Bidding 18880488 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.689965",
+    "level": "INFO",
+    "message": "Bidding 18882131 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.693212",
+    "level": "INFO",
+    "message": "Bidding 18882278 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.695538",
+    "level": "INFO",
+    "message": "Bidding 18882498 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.697211",
+    "level": "INFO",
+    "message": "Bidding 18872075 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.699025",
+    "level": "INFO",
+    "message": "Bidding 18872020 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.700718",
+    "level": "INFO",
+    "message": "Bidding 18883153 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.702328",
+    "level": "INFO",
+    "message": "Bidding 18880643 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.704003",
+    "level": "INFO",
+    "message": "Bidding 18880918 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.710148",
+    "level": "INFO",
+    "message": "Bidding 18879933 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.713463",
+    "level": "INFO",
+    "message": "Bidding 18878751 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.715148",
+    "level": "INFO",
+    "message": "Bidding 18877296 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.716730",
+    "level": "INFO",
+    "message": "Bidding 18877780 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.718211",
+    "level": "INFO",
+    "message": "Bidding 18878969 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.719745",
+    "level": "INFO",
+    "message": "Bidding 18882404 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.721434",
+    "level": "INFO",
+    "message": "Bidding 18882533 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.723041",
+    "level": "INFO",
+    "message": "Bidding 18882578 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.726541",
+    "level": "INFO",
+    "message": "Bidding 18883278 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.728241",
+    "level": "INFO",
+    "message": "Bidding 18881214 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.729881",
+    "level": "INFO",
+    "message": "Bidding 18875145 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.731435",
+    "level": "INFO",
+    "message": "Bidding 18875149 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.732972",
+    "level": "INFO",
+    "message": "Bidding 18882629 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.734902",
+    "level": "INFO",
+    "message": "Bidding 18882987 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.736725",
+    "level": "INFO",
+    "message": "Bidding 18881656 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.738491",
+    "level": "INFO",
+    "message": "Bidding 18882499 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.740100",
+    "level": "INFO",
+    "message": "Bidding 18883066 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.742054",
+    "level": "INFO",
+    "message": "Bidding 18873650 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.745160",
+    "level": "INFO",
+    "message": "Bidding 18872609 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.747098",
+    "level": "INFO",
+    "message": "Bidding 18873651 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.749524",
+    "level": "INFO",
+    "message": "Bidding 18872600 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.751260",
+    "level": "INFO",
+    "message": "Bidding 18882501 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.753121",
+    "level": "INFO",
+    "message": "Bidding 18880924 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.754924",
+    "level": "INFO",
+    "message": "Bidding 18882575 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.756872",
+    "level": "INFO",
+    "message": "Bidding 18881954 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.759242",
+    "level": "INFO",
+    "message": "Bidding 18879918 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.761197",
+    "level": "INFO",
+    "message": "Bidding 18881492 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.763410",
+    "level": "INFO",
+    "message": "Bidding 18877797 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.765118",
+    "level": "INFO",
+    "message": "Bidding 18882931 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.766869",
+    "level": "INFO",
+    "message": "Bidding 18751797 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.768667",
+    "level": "INFO",
+    "message": "Bidding 18813398 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.770294",
+    "level": "INFO",
+    "message": "Bidding 18861870 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.772197",
+    "level": "INFO",
+    "message": "Bidding 18857126 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.773860",
+    "level": "INFO",
+    "message": "Bidding 18682394 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.775877",
+    "level": "INFO",
+    "message": "Bidding 18772348 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.778075",
+    "level": "INFO",
+    "message": "Bidding 18808060 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.779856",
+    "level": "INFO",
+    "message": "Bidding 18156941 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.781560",
+    "level": "INFO",
+    "message": "Bidding 18810517 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.783353",
+    "level": "INFO",
+    "message": "Bidding 18819493 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.785039",
+    "level": "INFO",
+    "message": "Bidding 18399518 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.787445",
+    "level": "INFO",
+    "message": "Bidding 18856070 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:10:52.789230",
+    "level": "INFO",
+    "message": "Bidding 18856055 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.077833",
+    "level": "INFO",
+    "message": "Bidding 18882019 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.080739",
+    "level": "INFO",
+    "message": "Bidding 18884797 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.084273",
+    "level": "INFO",
+    "message": "Bidding 18883596 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.088528",
+    "level": "INFO",
+    "message": "Bidding 18882002 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.091689",
+    "level": "INFO",
+    "message": "Bidding 18883663 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.093877",
+    "level": "INFO",
+    "message": "Bidding 18882214 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.096046",
+    "level": "INFO",
+    "message": "Bidding 18884099 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.097953",
+    "level": "INFO",
+    "message": "Bidding 18884772 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.099584",
+    "level": "INFO",
+    "message": "Bidding 18881299 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.101370",
+    "level": "INFO",
+    "message": "Bidding 18881038 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.106388",
+    "level": "INFO",
+    "message": "Bidding 18882277 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.109020",
+    "level": "INFO",
+    "message": "Bidding 18884383 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.110818",
+    "level": "INFO",
+    "message": "Bidding 18884072 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.112559",
+    "level": "INFO",
+    "message": "Bidding 18882721 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.114827",
+    "level": "INFO",
+    "message": "Bidding 18882374 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.117109",
+    "level": "INFO",
+    "message": "Bidding 18883610 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.123286",
+    "level": "INFO",
+    "message": "Bidding 18884421 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.125990",
+    "level": "INFO",
+    "message": "Bidding 18880918 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.127750",
+    "level": "INFO",
+    "message": "Bidding 18884473 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.129478",
+    "level": "INFO",
+    "message": "Bidding 18881392 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.131493",
+    "level": "INFO",
+    "message": "Bidding 18884373 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.133628",
+    "level": "INFO",
+    "message": "Bidding 18878368 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.135506",
+    "level": "INFO",
+    "message": "Bidding 18872082 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.137543",
+    "level": "INFO",
+    "message": "Bidding 18884333 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.139774",
+    "level": "INFO",
+    "message": "Bidding 18883038 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.141733",
+    "level": "INFO",
+    "message": "Bidding 18883641 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.143562",
+    "level": "INFO",
+    "message": "Bidding 18883579 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.147155",
+    "level": "INFO",
+    "message": "Bidding 18880843 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.149558",
+    "level": "INFO",
+    "message": "Bidding 18883755 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.151379",
+    "level": "INFO",
+    "message": "Bidding 18882414 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.153144",
+    "level": "INFO",
+    "message": "Bidding 18871761 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.155717",
+    "level": "INFO",
+    "message": "Bidding 18884427 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.157703",
+    "level": "INFO",
+    "message": "Bidding 18884542 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.159439",
+    "level": "INFO",
+    "message": "Bidding 18881673 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.161451",
+    "level": "INFO",
+    "message": "Bidding 18882425 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.166376",
+    "level": "INFO",
+    "message": "Bidding 18883516 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.168292",
+    "level": "INFO",
+    "message": "Bidding 18871116 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.170265",
+    "level": "INFO",
+    "message": "Bidding 18883635 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.172442",
+    "level": "INFO",
+    "message": "Bidding 18877965 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.177066",
+    "level": "INFO",
+    "message": "Bidding 18872156 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.179206",
+    "level": "INFO",
+    "message": "Bidding 18884087 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.181647",
+    "level": "INFO",
+    "message": "Bidding 18882372 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.183683",
+    "level": "INFO",
+    "message": "Bidding 18884948 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.185622",
+    "level": "INFO",
+    "message": "Bidding 18883683 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.187576",
+    "level": "INFO",
+    "message": "Bidding 18883773 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.190242",
+    "level": "INFO",
+    "message": "Bidding 18884785 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.192580",
+    "level": "INFO",
+    "message": "Bidding 18883091 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.194734",
+    "level": "INFO",
+    "message": "Bidding 18883204 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.196925",
+    "level": "INFO",
+    "message": "Bidding 18883144 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.200504",
+    "level": "INFO",
+    "message": "Bidding 18866091 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.202670",
+    "level": "INFO",
+    "message": "Bidding 18883632 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.205171",
+    "level": "INFO",
+    "message": "Bidding 18878635 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.207313",
+    "level": "INFO",
+    "message": "Bidding 18883613 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.210841",
+    "level": "INFO",
+    "message": "Bidding 18884382 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.212906",
+    "level": "INFO",
+    "message": "Bidding 18884413 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.214856",
+    "level": "INFO",
+    "message": "Bidding 18884408 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.216904",
+    "level": "INFO",
+    "message": "Bidding 18884423 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.219210",
+    "level": "INFO",
+    "message": "Bidding 18884418 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.222490",
+    "level": "INFO",
+    "message": "Bidding 18884956 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.224547",
+    "level": "INFO",
+    "message": "Bidding 18876758 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.226775",
+    "level": "INFO",
+    "message": "Bidding 18823831 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.229187",
+    "level": "INFO",
+    "message": "Bidding 18776417 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.231138",
+    "level": "INFO",
+    "message": "Bidding 18848618 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.233022",
+    "level": "INFO",
+    "message": "Bidding 18577244 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.235008",
+    "level": "INFO",
+    "message": "Bidding 18700856 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.237242",
+    "level": "INFO",
+    "message": "Bidding 18880924 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.239550",
+    "level": "INFO",
+    "message": "Bidding 18762988 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.241647",
+    "level": "INFO",
+    "message": "Bidding 18801915 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.243825",
+    "level": "INFO",
+    "message": "Bidding 18819493 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:01.245867",
+    "level": "INFO",
+    "message": "Bidding 18827382 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:08.898681",
+    "level": "INFO",
+    "message": "Bidding 18885877 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:08.902892",
+    "level": "INFO",
+    "message": "Bidding 18885922 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:08.906573",
+    "level": "INFO",
+    "message": "Bidding 18885994 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:08.909843",
+    "level": "INFO",
+    "message": "Bidding 18883291 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:08.911895",
+    "level": "INFO",
+    "message": "Bidding 18877802 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:08.914087",
+    "level": "INFO",
+    "message": "Bidding 18885543 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:08.916139",
+    "level": "INFO",
+    "message": "Bidding 18886126 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:08.918561",
+    "level": "INFO",
+    "message": "Bidding 18886047 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:08.920849",
+    "level": "INFO",
+    "message": "Bidding 18883292 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:08.924033",
+    "level": "INFO",
+    "message": "Bidding 18884025 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:08.928839",
+    "level": "INFO",
+    "message": "Bidding 18885686 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:08.931090",
+    "level": "INFO",
+    "message": "Bidding 18822893 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:08.933419",
+    "level": "INFO",
+    "message": "Bidding 18884367 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:08.936564",
+    "level": "INFO",
+    "message": "Bidding 18886291 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:08.938945",
+    "level": "INFO",
+    "message": "Bidding 18885899 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:08.941200",
+    "level": "INFO",
+    "message": "Bidding 18882739 relevante — termo: 'medico'"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:11.249550",
+    "level": "WARNING",
+    "message": "Nenhum PDF encontrado para bidding 18882739"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:19.674670",
+    "level": "INFO",
+    "message": "Bidding 18886155 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:19.677208",
+    "level": "INFO",
+    "message": "Bidding 18883234 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:19.680585",
+    "level": "INFO",
+    "message": "Bidding 18886286 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:19.684138",
+    "level": "INFO",
+    "message": "Bidding 18881457 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:19.687388",
+    "level": "INFO",
+    "message": "Bidding 18885373 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:19.689740",
+    "level": "INFO",
+    "message": "Bidding 18886123 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:19.691968",
+    "level": "INFO",
+    "message": "Bidding 18886307 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:19.697393",
+    "level": "INFO",
+    "message": "Bidding 18885014 relevante — termo: 'consulta'"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:23.759410",
+    "level": "ERROR",
+    "message": "gemini_service: [ERRO GEMINI] modelo=gemini-2.5-pro-preview-05-06 tentativa=1 ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-2.5-pro-preview-05-06 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:26.939793",
+    "level": "ERROR",
+    "message": "gemini_service: [ERRO GEMINI] modelo=gemini-2.5-pro-preview-05-06 tentativa=2 ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-2.5-pro-preview-05-06 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:33.575613",
+    "level": "ERROR",
+    "message": "gemini_service: [ERRO GEMINI] modelo=gemini-2.5-pro-preview-05-06 tentativa=1 ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-2.5-pro-preview-05-06 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:36.875959",
+    "level": "ERROR",
+    "message": "gemini_service: [ERRO GEMINI] modelo=gemini-2.5-pro-preview-05-06 tentativa=2 ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-2.5-pro-preview-05-06 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:48.549158",
+    "level": "ERROR",
+    "message": "gemini_service: [ERRO GEMINI] modelo=gemini-2.5-pro-preview-05-06 tentativa=1 ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-2.5-pro-preview-05-06 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+  },
+  {
+    "timestamp": "2026-05-20T09:11:51.730604",
+    "level": "ERROR",
+    "message": "gemini_service: [ERRO GEMINI] modelo=gemini-2.5-pro-preview-05-06 tentativa=2 ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-2.5-pro-preview-05-06 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+  },
+  {
+    "timestamp": "2026-05-20T09:12:06.742692",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: ERRO | Chars: 0"
+  },
+  {
+    "timestamp": "2026-05-20T09:12:06.745089",
+    "level": "WARNING",
+    "message": "IA falhou para 18885014, upload ignorado."
+  },
+  {
+    "timestamp": "2026-05-20T09:12:07.461433",
+    "level": "INFO",
+    "message": "Bidding 18880886 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:12:07.463858",
+    "level": "INFO",
+    "message": "Bidding 18882579 relevante — termo: 'medico'"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:21.325663",
+    "level": "INFO",
+    "message": "=== INICIANDO COLETA ==="
+  },
+  {
+    "timestamp": "2026-05-20T09:20:22.018668",
+    "level": "INFO",
+    "message": "Iniciando login..."
+  },
+  {
+    "timestamp": "2026-05-20T09:20:38.998789",
+    "level": "INFO",
+    "message": "Login concluído"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:39.004647",
+    "level": "INFO",
+    "message": "Extraindo boletins via Playwright (FullCalendar)"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:48.526138",
+    "level": "INFO",
+    "message": "36 boletins válidos encontrados"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:48.528484",
+    "level": "INFO",
+    "message": "Boletins encontrados: [141279335, 141300905, 141325981, 141350078, 141374977, 141397386, 141421695, 141443735, 141469358, 141492124, 141514617, 141536581, 141562542, 141585039, 141610286, 141633813, 141657598, 141679840, 141705715, 141728108, 141752658, 141775815, 141798606, 141820579, 141846300, 141868812, 141893702, 141915632, 141939904, 141963248, 141987770, 142011376, 142035306, 142058388, 142079948, 142104075]"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:48.540336",
+    "level": "INFO",
+    "message": "Último salvo: 42079948"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:48.544293",
+    "level": "INFO",
+    "message": "Boletins novos: [141279335, 141300905, 141325981, 141350078, 141374977, 141397386, 141421695, 141443735, 141469358, 141492124, 141514617, 141536581, 141562542, 141585039, 141610286, 141633813, 141657598, 141679840, 141705715, 141728108, 141752658, 141775815, 141798606, 141820579, 141846300, 141868812, 141893702, 141915632, 141939904, 141963248, 141987770, 142011376, 142035306, 142058388, 142079948, 142104075]"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:51.644846",
+    "level": "INFO",
+    "message": "=== Boletim 1/36 — ID 141279335 ==="
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.124139",
+    "level": "INFO",
+    "message": "Bidding 18339042 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.127203",
+    "level": "INFO",
+    "message": "Bidding 18881610 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.129939",
+    "level": "INFO",
+    "message": "Bidding 18882048 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.133469",
+    "level": "INFO",
+    "message": "Bidding 18881853 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.137787",
+    "level": "INFO",
+    "message": "Bidding 18882562 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.140739",
+    "level": "INFO",
+    "message": "Bidding 18876110 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.143310",
+    "level": "INFO",
+    "message": "Bidding 18882053 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.145899",
+    "level": "INFO",
+    "message": "Bidding 18880488 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.148081",
+    "level": "INFO",
+    "message": "Bidding 18882131 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.150241",
+    "level": "INFO",
+    "message": "Bidding 18882278 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.152274",
+    "level": "INFO",
+    "message": "Bidding 18882498 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.155064",
+    "level": "INFO",
+    "message": "Bidding 18872075 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.160580",
+    "level": "INFO",
+    "message": "Bidding 18872020 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.162933",
+    "level": "INFO",
+    "message": "Bidding 18883153 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.166165",
+    "level": "INFO",
+    "message": "Bidding 18880643 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.168348",
+    "level": "INFO",
+    "message": "Bidding 18880918 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.170612",
+    "level": "INFO",
+    "message": "Bidding 18879933 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.174079",
+    "level": "INFO",
+    "message": "Bidding 18878751 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.177002",
+    "level": "INFO",
+    "message": "Bidding 18877296 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.179238",
+    "level": "INFO",
+    "message": "Bidding 18877780 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.181603",
+    "level": "INFO",
+    "message": "Bidding 18878969 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.183790",
+    "level": "INFO",
+    "message": "Bidding 18882404 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.185919",
+    "level": "INFO",
+    "message": "Bidding 18882533 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.188525",
+    "level": "INFO",
+    "message": "Bidding 18882578 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.191386",
+    "level": "INFO",
+    "message": "Bidding 18883278 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.193837",
+    "level": "INFO",
+    "message": "Bidding 18881214 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.196419",
+    "level": "INFO",
+    "message": "Bidding 18875145 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.199177",
+    "level": "INFO",
+    "message": "Bidding 18875149 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.201610",
+    "level": "INFO",
+    "message": "Bidding 18882629 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.204203",
+    "level": "INFO",
+    "message": "Bidding 18882987 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.206984",
+    "level": "INFO",
+    "message": "Bidding 18881656 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.209726",
+    "level": "INFO",
+    "message": "Bidding 18882499 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.212004",
+    "level": "INFO",
+    "message": "Bidding 18883066 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.214312",
+    "level": "INFO",
+    "message": "Bidding 18873650 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.216411",
+    "level": "INFO",
+    "message": "Bidding 18872609 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.220550",
+    "level": "INFO",
+    "message": "Bidding 18873651 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.224218",
+    "level": "INFO",
+    "message": "Bidding 18872600 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.226618",
+    "level": "INFO",
+    "message": "Bidding 18882501 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.228836",
+    "level": "INFO",
+    "message": "Bidding 18880924 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.231286",
+    "level": "INFO",
+    "message": "Bidding 18882575 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.235139",
+    "level": "INFO",
+    "message": "Bidding 18881954 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.238090",
+    "level": "INFO",
+    "message": "Bidding 18879918 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.240905",
+    "level": "INFO",
+    "message": "Bidding 18881492 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.243380",
+    "level": "INFO",
+    "message": "Bidding 18877797 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.245665",
+    "level": "INFO",
+    "message": "Bidding 18882931 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.247992",
+    "level": "INFO",
+    "message": "Bidding 18751797 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.250286",
+    "level": "INFO",
+    "message": "Bidding 18813398 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.254793",
+    "level": "INFO",
+    "message": "Bidding 18861870 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.257289",
+    "level": "INFO",
+    "message": "Bidding 18857126 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.259677",
+    "level": "INFO",
+    "message": "Bidding 18682394 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.262166",
+    "level": "INFO",
+    "message": "Bidding 18772348 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.264502",
+    "level": "INFO",
+    "message": "Bidding 18808060 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.266799",
+    "level": "INFO",
+    "message": "Bidding 18156941 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.269280",
+    "level": "INFO",
+    "message": "Bidding 18810517 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.272052",
+    "level": "INFO",
+    "message": "Bidding 18819493 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.274403",
+    "level": "INFO",
+    "message": "Bidding 18399518 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.276708",
+    "level": "INFO",
+    "message": "Bidding 18856070 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.279020",
+    "level": "INFO",
+    "message": "Bidding 18856055 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:20:58.281420",
+    "level": "INFO",
+    "message": "=== Boletim 2/36 — ID 141300905 ==="
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.439843",
+    "level": "INFO",
+    "message": "Bidding 18882019 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.445126",
+    "level": "INFO",
+    "message": "Bidding 18884797 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.448753",
+    "level": "INFO",
+    "message": "Bidding 18883596 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.452031",
+    "level": "INFO",
+    "message": "Bidding 18882002 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.454627",
+    "level": "INFO",
+    "message": "Bidding 18883663 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.456953",
+    "level": "INFO",
+    "message": "Bidding 18882214 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.459262",
+    "level": "INFO",
+    "message": "Bidding 18884099 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.461641",
+    "level": "INFO",
+    "message": "Bidding 18884772 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.463957",
+    "level": "INFO",
+    "message": "Bidding 18881299 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.466391",
+    "level": "INFO",
+    "message": "Bidding 18881038 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.469383",
+    "level": "INFO",
+    "message": "Bidding 18882277 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.472372",
+    "level": "INFO",
+    "message": "Bidding 18884383 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.474938",
+    "level": "INFO",
+    "message": "Bidding 18884072 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.479674",
+    "level": "INFO",
+    "message": "Bidding 18882721 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.482191",
+    "level": "INFO",
+    "message": "Bidding 18882374 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.485342",
+    "level": "INFO",
+    "message": "Bidding 18883610 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.488060",
+    "level": "INFO",
+    "message": "Bidding 18884421 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.491043",
+    "level": "INFO",
+    "message": "Bidding 18880918 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.493594",
+    "level": "INFO",
+    "message": "Bidding 18884473 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.496161",
+    "level": "INFO",
+    "message": "Bidding 18881392 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.498554",
+    "level": "INFO",
+    "message": "Bidding 18884373 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.501018",
+    "level": "INFO",
+    "message": "Bidding 18878368 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.504051",
+    "level": "INFO",
+    "message": "Bidding 18872082 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.506748",
+    "level": "INFO",
+    "message": "Bidding 18884333 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.509279",
+    "level": "INFO",
+    "message": "Bidding 18883038 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.513025",
+    "level": "INFO",
+    "message": "Bidding 18883641 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.515475",
+    "level": "INFO",
+    "message": "Bidding 18883579 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.520842",
+    "level": "INFO",
+    "message": "Bidding 18880843 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.523542",
+    "level": "INFO",
+    "message": "Bidding 18883755 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.526153",
+    "level": "INFO",
+    "message": "Bidding 18882414 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.528966",
+    "level": "INFO",
+    "message": "Bidding 18871761 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.531644",
+    "level": "INFO",
+    "message": "Bidding 18884427 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.534618",
+    "level": "INFO",
+    "message": "Bidding 18884542 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.537426",
+    "level": "INFO",
+    "message": "Bidding 18881673 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.540907",
+    "level": "INFO",
+    "message": "Bidding 18882425 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.543862",
+    "level": "INFO",
+    "message": "Bidding 18883516 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.546486",
+    "level": "INFO",
+    "message": "Bidding 18871116 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.549185",
+    "level": "INFO",
+    "message": "Bidding 18883635 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.552727",
+    "level": "INFO",
+    "message": "Bidding 18877965 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.555547",
+    "level": "INFO",
+    "message": "Bidding 18872156 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.558335",
+    "level": "INFO",
+    "message": "Bidding 18884087 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.561043",
+    "level": "INFO",
+    "message": "Bidding 18882372 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.564888",
+    "level": "INFO",
+    "message": "Bidding 18884948 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.567918",
+    "level": "INFO",
+    "message": "Bidding 18883683 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.570840",
+    "level": "INFO",
+    "message": "Bidding 18883773 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.573670",
+    "level": "INFO",
+    "message": "Bidding 18884785 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.577676",
+    "level": "INFO",
+    "message": "Bidding 18883091 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.580281",
+    "level": "INFO",
+    "message": "Bidding 18883204 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.583135",
+    "level": "INFO",
+    "message": "Bidding 18883144 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.586031",
+    "level": "INFO",
+    "message": "Bidding 18866091 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.588867",
+    "level": "INFO",
+    "message": "Bidding 18883632 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.591571",
+    "level": "INFO",
+    "message": "Bidding 18878635 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.594173",
+    "level": "INFO",
+    "message": "Bidding 18883613 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.596764",
+    "level": "INFO",
+    "message": "Bidding 18884382 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.599899",
+    "level": "INFO",
+    "message": "Bidding 18884413 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.602997",
+    "level": "INFO",
+    "message": "Bidding 18884408 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.605742",
+    "level": "INFO",
+    "message": "Bidding 18884423 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.608494",
+    "level": "INFO",
+    "message": "Bidding 18884418 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.611196",
+    "level": "INFO",
+    "message": "Bidding 18884956 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.614427",
+    "level": "INFO",
+    "message": "Bidding 18876758 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.617165",
+    "level": "INFO",
+    "message": "Bidding 18823831 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.620235",
+    "level": "INFO",
+    "message": "Bidding 18776417 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.622925",
+    "level": "INFO",
+    "message": "Bidding 18848618 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.626028",
+    "level": "INFO",
+    "message": "Bidding 18577244 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.631435",
+    "level": "INFO",
+    "message": "Bidding 18700856 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.635771",
+    "level": "INFO",
+    "message": "Bidding 18880924 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.638952",
+    "level": "INFO",
+    "message": "Bidding 18762988 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.643406",
+    "level": "INFO",
+    "message": "Bidding 18801915 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.646235",
+    "level": "INFO",
+    "message": "Bidding 18819493 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.651398",
+    "level": "INFO",
+    "message": "Bidding 18827382 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:05.654482",
+    "level": "INFO",
+    "message": "=== Boletim 3/36 — ID 141325981 ==="
+  },
+  {
+    "timestamp": "2026-05-20T09:21:12.718078",
+    "level": "INFO",
+    "message": "Bidding 18885877 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:12.723481",
+    "level": "INFO",
+    "message": "Bidding 18885922 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:12.728158",
+    "level": "INFO",
+    "message": "Bidding 18885994 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:12.733997",
+    "level": "INFO",
+    "message": "Bidding 18883291 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:12.740579",
+    "level": "INFO",
+    "message": "Bidding 18877802 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:12.743387",
+    "level": "INFO",
+    "message": "Bidding 18885543 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:12.747953",
+    "level": "INFO",
+    "message": "Bidding 18886126 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:12.750730",
+    "level": "INFO",
+    "message": "Bidding 18886047 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:12.753456",
+    "level": "INFO",
+    "message": "Bidding 18883292 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:12.756208",
+    "level": "INFO",
+    "message": "Bidding 18884025 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:12.759992",
+    "level": "INFO",
+    "message": "Bidding 18885686 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:12.764960",
+    "level": "INFO",
+    "message": "Bidding 18822893 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:12.767940",
+    "level": "INFO",
+    "message": "Bidding 18884367 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:12.771086",
+    "level": "INFO",
+    "message": "Bidding 18886291 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:12.773969",
+    "level": "INFO",
+    "message": "Bidding 18885899 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:12.777315",
+    "level": "INFO",
+    "message": "Bidding 18882739 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:12.783927",
+    "level": "INFO",
+    "message": "Bidding 18886155 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:12.789761",
+    "level": "INFO",
+    "message": "Bidding 18883234 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:12.793693",
+    "level": "INFO",
+    "message": "Bidding 18886286 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:12.796872",
+    "level": "INFO",
+    "message": "Bidding 18881457 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:12.801484",
+    "level": "INFO",
+    "message": "Bidding 18885373 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:12.805037",
+    "level": "INFO",
+    "message": "Bidding 18886123 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:12.808021",
+    "level": "INFO",
+    "message": "Bidding 18886307 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:12.810953",
+    "level": "INFO",
+    "message": "Bidding 18885014 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:12.813919",
+    "level": "INFO",
+    "message": "Bidding 18880886 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:12.820558",
+    "level": "INFO",
+    "message": "Bidding 18882579 relevante — termo: 'medico'"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:18.630052",
+    "level": "ERROR",
+    "message": "gemini_service: [ERRO GEMINI] modelo=gemini-2.5-flash-preview-04-17 tentativa=1 ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-2.5-flash-preview-04-17 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:22.254163",
+    "level": "ERROR",
+    "message": "gemini_service: [ERRO GEMINI] modelo=gemini-2.5-flash-preview-04-17 tentativa=2 ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-2.5-flash-preview-04-17 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+  },
+  {
+    "timestamp": "2026-05-20T09:21:22.260366",
+    "level": "WARNING",
+    "message": "gemini_service: [GEMINI] Modelo gemini-2.5-flash-preview-04-17 indisponível, tentando próximo..."
+  },
+  {
+    "timestamp": "2026-05-20T09:22:22.115848",
+    "level": "INFO",
+    "message": "=== INICIANDO COLETA ==="
+  },
+  {
+    "timestamp": "2026-05-20T09:22:22.831924",
+    "level": "INFO",
+    "message": "Iniciando login..."
+  },
+  {
+    "timestamp": "2026-05-20T09:22:36.582517",
+    "level": "INFO",
+    "message": "Login concluído"
+  },
+  {
+    "timestamp": "2026-05-20T09:22:36.585559",
+    "level": "INFO",
+    "message": "Extraindo boletins via Playwright (FullCalendar)"
+  },
+  {
+    "timestamp": "2026-05-20T09:22:45.616969",
+    "level": "INFO",
+    "message": "36 boletins válidos encontrados"
+  },
+  {
+    "timestamp": "2026-05-20T09:22:45.620029",
+    "level": "INFO",
+    "message": "Boletins encontrados: [141279335, 141300905, 141325981, 141350078, 141374977, 141397386, 141421695, 141443735, 141469358, 141492124, 141514617, 141536581, 141562542, 141585039, 141610286, 141633813, 141657598, 141679840, 141705715, 141728108, 141752658, 141775815, 141798606, 141820579, 141846300, 141868812, 141893702, 141915632, 141939904, 141963248, 141987770, 142011376, 142035306, 142058388, 142079948, 142104075]"
+  },
+  {
+    "timestamp": "2026-05-20T09:22:45.632978",
+    "level": "INFO",
+    "message": "Último salvo: 42079948"
+  },
+  {
+    "timestamp": "2026-05-20T09:22:45.653627",
+    "level": "INFO",
+    "message": "Boletins novos: [141279335, 141300905, 141325981, 141350078, 141374977, 141397386, 141421695, 141443735, 141469358, 141492124, 141514617, 141536581, 141562542, 141585039, 141610286, 141633813, 141657598, 141679840, 141705715, 141728108, 141752658, 141775815, 141798606, 141820579, 141846300, 141868812, 141893702, 141915632, 141939904, 141963248, 141987770, 142011376, 142035306, 142058388, 142079948, 142104075]"
+  },
+  {
+    "timestamp": "2026-05-20T09:22:48.121720",
+    "level": "INFO",
+    "message": "=== Boletim 1/36 — ID 141279335 ==="
+  },
+  {
+    "timestamp": "2026-05-20T09:24:41.844090",
+    "level": "INFO",
+    "message": "=== INICIANDO COLETA ==="
+  },
+  {
+    "timestamp": "2026-05-20T09:24:42.541598",
+    "level": "INFO",
+    "message": "Iniciando login..."
+  },
+  {
+    "timestamp": "2026-05-20T09:24:56.022390",
+    "level": "INFO",
+    "message": "Login concluído"
+  },
+  {
+    "timestamp": "2026-05-20T09:24:56.028203",
+    "level": "INFO",
+    "message": "Extraindo boletins via Playwright (FullCalendar)"
+  },
+  {
+    "timestamp": "2026-05-20T09:25:04.834480",
+    "level": "INFO",
+    "message": "36 boletins válidos encontrados"
+  },
+  {
+    "timestamp": "2026-05-20T09:25:04.837576",
+    "level": "INFO",
+    "message": "Boletins encontrados: [141279335, 141300905, 141325981, 141350078, 141374977, 141397386, 141421695, 141443735, 141469358, 141492124, 141514617, 141536581, 141562542, 141585039, 141610286, 141633813, 141657598, 141679840, 141705715, 141728108, 141752658, 141775815, 141798606, 141820579, 141846300, 141868812, 141893702, 141915632, 141939904, 141963248, 141987770, 142011376, 142035306, 142058388, 142079948, 142104075]"
+  },
+  {
+    "timestamp": "2026-05-20T09:25:04.851110",
+    "level": "INFO",
+    "message": "Último salvo: 142079948"
+  },
+  {
+    "timestamp": "2026-05-20T09:25:04.855283",
+    "level": "INFO",
+    "message": "Boletins novos: [142104075]"
+  },
+  {
+    "timestamp": "2026-05-20T09:25:07.005901",
+    "level": "INFO",
+    "message": "=== Boletim 1/1 — ID 142104075 ==="
+  },
+  {
+    "timestamp": "2026-05-20T09:25:19.655497",
+    "level": "INFO",
+    "message": "Bidding 18941562 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:25:19.668578",
+    "level": "INFO",
+    "message": "Bidding 18919723 relevante — termo: 'enfermagem'"
+  },
+  {
+    "timestamp": "2026-05-20T09:25:57.954031",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: NAO | Chars: 3161"
+  },
+  {
+    "timestamp": "2026-05-20T09:26:29.539265",
+    "level": "INFO",
+    "message": "Bidding 18943824 relevante — termo: 'medicos'"
+  },
+  {
+    "timestamp": "2026-05-20T09:27:06.786348",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 3014"
+  },
+  {
+    "timestamp": "2026-05-20T09:27:18.959348",
+    "level": "INFO",
+    "message": "Bidding 18944604 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:27:18.973054",
+    "level": "INFO",
+    "message": "Bidding 18932150 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:27:18.985274",
+    "level": "INFO",
+    "message": "Bidding 18944704 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:27:18.994638",
+    "level": "INFO",
+    "message": "Bidding 18942229 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:27:19.004555",
+    "level": "INFO",
+    "message": "Bidding 18945564 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:27:19.019123",
+    "level": "INFO",
+    "message": "Bidding 18941258 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:27:19.033783",
+    "level": "INFO",
+    "message": "Bidding 18944729 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:27:19.045980",
+    "level": "INFO",
+    "message": "Bidding 18943998 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:27:19.058495",
+    "level": "INFO",
+    "message": "Bidding 18930899 relevante — termo: 'medicos'"
+  },
+  {
+    "timestamp": "2026-05-20T09:28:04.393548",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 3102"
+  },
+  {
+    "timestamp": "2026-05-20T09:28:46.791110",
+    "level": "INFO",
+    "message": "Bidding 18943874 relevante — termo: 'medico'"
+  },
+  {
+    "timestamp": "2026-05-20T09:29:22.713410",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 3036"
+  },
+  {
+    "timestamp": "2026-05-20T09:30:33.847880",
+    "level": "INFO",
+    "message": "Bidding 18941514 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:30:33.857391",
+    "level": "INFO",
+    "message": "Bidding 18944655 relevante — termo: 'medico'"
+  },
+  {
+    "timestamp": "2026-05-20T09:31:25.965341",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: NAO | Chars: 2830"
+  },
+  {
+    "timestamp": "2026-05-20T09:31:52.695184",
+    "level": "INFO",
+    "message": "Bidding 18944582 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:31:52.709755",
+    "level": "INFO",
+    "message": "Bidding 18944670 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:31:52.726035",
+    "level": "INFO",
+    "message": "Bidding 18831601 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:31:52.741977",
+    "level": "INFO",
+    "message": "Bidding 18943922 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:31:52.756400",
+    "level": "INFO",
+    "message": "Bidding 18941766 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:31:52.772429",
+    "level": "INFO",
+    "message": "Bidding 18944048 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:31:52.783252",
+    "level": "INFO",
+    "message": "Bidding 18944368 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:31:52.794842",
+    "level": "INFO",
+    "message": "Bidding 18942685 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:31:52.806784",
+    "level": "INFO",
+    "message": "Bidding 18944846 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:31:52.821495",
+    "level": "INFO",
+    "message": "Bidding 18942720 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:31:52.844544",
+    "level": "INFO",
+    "message": "Bidding 18942646 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:31:52.857869",
+    "level": "INFO",
+    "message": "Bidding 18941845 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:31:52.872427",
+    "level": "INFO",
+    "message": "Bidding 18944872 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:31:52.887057",
+    "level": "INFO",
+    "message": "Bidding 18944869 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:31:52.903449",
+    "level": "INFO",
+    "message": "Bidding 18944184 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:31:52.920262",
+    "level": "INFO",
+    "message": "Bidding 18945584 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:31:52.932465",
+    "level": "INFO",
+    "message": "Bidding 18919492 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:31:52.942587",
+    "level": "INFO",
+    "message": "Bidding 18941804 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:31:52.952144",
+    "level": "INFO",
+    "message": "Bidding 18943482 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:31:52.961799",
+    "level": "INFO",
+    "message": "Bidding 18940687 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:31:52.969736",
+    "level": "INFO",
+    "message": "Bidding 18943756 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:31:52.978894",
+    "level": "INFO",
+    "message": "Bidding 18944076 relevante — termo: 'medicos'"
+  },
+  {
+    "timestamp": "2026-05-20T09:36:07.037496",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 5110"
+  },
+  {
+    "timestamp": "2026-05-20T09:36:19.406737",
+    "level": "INFO",
+    "message": "Bidding 18944077 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:36:19.409623",
+    "level": "INFO",
+    "message": "Bidding 18941749 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:36:19.412679",
+    "level": "INFO",
+    "message": "Bidding 18941454 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:36:19.415948",
+    "level": "INFO",
+    "message": "Bidding 18944868 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:36:19.421706",
+    "level": "INFO",
+    "message": "Bidding 18944879 relevante — termo: 'medico'"
+  },
+  {
+    "timestamp": "2026-05-20T09:36:21.057964",
+    "level": "WARNING",
+    "message": "Nenhum PDF encontrado para bidding 18944879"
+  },
+  {
+    "timestamp": "2026-05-20T09:36:29.061067",
+    "level": "INFO",
+    "message": "Bidding 18944887 relevante — termo: 'enfermagem'"
+  },
+  {
+    "timestamp": "2026-05-20T09:37:03.764619",
+    "level": "ERROR",
+    "message": "gemini_service: [ERRO GEMINI] modelo=gemini-3-flash-preview tentativa=1 Exception: Resposta suspeita de truncamento (594 chars)"
+  },
+  {
+    "timestamp": "2026-05-20T09:37:44.446539",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 3465"
+  },
+  {
+    "timestamp": "2026-05-20T09:37:56.223883",
+    "level": "INFO",
+    "message": "Bidding 18945025 relevante — termo: 'consultas'"
+  },
+  {
+    "timestamp": "2026-05-20T09:38:32.569709",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 3387"
+  },
+  {
+    "timestamp": "2026-05-20T09:38:51.804359",
+    "level": "INFO",
+    "message": "Bidding 18913167 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:38:51.821724",
+    "level": "INFO",
+    "message": "Bidding 18942769 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:38:51.835310",
+    "level": "INFO",
+    "message": "Bidding 18940690 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:38:51.851307",
+    "level": "INFO",
+    "message": "Bidding 18943642 relevante — termo: 'medicos'"
+  },
+  {
+    "timestamp": "2026-05-20T09:39:31.118690",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 3946"
+  },
+  {
+    "timestamp": "2026-05-20T09:40:21.878160",
+    "level": "INFO",
+    "message": "Bidding 18945575 relevante — termo: 'consultas'"
+  },
+  {
+    "timestamp": "2026-05-20T09:41:01.550538",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 3937"
+  },
+  {
+    "timestamp": "2026-05-20T09:41:21.749135",
+    "level": "INFO",
+    "message": "Bidding 18943217 relevante — termo: 'medico'"
+  },
+  {
+    "timestamp": "2026-05-20T09:41:59.808585",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 4293"
+  },
+  {
+    "timestamp": "2026-05-20T09:42:20.088427",
+    "level": "INFO",
+    "message": "Bidding 18945727 relevante — termo: 'medico'"
+  },
+  {
+    "timestamp": "2026-05-20T09:43:08.646448",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: NAO | Chars: 3037"
+  },
+  {
+    "timestamp": "2026-05-20T09:43:29.967234",
+    "level": "INFO",
+    "message": "Bidding 18943425 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:43:29.981776",
+    "level": "INFO",
+    "message": "Bidding 18941854 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:43:30.000933",
+    "level": "INFO",
+    "message": "Bidding 18944569 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:43:30.015746",
+    "level": "INFO",
+    "message": "Bidding 18941408 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:43:30.032374",
+    "level": "INFO",
+    "message": "Bidding 18941853 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:43:30.047587",
+    "level": "INFO",
+    "message": "Bidding 18941346 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:43:30.060612",
+    "level": "INFO",
+    "message": "Bidding 18945394 relevante — termo: 'consulta'"
+  },
+  {
+    "timestamp": "2026-05-20T09:44:12.513804",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 3535"
+  },
+  {
+    "timestamp": "2026-05-20T09:44:32.166666",
+    "level": "INFO",
+    "message": "Bidding 18934963 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:44:32.178347",
+    "level": "INFO",
+    "message": "Bidding 18944398 relevante — termo: 'enfermagem'"
+  },
+  {
+    "timestamp": "2026-05-20T09:44:42.157430",
+    "level": "ERROR",
+    "message": "gemini_service: [ERRO GEMINI] modelo=gemini-3-flash-preview tentativa=1 ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+  },
+  {
+    "timestamp": "2026-05-20T09:45:24.104027",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 3118"
+  },
+  {
+    "timestamp": "2026-05-20T09:46:10.033374",
+    "level": "INFO",
+    "message": "Bidding 18941929 relevante — termo: 'medico'"
+  },
+  {
+    "timestamp": "2026-05-20T09:46:11.623047",
+    "level": "WARNING",
+    "message": "Nenhum PDF encontrado para bidding 18941929"
+  },
+  {
+    "timestamp": "2026-05-20T09:46:22.739201",
+    "level": "INFO",
+    "message": "Bidding 18945054 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:46:22.742314",
+    "level": "INFO",
+    "message": "Bidding 18943123 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:46:22.745699",
+    "level": "INFO",
+    "message": "Bidding 18943638 relevante — termo: 'medico'"
+  },
+  {
+    "timestamp": "2026-05-20T09:46:59.450105",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 4014"
+  },
+  {
+    "timestamp": "2026-05-20T09:47:37.511850",
+    "level": "INFO",
+    "message": "Bidding 18945415 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:47:37.519888",
+    "level": "INFO",
+    "message": "Bidding 18945344 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:47:37.529506",
+    "level": "INFO",
+    "message": "Bidding 18944231 relevante — termo: 'consulta'"
+  },
+  {
+    "timestamp": "2026-05-20T09:48:15.938867",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 4027"
+  },
+  {
+    "timestamp": "2026-05-20T09:49:11.962279",
+    "level": "INFO",
+    "message": "Bidding 18904888 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:49:11.975165",
+    "level": "INFO",
+    "message": "Bidding 18910043 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:49:11.992063",
+    "level": "INFO",
+    "message": "Bidding 18944089 relevante — termo: 'medico'"
+  },
+  {
+    "timestamp": "2026-05-20T09:50:03.035077",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: NAO | Chars: 820"
+  },
+  {
+    "timestamp": "2026-05-20T09:50:34.433119",
+    "level": "INFO",
+    "message": "Bidding 18943858 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:50:34.436305",
+    "level": "INFO",
+    "message": "Bidding 18943163 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:50:34.439529",
+    "level": "INFO",
+    "message": "Bidding 18944558 relevante — termo: 'enfermagem'"
+  },
+  {
+    "timestamp": "2026-05-20T09:50:43.308864",
+    "level": "WARNING",
+    "message": "Nenhum PDF encontrado para bidding 18944558"
+  },
+  {
+    "timestamp": "2026-05-20T09:50:58.561611",
+    "level": "INFO",
+    "message": "Bidding 18944165 relevante — termo: 'consultas'"
+  },
+  {
+    "timestamp": "2026-05-20T09:51:28.099191",
+    "level": "ERROR",
+    "message": "gemini_service: [ERRO GEMINI] modelo=gemini-3-flash-preview tentativa=1 Exception: Resposta suspeita de truncamento (416 chars)"
+  },
+  {
+    "timestamp": "2026-05-20T09:51:55.339815",
+    "level": "ERROR",
+    "message": "gemini_service: [ERRO GEMINI] modelo=gemini-3-flash-preview tentativa=2 Exception: Resposta suspeita de truncamento (406 chars)"
+  },
+  {
+    "timestamp": "2026-05-20T09:52:24.401853",
+    "level": "ERROR",
+    "message": "gemini_service: [ERRO GEMINI] modelo=gemini-3-flash-preview tentativa=1 Exception: Resposta suspeita de truncamento (406 chars)"
+  },
+  {
+    "timestamp": "2026-05-20T09:52:50.530749",
+    "level": "ERROR",
+    "message": "gemini_service: [ERRO GEMINI] modelo=gemini-3-flash-preview tentativa=2 Exception: Resposta suspeita de truncamento (406 chars)"
+  },
+  {
+    "timestamp": "2026-05-20T09:53:24.873634",
+    "level": "ERROR",
+    "message": "gemini_service: [ERRO GEMINI] modelo=gemini-3-flash-preview tentativa=1 Exception: Resposta suspeita de truncamento (406 chars)"
+  },
+  {
+    "timestamp": "2026-05-20T09:54:03.276256",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 3668"
+  },
+  {
+    "timestamp": "2026-05-20T09:54:19.457350",
+    "level": "INFO",
+    "message": "Bidding 18945479 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:54:19.461556",
+    "level": "INFO",
+    "message": "Bidding 18943625 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:54:19.466075",
+    "level": "INFO",
+    "message": "Bidding 18943533 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:54:19.472678",
+    "level": "INFO",
+    "message": "Bidding 18941439 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:54:19.477330",
+    "level": "INFO",
+    "message": "Bidding 18944412 relevante — termo: 'medicos'"
+  },
+  {
+    "timestamp": "2026-05-20T09:55:02.306285",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 3316"
+  },
+  {
+    "timestamp": "2026-05-20T09:55:17.999818",
+    "level": "INFO",
+    "message": "Bidding 18944101 relevante — termo: 'medico'"
+  },
+  {
+    "timestamp": "2026-05-20T09:55:50.335704",
+    "level": "ERROR",
+    "message": "gemini_service: [ERRO GEMINI] modelo=gemini-3-flash-preview tentativa=1 Exception: Resposta suspeita de truncamento (640 chars)"
+  },
+  {
+    "timestamp": "2026-05-20T09:56:29.002216",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 3716"
+  },
+  {
+    "timestamp": "2026-05-20T09:56:53.218487",
+    "level": "INFO",
+    "message": "Bidding 18944809 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:56:53.223158",
+    "level": "INFO",
+    "message": "Bidding 18944096 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:56:53.226396",
+    "level": "INFO",
+    "message": "Bidding 18944426 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:56:53.233067",
+    "level": "INFO",
+    "message": "Bidding 18945496 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:56:53.237850",
+    "level": "INFO",
+    "message": "Bidding 18944103 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:56:53.243336",
+    "level": "INFO",
+    "message": "Bidding 18943829 relevante — termo: 'consulta'"
+  },
+  {
+    "timestamp": "2026-05-20T09:57:32.584657",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 3753"
+  },
+  {
+    "timestamp": "2026-05-20T09:57:44.694151",
+    "level": "INFO",
+    "message": "Bidding 18944095 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:57:44.697982",
+    "level": "INFO",
+    "message": "Bidding 18943617 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:57:44.701220",
+    "level": "INFO",
+    "message": "Bidding 18944417 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:57:44.704707",
+    "level": "INFO",
+    "message": "Bidding 18944124 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:57:44.708718",
+    "level": "INFO",
+    "message": "Bidding 18945095 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:57:44.712465",
+    "level": "INFO",
+    "message": "Bidding 18944126 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:57:44.716460",
+    "level": "INFO",
+    "message": "Bidding 18942141 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:57:44.720590",
+    "level": "INFO",
+    "message": "Bidding 18942146 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:57:44.725021",
+    "level": "INFO",
+    "message": "Bidding 18942208 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:57:44.729002",
+    "level": "INFO",
+    "message": "Bidding 18945423 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:57:44.733880",
+    "level": "INFO",
+    "message": "Bidding 18829486 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:57:44.737916",
+    "level": "INFO",
+    "message": "Bidding 17685353 relevante — termo: 'enfermagem'"
+  },
+  {
+    "timestamp": "2026-05-20T09:57:44.742683",
+    "level": "WARNING",
+    "message": "Nenhum PDF encontrado para bidding 17685353"
+  },
+  {
+    "timestamp": "2026-05-20T09:57:49.002322",
+    "level": "INFO",
+    "message": "Bidding 18944065 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:57:49.008821",
+    "level": "INFO",
+    "message": "Bidding 18849805 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:57:49.013481",
+    "level": "INFO",
+    "message": "Bidding 18873834 relevante — termo: 'medico'"
+  },
+  {
+    "timestamp": "2026-05-20T09:57:49.016747",
+    "level": "WARNING",
+    "message": "Nenhum PDF encontrado para bidding 18873834"
+  },
+  {
+    "timestamp": "2026-05-20T09:57:53.016163",
+    "level": "INFO",
+    "message": "Bidding 18911860 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:57:53.021545",
+    "level": "INFO",
+    "message": "Bidding 18872150 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:57:53.025650",
+    "level": "INFO",
+    "message": "Bidding 18929244 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:57:53.029376",
+    "level": "INFO",
+    "message": "Bidding 18895322 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:57:53.032943",
+    "level": "INFO",
+    "message": "Bidding 18873718 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:57:53.054259",
+    "level": "INFO",
+    "message": "Bidding 18940137 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T09:57:53.059993",
+    "level": "INFO",
+    "message": "Iniciando importação Pipedrive (17 aprovadas)"
+  },
+  {
+    "timestamp": "2026-05-20T09:58:27.190454",
+    "level": "INFO",
+    "message": "Importação Pipedrive concluída"
+  },
+  {
+    "timestamp": "2026-05-20T10:47:08.942339",
+    "level": "INFO",
+    "message": "=== INICIANDO COLETA ==="
+  },
+  {
+    "timestamp": "2026-05-20T10:47:09.744080",
+    "level": "INFO",
+    "message": "Iniciando login..."
+  },
+  {
+    "timestamp": "2026-05-20T10:47:26.981249",
+    "level": "INFO",
+    "message": "Login concluído"
+  },
+  {
+    "timestamp": "2026-05-20T10:47:26.987089",
+    "level": "INFO",
+    "message": "Extraindo boletins via Playwright (FullCalendar)"
+  },
+  {
+    "timestamp": "2026-05-20T10:47:44.397469",
+    "level": "INFO",
+    "message": "37 boletins válidos encontrados"
+  },
+  {
+    "timestamp": "2026-05-20T10:47:44.401128",
+    "level": "INFO",
+    "message": "Boletins encontrados: [141279335, 141300905, 141325981, 141350078, 141374977, 141397386, 141421695, 141443735, 141469358, 141492124, 141514617, 141536581, 141562542, 141585039, 141610286, 141633813, 141657598, 141679840, 141705715, 141728108, 141752658, 141775815, 141798606, 141820579, 141846300, 141868812, 141893702, 141915632, 141939904, 141963248, 141987770, 142011376, 142035306, 142058388, 142079948, 142104075, 142130345]"
+  },
+  {
+    "timestamp": "2026-05-20T10:47:44.416038",
+    "level": "INFO",
+    "message": "Último salvo: 142104075"
+  },
+  {
+    "timestamp": "2026-05-20T10:47:44.421139",
+    "level": "INFO",
+    "message": "Boletins novos: [142130345]"
+  },
+  {
+    "timestamp": "2026-05-20T10:47:46.499922",
+    "level": "INFO",
+    "message": "=== Boletim 1/1 — ID 142130345 ==="
+  },
+  {
+    "timestamp": "2026-05-20T10:48:03.868707",
+    "level": "INFO",
+    "message": "Bidding 18944604 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T10:48:03.874836",
+    "level": "INFO",
+    "message": "Bidding 18945766 relevante — termo: 'equipe medica'"
+  },
+  {
+    "timestamp": "2026-05-20T10:48:14.947166",
+    "level": "ERROR",
+    "message": "gemini_service: [ERRO GEMINI] modelo=gemini-3-flash-preview tentativa=1 ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+  },
+  {
+    "timestamp": "2026-05-20T10:48:47.666309",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 2550"
+  },
+  {
+    "timestamp": "2026-05-20T10:49:00.132416",
+    "level": "INFO",
+    "message": "Bidding 18945767 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T10:49:00.138994",
+    "level": "INFO",
+    "message": "Bidding 18945776 relevante — termo: 'medico'"
+  },
+  {
+    "timestamp": "2026-05-20T10:49:31.033059",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 2801"
+  },
+  {
+    "timestamp": "2026-05-20T10:49:43.297151",
+    "level": "INFO",
+    "message": "Bidding 18945774 relevante — termo: 'consulta'"
+  },
+  {
+    "timestamp": "2026-05-20T10:50:21.838742",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 3235"
+  },
+  {
+    "timestamp": "2026-05-20T10:50:35.424798",
+    "level": "INFO",
+    "message": "Bidding 18943258 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T10:50:35.428254",
+    "level": "INFO",
+    "message": "Bidding 18930899 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T10:50:35.432358",
+    "level": "INFO",
+    "message": "Bidding 18862519 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T10:50:35.440246",
+    "level": "INFO",
+    "message": "Bidding 18946583 relevante — termo: 'medicos'"
+  },
+  {
+    "timestamp": "2026-05-20T10:50:37.089246",
+    "level": "WARNING",
+    "message": "Nenhum PDF encontrado para bidding 18946583"
+  },
+  {
+    "timestamp": "2026-05-20T10:50:44.665642",
+    "level": "INFO",
+    "message": "Bidding 18947367 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T10:50:44.669390",
+    "level": "INFO",
+    "message": "Bidding 18945908 relevante — termo: 'medico'"
+  },
+  {
+    "timestamp": "2026-05-20T10:51:22.905183",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 3902"
+  },
+  {
+    "timestamp": "2026-05-20T10:51:38.705069",
+    "level": "INFO",
+    "message": "Bidding 18947496 relevante — termo: 'consultas'"
+  },
+  {
+    "timestamp": "2026-05-20T10:52:38.127747",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 3730"
+  },
+  {
+    "timestamp": "2026-05-20T10:52:49.591140",
+    "level": "INFO",
+    "message": "Bidding 18947329 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T10:52:49.598357",
+    "level": "INFO",
+    "message": "Bidding 18947345 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T10:52:49.601800",
+    "level": "INFO",
+    "message": "Bidding 18947471 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T10:52:49.605499",
+    "level": "INFO",
+    "message": "Bidding 18947317 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T10:52:49.611862",
+    "level": "INFO",
+    "message": "Bidding 18942891 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T10:52:49.615812",
+    "level": "INFO",
+    "message": "Bidding 18946682 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T10:52:49.619207",
+    "level": "INFO",
+    "message": "Bidding 18946690 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T10:52:49.625613",
+    "level": "INFO",
+    "message": "Bidding 18946437 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T10:52:49.630849",
+    "level": "INFO",
+    "message": "Bidding 18946887 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T10:52:49.637167",
+    "level": "INFO",
+    "message": "Bidding 18945763 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T10:52:49.640966",
+    "level": "INFO",
+    "message": "Bidding 18940656 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T10:52:49.645307",
+    "level": "INFO",
+    "message": "Bidding 18946467 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T10:52:49.650038",
+    "level": "INFO",
+    "message": "Bidding 18914264 relevante — termo: 'medico'"
+  },
+  {
+    "timestamp": "2026-05-20T10:53:03.204225",
+    "level": "ERROR",
+    "message": "gemini_service: [ERRO GEMINI] modelo=gemini-3-flash-preview tentativa=1 ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+  },
+  {
+    "timestamp": "2026-05-20T10:53:54.407620",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: NAO | Chars: 2775"
+  },
+  {
+    "timestamp": "2026-05-20T10:54:10.076438",
+    "level": "INFO",
+    "message": "Bidding 18946036 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T10:54:10.080457",
+    "level": "INFO",
+    "message": "Bidding 18938593 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T10:54:10.084801",
+    "level": "INFO",
+    "message": "Bidding 18946694 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T10:54:10.090127",
+    "level": "INFO",
+    "message": "Bidding 18946599 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T10:54:10.094884",
+    "level": "INFO",
+    "message": "Bidding 18946699 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T10:54:10.098742",
+    "level": "INFO",
+    "message": "Bidding 18946530 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T10:54:10.103167",
+    "level": "INFO",
+    "message": "Bidding 18944101 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T10:54:10.108263",
+    "level": "INFO",
+    "message": "Bidding 18944096 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T10:54:10.112377",
+    "level": "INFO",
+    "message": "Bidding 18946081 relevante — termo: 'medico'"
+  },
+  {
+    "timestamp": "2026-05-20T10:55:07.591113",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 4528"
+  },
+  {
+    "timestamp": "2026-05-20T10:55:59.946055",
+    "level": "INFO",
+    "message": "Bidding 18946128 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T10:55:59.951067",
+    "level": "INFO",
+    "message": "Bidding 18946275 relevante — termo: 'medico'"
+  },
+  {
+    "timestamp": "2026-05-20T10:57:31.908398",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 2864"
+  },
+  {
+    "timestamp": "2026-05-20T10:57:51.842720",
+    "level": "INFO",
+    "message": "Bidding 18946248 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T10:57:51.848082",
+    "level": "INFO",
+    "message": "Bidding 18946298 relevante — termo: 'enfermagem'"
+  },
+  {
+    "timestamp": "2026-05-20T10:58:40.273638",
+    "level": "ERROR",
+    "message": "gemini_service: [ERRO GEMINI] modelo=gemini-3-flash-preview tentativa=1 Exception: Resposta suspeita de truncamento (623 chars)"
+  },
+  {
+    "timestamp": "2026-05-20T10:58:48.452598",
+    "level": "ERROR",
+    "message": "gemini_service: [ERRO GEMINI] modelo=gemini-3-flash-preview tentativa=2 ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+  },
+  {
+    "timestamp": "2026-05-20T10:58:58.013965",
+    "level": "ERROR",
+    "message": "gemini_service: [ERRO GEMINI] modelo=gemini-3-flash-preview tentativa=1 ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+  },
+  {
+    "timestamp": "2026-05-20T10:59:57.244883",
+    "level": "ERROR",
+    "message": "gemini_service: [ERRO GEMINI] modelo=gemini-3-flash-preview tentativa=2 ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+  },
+  {
+    "timestamp": "2026-05-20T11:00:13.034057",
+    "level": "ERROR",
+    "message": "gemini_service: [ERRO GEMINI] modelo=gemini-3-flash-preview tentativa=1 ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+  },
+  {
+    "timestamp": "2026-05-20T11:00:21.181262",
+    "level": "ERROR",
+    "message": "gemini_service: [ERRO GEMINI] modelo=gemini-3-flash-preview tentativa=2 ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+  },
+  {
+    "timestamp": "2026-05-20T11:00:36.190088",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: ERRO | Chars: 0"
+  },
+  {
+    "timestamp": "2026-05-20T11:00:36.198631",
+    "level": "WARNING",
+    "message": "IA falhou para 18946298, upload ignorado."
+  },
+  {
+    "timestamp": "2026-05-20T11:00:37.022324",
+    "level": "INFO",
+    "message": "Bidding 18946136 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T11:00:37.026267",
+    "level": "INFO",
+    "message": "Bidding 18947245 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T11:00:37.030133",
+    "level": "INFO",
+    "message": "Bidding 18946211 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T11:00:37.034166",
+    "level": "INFO",
+    "message": "Bidding 18947141 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T11:00:37.040036",
+    "level": "INFO",
+    "message": "Bidding 18873800 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T11:00:37.044163",
+    "level": "INFO",
+    "message": "Bidding 18797487 relevante — termo: 'consulta'"
+  },
+  {
+    "timestamp": "2026-05-20T11:00:37.047744",
+    "level": "WARNING",
+    "message": "Nenhum PDF encontrado para bidding 18797487"
+  },
+  {
+    "timestamp": "2026-05-20T11:00:40.937823",
+    "level": "INFO",
+    "message": "Bidding 18867285 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T11:00:40.941484",
+    "level": "INFO",
+    "message": "Bidding 18812652 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T11:00:40.944972",
+    "level": "INFO",
+    "message": "Bidding 18898788 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T11:00:40.949223",
+    "level": "INFO",
+    "message": "Bidding 18897892 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T11:00:40.954360",
+    "level": "INFO",
+    "message": "Bidding 18503806 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T11:00:40.959785",
+    "level": "INFO",
+    "message": "Bidding 18866560 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T11:00:40.965049",
+    "level": "INFO",
+    "message": "Iniciando importação Pipedrive (7 aprovadas)"
+  },
+  {
+    "timestamp": "2026-05-20T11:00:55.095587",
+    "level": "INFO",
+    "message": "Importação Pipedrive concluída"
+  },
+  {
+    "timestamp": "2026-05-20T15:16:20.113646",
+    "level": "INFO",
+    "message": "=== INICIANDO COLETA ==="
+  },
+  {
+    "timestamp": "2026-05-20T15:16:21.096293",
+    "level": "INFO",
+    "message": "Iniciando login..."
+  },
+  {
+    "timestamp": "2026-05-20T15:16:43.152446",
+    "level": "INFO",
+    "message": "Login concluído"
+  },
+  {
+    "timestamp": "2026-05-20T15:16:43.165523",
+    "level": "INFO",
+    "message": "Extraindo boletins via Playwright (FullCalendar)"
+  },
+  {
+    "timestamp": "2026-05-20T15:16:56.248288",
+    "level": "INFO",
+    "message": "38 boletins válidos encontrados"
+  },
+  {
+    "timestamp": "2026-05-20T15:16:56.263933",
+    "level": "INFO",
+    "message": "Boletins encontrados: [141279335, 141300905, 141325981, 141350078, 141374977, 141397386, 141421695, 141443735, 141469358, 141492124, 141514617, 141536581, 141562542, 141585039, 141610286, 141633813, 141657598, 141679840, 141705715, 141728108, 141752658, 141775815, 141798606, 141820579, 141846300, 141868812, 141893702, 141915632, 141939904, 141963248, 141987770, 142011376, 142035306, 142058388, 142079948, 142104075, 142130345, 142152342]"
+  },
+  {
+    "timestamp": "2026-05-20T15:16:56.312390",
+    "level": "INFO",
+    "message": "Último salvo: 142130345"
+  },
+  {
+    "timestamp": "2026-05-20T15:16:56.325898",
+    "level": "INFO",
+    "message": "Boletins novos: [142152342]"
+  },
+  {
+    "timestamp": "2026-05-20T15:16:58.229148",
+    "level": "INFO",
+    "message": "=== Boletim 1/1 — ID 142152342 ==="
+  },
+  {
+    "timestamp": "2026-05-20T15:17:27.403182",
+    "level": "INFO",
+    "message": "Bidding 18936385 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:17:27.423144",
+    "level": "INFO",
+    "message": "Bidding 18941375 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:17:27.441422",
+    "level": "INFO",
+    "message": "Bidding 18873092 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:17:27.457922",
+    "level": "INFO",
+    "message": "Bidding 18948247 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:17:27.469125",
+    "level": "INFO",
+    "message": "Bidding 18947930 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:17:27.479841",
+    "level": "INFO",
+    "message": "Bidding 18948208 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:17:27.492199",
+    "level": "INFO",
+    "message": "Bidding 18941163 relevante — termo: 'medicos'"
+  },
+  {
+    "timestamp": "2026-05-20T15:20:23.817554",
+    "level": "ERROR",
+    "message": "gemini_service: [ERRO GEMINI] modelo=gemini-3-flash-preview tentativa=1 Exception: Resposta suspeita de truncamento (472 chars)"
+  },
+  {
+    "timestamp": "2026-05-20T15:21:39.373117",
+    "level": "ERROR",
+    "message": "gemini_service: [ERRO GEMINI] modelo=gemini-3-flash-preview tentativa=2 ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+  },
+  {
+    "timestamp": "2026-05-20T15:24:25.211103",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 3736"
+  },
+  {
+    "timestamp": "2026-05-20T15:24:44.977691",
+    "level": "INFO",
+    "message": "Bidding 18948210 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:24:44.994930",
+    "level": "INFO",
+    "message": "Bidding 18948162 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:24:45.010053",
+    "level": "INFO",
+    "message": "Bidding 18946366 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:24:45.025775",
+    "level": "INFO",
+    "message": "Bidding 18940379 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:24:45.042226",
+    "level": "INFO",
+    "message": "Bidding 18942969 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:24:45.059130",
+    "level": "INFO",
+    "message": "Bidding 18946822 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:24:45.073812",
+    "level": "INFO",
+    "message": "Bidding 18947471 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:24:45.089350",
+    "level": "INFO",
+    "message": "Bidding 18947345 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:24:45.103611",
+    "level": "INFO",
+    "message": "Bidding 18947329 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:24:45.119157",
+    "level": "INFO",
+    "message": "Bidding 18948103 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:24:45.135699",
+    "level": "INFO",
+    "message": "Bidding 18944872 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:24:45.148134",
+    "level": "INFO",
+    "message": "Bidding 18944869 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:24:45.161029",
+    "level": "INFO",
+    "message": "Bidding 18942699 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:24:45.175770",
+    "level": "INFO",
+    "message": "Bidding 18938903 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:24:45.186563",
+    "level": "INFO",
+    "message": "Bidding 18938960 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:24:45.203668",
+    "level": "INFO",
+    "message": "Bidding 18937561 relevante — termo: 'medicos'"
+  },
+  {
+    "timestamp": "2026-05-20T15:25:57.662214",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 3935"
+  },
+  {
+    "timestamp": "2026-05-20T15:26:48.150704",
+    "level": "INFO",
+    "message": "Bidding 18938931 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:26:48.159561",
+    "level": "INFO",
+    "message": "Bidding 18948545 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:26:48.178675",
+    "level": "INFO",
+    "message": "Bidding 18947759 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:26:48.198044",
+    "level": "INFO",
+    "message": "Bidding 18947758 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:26:48.216135",
+    "level": "INFO",
+    "message": "Bidding 18946690 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:26:48.234913",
+    "level": "INFO",
+    "message": "Bidding 18944879 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T15:26:48.251670",
+    "level": "INFO",
+    "message": "Bidding 18935434 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:26:48.269082",
+    "level": "INFO",
+    "message": "Bidding 18930751 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:26:48.285645",
+    "level": "INFO",
+    "message": "Bidding 18940534 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:26:48.303563",
+    "level": "INFO",
+    "message": "Bidding 18940586 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:26:48.320960",
+    "level": "INFO",
+    "message": "Bidding 18941454 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:26:48.337553",
+    "level": "INFO",
+    "message": "Bidding 18948732 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:26:48.355418",
+    "level": "INFO",
+    "message": "Bidding 18948774 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:26:48.372108",
+    "level": "INFO",
+    "message": "Bidding 18945727 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T15:26:48.389162",
+    "level": "INFO",
+    "message": "Bidding 18948766 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:26:48.404975",
+    "level": "INFO",
+    "message": "Bidding 18949075 relevante — termo: 'consultas'"
+  },
+  {
+    "timestamp": "2026-05-20T15:27:33.253958",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 3490"
+  },
+  {
+    "timestamp": "2026-05-20T15:27:57.515324",
+    "level": "INFO",
+    "message": "Bidding 18949118 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:27:57.531410",
+    "level": "INFO",
+    "message": "Bidding 18939227 relevante — termo: 'medicos'"
+  },
+  {
+    "timestamp": "2026-05-20T15:29:13.509028",
+    "level": "ERROR",
+    "message": "gemini_service: [ERRO GEMINI] modelo=gemini-3-flash-preview tentativa=1 Exception: Resposta suspeita de truncamento (547 chars)"
+  },
+  {
+    "timestamp": "2026-05-20T15:29:51.918110",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 4283"
+  },
+  {
+    "timestamp": "2026-05-20T15:30:42.844363",
+    "level": "INFO",
+    "message": "Bidding 18946831 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:30:42.857087",
+    "level": "INFO",
+    "message": "Bidding 18946237 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:30:42.877201",
+    "level": "INFO",
+    "message": "Bidding 18946289 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:30:42.896626",
+    "level": "INFO",
+    "message": "Bidding 18941448 relevante — termo: 'medicos'"
+  },
+  {
+    "timestamp": "2026-05-20T15:31:23.005824",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 3859"
+  },
+  {
+    "timestamp": "2026-05-20T15:31:49.134753",
+    "level": "INFO",
+    "message": "Bidding 18939185 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:31:49.153630",
+    "level": "INFO",
+    "message": "Bidding 18925673 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:31:49.176920",
+    "level": "INFO",
+    "message": "Bidding 18938676 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:31:49.190991",
+    "level": "INFO",
+    "message": "Bidding 18937602 relevante — termo: 'consulta'"
+  },
+  {
+    "timestamp": "2026-05-20T15:32:28.115939",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 3675"
+  },
+  {
+    "timestamp": "2026-05-20T15:32:48.744064",
+    "level": "INFO",
+    "message": "Bidding 18948719 relevante — termo: 'consulta'"
+  },
+  {
+    "timestamp": "2026-05-20T15:33:26.517401",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 3438"
+  },
+  {
+    "timestamp": "2026-05-20T15:33:46.219856",
+    "level": "INFO",
+    "message": "Bidding 18927677 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:33:46.231547",
+    "level": "INFO",
+    "message": "Bidding 18948114 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:33:46.251619",
+    "level": "INFO",
+    "message": "Bidding 18948265 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:33:46.270375",
+    "level": "INFO",
+    "message": "Bidding 18943306 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:33:46.309198",
+    "level": "INFO",
+    "message": "Bidding 18941463 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:33:46.328817",
+    "level": "INFO",
+    "message": "Bidding 18934963 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:33:46.346955",
+    "level": "INFO",
+    "message": "Bidding 18947526 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:33:46.363596",
+    "level": "INFO",
+    "message": "Bidding 18946971 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:33:46.381803",
+    "level": "INFO",
+    "message": "Bidding 18946291 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:33:46.397845",
+    "level": "INFO",
+    "message": "Bidding 18947723 relevante — termo: 'medico'"
+  },
+  {
+    "timestamp": "2026-05-20T15:33:49.895837",
+    "level": "WARNING",
+    "message": "Nenhum PDF encontrado para bidding 18947723"
+  },
+  {
+    "timestamp": "2026-05-20T15:34:02.957606",
+    "level": "INFO",
+    "message": "Bidding 18943638 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T15:34:02.977583",
+    "level": "INFO",
+    "message": "Bidding 18941654 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:34:03.000251",
+    "level": "INFO",
+    "message": "Bidding 18934740 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:34:03.018504",
+    "level": "INFO",
+    "message": "Bidding 18931448 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:34:03.037151",
+    "level": "INFO",
+    "message": "Bidding 18948519 relevante — termo: 'medicos'"
+  },
+  {
+    "timestamp": "2026-05-20T15:34:37.701002",
+    "level": "ERROR",
+    "message": "gemini_service: [ERRO GEMINI] modelo=gemini-3-flash-preview tentativa=1 Exception: Resposta suspeita de truncamento (438 chars)"
+  },
+  {
+    "timestamp": "2026-05-20T15:35:13.756577",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 4627"
+  },
+  {
+    "timestamp": "2026-05-20T15:35:43.832979",
+    "level": "INFO",
+    "message": "Bidding 18948696 relevante — termo: 'enfermagem'"
+  },
+  {
+    "timestamp": "2026-05-20T15:36:18.552888",
+    "level": "ERROR",
+    "message": "gemini_service: [ERRO GEMINI] modelo=gemini-3-flash-preview tentativa=1 Exception: Resposta suspeita de truncamento (434 chars)"
+  },
+  {
+    "timestamp": "2026-05-20T15:36:59.227776",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 3847"
+  },
+  {
+    "timestamp": "2026-05-20T15:37:24.906092",
+    "level": "INFO",
+    "message": "Bidding 18948526 relevante — termo: 'medicos'"
+  },
+  {
+    "timestamp": "2026-05-20T15:38:15.400202",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: NAO | Chars: 2492"
+  },
+  {
+    "timestamp": "2026-05-20T15:38:34.973802",
+    "level": "INFO",
+    "message": "Bidding 18867053 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:38:34.995611",
+    "level": "INFO",
+    "message": "Bidding 18947585 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:38:35.014380",
+    "level": "INFO",
+    "message": "Bidding 18946198 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:38:35.033110",
+    "level": "INFO",
+    "message": "Bidding 18946477 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:38:35.052086",
+    "level": "INFO",
+    "message": "Bidding 18941447 relevante — termo: 'medicos'"
+  },
+  {
+    "timestamp": "2026-05-20T15:39:41.066258",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 3440"
+  },
+  {
+    "timestamp": "2026-05-20T15:40:10.714113",
+    "level": "INFO",
+    "message": "Bidding 18943533 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:40:10.729265",
+    "level": "INFO",
+    "message": "Bidding 18941475 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:40:10.748843",
+    "level": "INFO",
+    "message": "Bidding 18940479 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:40:10.774651",
+    "level": "INFO",
+    "message": "Bidding 18941439 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:40:10.789696",
+    "level": "INFO",
+    "message": "Bidding 18939902 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:40:10.803304",
+    "level": "INFO",
+    "message": "Bidding 18937105 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:40:10.816250",
+    "level": "INFO",
+    "message": "Bidding 18938683 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:40:10.830693",
+    "level": "INFO",
+    "message": "Bidding 18939132 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:40:10.844601",
+    "level": "INFO",
+    "message": "Bidding 18948175 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:40:10.856771",
+    "level": "INFO",
+    "message": "Bidding 18948512 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:40:10.870464",
+    "level": "INFO",
+    "message": "Bidding 18939147 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:40:10.886292",
+    "level": "INFO",
+    "message": "Bidding 18939127 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:40:10.903102",
+    "level": "INFO",
+    "message": "Bidding 18939063 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:40:10.921572",
+    "level": "INFO",
+    "message": "Bidding 18937352 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:40:10.942805",
+    "level": "INFO",
+    "message": "Bidding 18948631 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:40:10.962535",
+    "level": "INFO",
+    "message": "Bidding 18946275 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T15:40:10.976805",
+    "level": "INFO",
+    "message": "Bidding 18944417 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:40:10.991191",
+    "level": "INFO",
+    "message": "Bidding 18947161 relevante — termo: 'medico'"
+  },
+  {
+    "timestamp": "2026-05-20T15:40:13.371216",
+    "level": "WARNING",
+    "message": "Nenhum PDF encontrado para bidding 18947161"
+  },
+  {
+    "timestamp": "2026-05-20T15:40:26.205207",
+    "level": "INFO",
+    "message": "Bidding 18947727 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:40:26.225134",
+    "level": "INFO",
+    "message": "Bidding 18940596 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:40:26.247526",
+    "level": "INFO",
+    "message": "Bidding 18947121 relevante — termo: 'enfermagem'"
+  },
+  {
+    "timestamp": "2026-05-20T15:41:14.885562",
+    "level": "WARNING",
+    "message": "Nenhum PDF encontrado para bidding 18947121"
+  },
+  {
+    "timestamp": "2026-05-20T15:41:30.591314",
+    "level": "INFO",
+    "message": "Bidding 18947268 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:41:30.609401",
+    "level": "INFO",
+    "message": "Bidding 18937376 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:41:30.629866",
+    "level": "INFO",
+    "message": "Bidding 18937432 relevante — termo: 'enfermagem'"
+  },
+  {
+    "timestamp": "2026-05-20T15:42:17.555792",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 3951"
+  },
+  {
+    "timestamp": "2026-05-20T15:42:37.106937",
+    "level": "INFO",
+    "message": "Bidding 18936546 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:42:37.122400",
+    "level": "INFO",
+    "message": "Bidding 18948520 relevante — termo: 'enfermeiro'"
+  },
+  {
+    "timestamp": "2026-05-20T15:42:38.344537",
+    "level": "WARNING",
+    "message": "Nenhum PDF encontrado para bidding 18948520"
+  },
+  {
+    "timestamp": "2026-05-20T15:42:51.761129",
+    "level": "INFO",
+    "message": "Bidding 18947726 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:42:51.784517",
+    "level": "INFO",
+    "message": "Bidding 18945095 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:42:51.805933",
+    "level": "INFO",
+    "message": "Bidding 18929497 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:42:51.829239",
+    "level": "INFO",
+    "message": "Bidding 18912533 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:42:51.849360",
+    "level": "INFO",
+    "message": "Bidding 18909350 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:42:51.871431",
+    "level": "INFO",
+    "message": "Bidding 18918255 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:42:51.889970",
+    "level": "INFO",
+    "message": "Bidding 18902014 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:42:51.904624",
+    "level": "INFO",
+    "message": "Bidding 18883671 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T15:42:51.918552",
+    "level": "INFO",
+    "message": "Bidding 18926252 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:42:51.932522",
+    "level": "INFO",
+    "message": "Bidding 18907746 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:42:51.947516",
+    "level": "INFO",
+    "message": "Bidding 18852278 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:42:51.964790",
+    "level": "INFO",
+    "message": "Bidding 18185456 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:42:51.977480",
+    "level": "INFO",
+    "message": "Bidding 18941472 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:42:51.997655",
+    "level": "INFO",
+    "message": "Bidding 18706647 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:42:52.012214",
+    "level": "INFO",
+    "message": "Bidding 18624919 relevante — termo: 'medico'"
+  },
+  {
+    "timestamp": "2026-05-20T15:43:38.930145",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: SIM | Chars: 3874"
+  },
+  {
+    "timestamp": "2026-05-20T15:43:56.793350",
+    "level": "INFO",
+    "message": "Bidding 18837178 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:43:56.810262",
+    "level": "INFO",
+    "message": "Bidding 18751793 relevante — termo: 'medico'"
+  },
+  {
+    "timestamp": "2026-05-20T15:44:11.562759",
+    "level": "ERROR",
+    "message": "gemini_service: [ERRO GEMINI] modelo=gemini-3-flash-preview tentativa=1 ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+  },
+  {
+    "timestamp": "2026-05-20T15:46:53.714979",
+    "level": "INFO",
+    "message": "Gemini retornou - Status: NAO | Chars: 1033"
+  },
+  {
+    "timestamp": "2026-05-20T15:48:00.393210",
+    "level": "INFO",
+    "message": "Bidding 18945468 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:48:00.412144",
+    "level": "INFO",
+    "message": "Bidding 18885014 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T15:48:00.430338",
+    "level": "INFO",
+    "message": "Bidding 18893302 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:48:00.449737",
+    "level": "INFO",
+    "message": "Bidding 18866405 ja processado, pulando"
+  },
+  {
+    "timestamp": "2026-05-20T15:48:00.466892",
+    "level": "INFO",
+    "message": "Bidding 18872525 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:48:00.485414",
+    "level": "INFO",
+    "message": "Bidding 18929689 fora do escopo de saúde — ignorado"
+  },
+  {
+    "timestamp": "2026-05-20T15:48:00.507089",
+    "level": "INFO",
+    "message": "Iniciando importação Pipedrive (12 aprovadas)"
+  },
+  {
+    "timestamp": "2026-05-20T15:48:20.001704",
+    "level": "INFO",
+    "message": "Importação Pipedrive concluída"
   }
 ]

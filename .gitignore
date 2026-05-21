@@ -2,3 +2,4 @@ credentials
 node_modules
 downloads
 cache_gemini
+.env

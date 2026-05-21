@@ -1,0 +1,50 @@
+[
+  {
+    "data": "2026-05-07T15:22:22.791415",
+    "boletins_processados": 1,
+    "licitacoes_coletadas": 2,
+    "licitacoes_aprovadas": 0,
+    "licitacoes_reprovadas": 0,
+    "licitacoes_erro_ia": 2,
+    "tokens_entrada": 0,
+    "tokens_saida": 0,
+    "cache_hits": 0,
+    "custo_estimado_usd": 0.0
+  },
+  {
+    "data": "2026-05-20T09:25:07.005874",
+    "boletins_processados": 1,
+    "licitacoes_coletadas": 26,
+    "licitacoes_aprovadas": 17,
+    "licitacoes_reprovadas": 9,
+    "licitacoes_erro_ia": 0,
+    "tokens_entrada": 443842,
+    "tokens_saida": 20224,
+    "cache_hits": 0,
+    "custo_estimado_usd": 0.078711
+  },
+  {
+    "data": "2026-05-20T10:47:46.499908",
+    "boletins_processados": 1,
+    "licitacoes_coletadas": 11,
+    "licitacoes_aprovadas": 7,
+    "licitacoes_reprovadas": 3,
+    "licitacoes_erro_ia": 1,
+    "tokens_entrada": 120896,
+    "tokens_saida": 7389,
+    "cache_hits": 0,
+    "custo_estimado_usd": 0.022568
+  },
+  {
+    "data": "2026-05-20T15:16:58.229134",
+    "boletins_processados": 1,
+    "licitacoes_coletadas": 18,
+    "licitacoes_aprovadas": 12,
+    "licitacoes_reprovadas": 6,
+    "licitacoes_erro_ia": 0,
+    "tokens_entrada": 510818,
+    "tokens_saida": 14596,
+    "cache_hits": 0,
+    "custo_estimado_usd": 0.08538
+  }
+]

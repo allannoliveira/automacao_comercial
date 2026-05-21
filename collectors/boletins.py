@@ -1,5 +1,6 @@
 import re
 import json
+import logging
 import os
 from datetime import datetime
 from playwright.sync_api import sync_playwright
@@ -8,10 +9,16 @@ from google.oauth2.service_account import Credentials
 import requests
 import pathlib
 import zipfile
+from dotenv import load_dotenv
+
+load_dotenv()
 
 #from services.gemini_service import analisar_edital
 from services.drive_service import criar_pasta, upload_arquivo_para_pasta, SHARED_DRIVE_ID
 from services.gemini_queue import GeminiQueue
+from services.gemini_service import tokens_para_custo_usd
+from inputData.inputDataPipedrive import processar as importar_pipedrive
+from services.filtro_palavras import licitacao_relevante, motivo_match
 
 
 # =====================================================
@@ -24,9 +31,12 @@ BIDDINGS_API = "https://consultaonline.conlicitacao.com.br/boletim_web/public/bo
 CHECKPOINT_FILE = "logs/ultimo_boletim.json"
 CHECKPOINT_LICITACOES_FILE = "logs/licitacoes_processadas.json"
 LOG_FILE = "logs/coleta_log.json"
+RELATORIO_FILE = "logs/relatorio_coleta.json"
 GEMINI_MEMORY_FILE = "memory/gemini_memoria.md"
 
-SHEET_ID = "1yJmxxKcTjJFqlci3UEUa54BwhvCY_KaLaAxhEsgdvyo"
+SHEET_ID = os.getenv("GOOGLE_SHEET_ID")
+if not SHEET_ID:
+    raise EnvironmentError("GOOGLE_SHEET_ID não definido no .env")
 SHEET_APROVADOS = "aprovados"
 SHEET_REPROVADOS = "reprovados"
 gemini_queue = GeminiQueue(delay=15)  # 15 segundos entre envios
@@ -358,12 +368,31 @@ Entre cada conjunto lógico de informações, inserir obrigatoriamente uma linha
 divisória.
 O BLOCO 5 é condicional e só deve ser renderizado se o objeto da licitação for
 Telemedicina
-Nunca esqueça o negrito e se APROVADO OU REPROVADO"""
+Nunca esqueça o negrito e se APROVADO OU REPROVADO
+
+========================================
+CLASSIFICAÇÃO FINAL OBRIGATÓRIA
+========================================
+Na última linha da sua resposta, escreva EXATAMENTE uma das opções abaixo (sem negrito, sem markdown, sem texto adicional):
+
+STATUS_FINAL: APROVADO
+ou
+STATUS_FINAL: REPROVADO"""
 
 MODO_TESTE = False
 TESTE_LIMITE = 1
 
-log_entries = []
+def _carregar_log_existente():
+    if os.path.exists(LOG_FILE):
+        try:
+            with open(LOG_FILE, "r", encoding="utf-8") as f:
+                dados = json.load(f)
+                return dados if isinstance(dados, list) else []
+        except Exception:
+            return []
+    return []
+
+log_entries = _carregar_log_existente()
 
 # =====================================================
 # MEMORIA GEMINI
@@ -396,6 +425,18 @@ Se houver conflito entre esta memoria e o documento oficial, o documento oficial
 # =====================================================
 # LOG
 # =====================================================
+
+class _JsonLogHandler(logging.Handler):
+    """Roteia logs do logging padrão para o mesmo JSON de coleta."""
+    def emit(self, record):
+        log_message(record.levelname, self.format(record))
+
+_handler = _JsonLogHandler()
+_handler.setFormatter(logging.Formatter("%(name)s: %(message)s"))
+logging.getLogger("gemini_service").addHandler(_handler)
+logging.getLogger("gemini_service").setLevel(logging.DEBUG)
+
+
 def log_message(level, message, extra=None):
     entry = {
         "timestamp": datetime.now().isoformat(),
@@ -407,6 +448,10 @@ def log_message(level, message, extra=None):
 
     log_entries.append(entry)
     print(f"[{level.upper()}] {message}")
+
+    os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
+    with open(LOG_FILE, "w", encoding="utf-8") as f:
+        json.dump(log_entries, f, indent=2, ensure_ascii=False)
 
 # =====================================================
 # CHECKPOINT
@@ -452,6 +497,34 @@ def salvar_licitacao_processada(bidding_id, dados):
     with open(CHECKPOINT_LICITACOES_FILE, "w", encoding="utf-8") as f:
         json.dump(processadas, f, indent=2, ensure_ascii=False)
 
+
+def salvar_relatorio_coleta(stats):
+    os.makedirs(os.path.dirname(RELATORIO_FILE), exist_ok=True)
+
+    historico = []
+    if os.path.exists(RELATORIO_FILE):
+        try:
+            with open(RELATORIO_FILE, "r", encoding="utf-8") as f:
+                historico = json.load(f)
+        except Exception:
+            historico = []
+
+    historico.append(stats)
+
+    with open(RELATORIO_FILE, "w", encoding="utf-8") as f:
+        json.dump(historico, f, indent=2, ensure_ascii=False)
+
+    print(
+        f"[RELATORIO] Boletins: {stats['boletins_processados']} | "
+        f"Coletadas: {stats['licitacoes_coletadas']} | "
+        f"Aprovadas: {stats['licitacoes_aprovadas']} | "
+        f"Reprovadas: {stats['licitacoes_reprovadas']} | "
+        f"Cache hits: {stats['cache_hits']} | "
+        f"Tokens entrada: {stats['tokens_entrada']} | "
+        f"Tokens saida: {stats['tokens_saida']} | "
+        f"Custo estimado: US$ {stats['custo_estimado_usd']:.4f}"
+    )
+
 # =====================================================
 # GOOGLE SHEETS
 # =====================================================
@@ -481,22 +554,25 @@ def obter_ids_existentes(spreadsheet):
 
 def montar_linha_planilha(dados):
     return [
-        dados.get("boletim_id") or "",
-        str(dados.get("bidding_id")).strip(),
-        dados.get("orgao_cidade") or "",
-        dados.get("orgao_estado") or "",
-        dados.get("edital") or "",
-        dados.get("edital_site") or "",
-        dados.get("itens") or "",
-        dados.get("descricao") or "",
-        dados.get("valor_estimado") or "",
-        dados.get("datahora_abertura") or "",
-        dados.get("datahora_prazo") or "",
-        datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-        dados.get("status_ia") or "",
-        dados.get("link_drive") or "",
-        "",
-        dados.get("link_txt") or "",
+        dados.get("boletim_id") or "",                  # 1  boletim_id
+        str(dados.get("bidding_id")).strip(),            # 2  idconlicitacao
+        dados.get("orgao_cidade") or "",                 # 3  orgao_cidade
+        dados.get("orgao_estado") or "",                 # 4  orgao_estado
+        dados.get("edital") or "",                       # 5  edital
+        dados.get("edital_site") or "",                  # 6  edital_site
+        dados.get("itens") or "",                        # 7  itens
+        dados.get("descricao") or "",                    # 8  descricao
+        dados.get("valor_estimado") or "",               # 9  valor_estimado
+        dados.get("datahora_abertura") or "",            # 10 datahora_abertura
+        dados.get("datahora_prazo") or "",               # 11 datahora_prazo
+        datetime.now().strftime("%Y-%m-%d %H:%M:%S"),   # 12 data_coleta
+        dados.get("status_ia") or "",                   # 13 aprovado_ia
+        dados.get("link_drive") or "",                  # 14 link_drive_edital
+        "",                                              # 15 importado_pipedrive
+        dados.get("resumo_ia") or "",                   # 16 resumo_ia
+        dados.get("orgao_nome") or "",                  # 17 orgao_nome
+        dados.get("modalidade") or "",                  # 18 modalidade
+        dados.get("modo_disputa") or "",                # 19 modo_disputa
     ]
 
 def inserir_boletim_google_sheets(spreadsheet, dados, ids_existentes):
@@ -565,7 +641,7 @@ def extrair_boletins(context):
     
     page = context.new_page()
     boletins = set()
-    log_message("INFO", f"Boletins encontrados: {boletins}")
+    
 
     try:
         page.goto(
@@ -581,14 +657,18 @@ def extrair_boletins(context):
 
         for ev in eventos:
             try:
-                html = ev.inner_html()
-                encontrados = re.findall(r"boletins/(\d+)", html)
-                for b in encontrados:
-                    boletins.add(int(b))
+                href = ev.locator("a").get_attribute("href")
+
+                if href:
+                    match = re.search(r"/boletins/(\d+)", href)
+
+                    if match:
+                        boletins.add(int(match.group(1)))
             except Exception:
                 continue
 
         log_message("INFO", f"{len(boletins)} boletins válidos encontrados")
+        log_message("INFO", f"Boletins encontrados: {sorted(boletins)}")
         return sorted(boletins)
 
     except Exception as e:
@@ -672,7 +752,22 @@ def coletar_licitacoes(context, boletins):
     licitacoes_processadas = carregar_licitacoes_processadas()
     contador_teste = 0
 
-    for boletim_id in boletins:
+    stats = {
+        "data": datetime.now().isoformat(),
+        "boletins_processados": len(boletins),
+        "licitacoes_coletadas": 0,
+        "licitacoes_aprovadas": 0,
+        "licitacoes_reprovadas": 0,
+        "licitacoes_erro_ia": 0,
+        "tokens_entrada": 0,
+        "tokens_saida": 0,
+        "cache_hits": 0,
+        "custo_estimado_usd": 0.0,
+    }
+
+    for idx, boletim_id in enumerate(boletins, start=1):
+
+        log_message("INFO", f"=== Boletim {idx}/{len(boletins)} — ID {boletim_id} ===")
 
         ativar_boletim_html(context, boletim_id)
 
@@ -698,7 +793,10 @@ def coletar_licitacoes(context, boletins):
 
             if MODO_TESTE and contador_teste >= TESTE_LIMITE:
                 log_message("INFO", "Modo teste ativo - encerrando")
-                return resultados
+                stats["custo_estimado_usd"] = round(
+                    tokens_para_custo_usd(stats["tokens_entrada"], stats["tokens_saida"]), 6
+                )
+                return resultados, stats
 
             bidding_id = item.get("bidding_id")
             bidding_id_str = str(bidding_id).strip()
@@ -713,6 +811,20 @@ def coletar_licitacoes(context, boletins):
                 continue
 
             arquivos_edital = []
+
+            # --------------------------------------------
+            # FILTRO POR PALAVRAS-CHAVE (antes do download)
+            # --------------------------------------------
+            termo = motivo_match(
+                item.get("edital", ""),
+                item.get("descricao", ""),
+                item.get("itens", ""),
+            )
+            if not termo:
+                log_message("INFO", f"Bidding {bidding_id} fora do escopo de saúde — ignorado")
+                continue
+
+            log_message("INFO", f"Bidding {bidding_id} relevante — termo: '{termo}'")
 
             # --------------------------------------------
             # DOWNLOAD DO EDITAL
@@ -737,8 +849,13 @@ def coletar_licitacoes(context, boletins):
             )
 
             if pdf_principal:
-                texto_ia, status_ia = gemini_queue.processar(pdf_principal, montar_prompt_gemini())
+                texto_ia, status_ia, tokens_ia = gemini_queue.processar(pdf_principal, montar_prompt_gemini())
                 log_message("INFO", f"Gemini retornou - Status: {status_ia} | Chars: {len(texto_ia or '')}")
+
+                stats["tokens_entrada"] += tokens_ia["prompt_tokens"]
+                stats["tokens_saida"] += tokens_ia["output_tokens"]
+                if tokens_ia["cache_hit"]:
+                    stats["cache_hits"] += 1
             else:
                 log_message("WARNING", f"Nenhum PDF encontrado para bidding {bidding_id}")
 
@@ -794,21 +911,29 @@ def coletar_licitacoes(context, boletins):
             else:
                 log_message("WARNING", f"IA falhou para {bidding_id}, upload ignorado.")
 
+            _obs = item.get("observacao") or ""
+            _modo_match = re.search(r"MODO DE DISPUTA:\s*(\S+)", _obs, re.IGNORECASE)
+
             licitacao_dados = {
                 "boletim_id": boletim_id,
                 "bidding_id": bidding_id,
                 "orgao_cidade": item.get("orgao_cidade"),
                 "orgao_estado": item.get("orgao_estado"),
+                "orgao_nome": (item.get("public_body") or {}).get("nome") or "",
                 "edital": item.get("edital"),
                 "edital_site": item.get("edital_site"),
                 "itens": item.get("itens"),
                 "descricao": item.get("descricao"),
+                "objeto": item.get("objeto"),
                 "valor_estimado": item.get("valor_estimado"),
                 "datahora_abertura": item.get("datahora_abertura"),
                 "datahora_prazo": item.get("datahora_prazo"),
                 "status_ia": status_ia,
                 "link_drive": link_drive,
                 "link_txt": link_txt,
+                "resumo_ia": texto_ia,
+                "modalidade": (item.get("modality") or {}).get("nome") or "",
+                "modo_disputa": _modo_match.group(1).upper() if _modo_match else "",
             }
 
             inserido = inserir_boletim_google_sheets(spreadsheet, licitacao_dados, ids_existentes)
@@ -816,10 +941,22 @@ def coletar_licitacoes(context, boletins):
                 salvar_licitacao_processada(bidding_id, licitacao_dados)
                 licitacoes_processadas[bidding_id_str] = licitacao_dados
 
+            stats["licitacoes_coletadas"] += 1
+            if status_ia == "SIM":
+                stats["licitacoes_aprovadas"] += 1
+            elif status_ia == "ERRO":
+                stats["licitacoes_erro_ia"] += 1
+            else:
+                stats["licitacoes_reprovadas"] += 1
+
             resultados.append(licitacao_dados)
             contador_teste += 1
 
-    return resultados
+    stats["custo_estimado_usd"] = round(
+        tokens_para_custo_usd(stats["tokens_entrada"], stats["tokens_saida"]), 6
+    )
+
+    return resultados, stats
 
 # =====================================================
 # MAIN
@@ -836,14 +973,29 @@ def main():
         boletins = extrair_boletins(context)
         novos = sorted([b for b in boletins if b > ultimo])
 
+        log_message("INFO", f"Último salvo: {ultimo}")
+        log_message("INFO", f"Boletins novos: {novos}")
+
         if not novos:
             log_message("INFO", "Nenhum boletim novo encontrado")
             return
 
-        dados = coletar_licitacoes(context, novos)
+        dados, stats = coletar_licitacoes(context, novos)
 
         if dados:
             salvar_ultimo_boletim(max(novos))
+            salvar_relatorio_coleta(stats)
+
+        aprovadas = stats.get("licitacoes_aprovadas", 0)
+        if aprovadas > 0:
+            log_message("INFO", f"Iniciando importação Pipedrive ({aprovadas} aprovadas)")
+            try:
+                importar_pipedrive()
+                log_message("INFO", "Importação Pipedrive concluída")
+            except Exception as e:
+                log_message("ERROR", f"Falha na importação Pipedrive: {type(e).__name__}: {e}")
+        else:
+            log_message("INFO", "Nenhuma licitação aprovada — importação Pipedrive ignorada")
 
     finally:
         browser.close()

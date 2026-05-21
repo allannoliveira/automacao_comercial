@@ -1,9 +1,13 @@
 from google import genai
 from google.genai import types
 import json
+import logging
+import re
 import time
 import hashlib
 import os
+
+logger = logging.getLogger("gemini_service")
 
 # =========================
 # CONFIGURAÇÕES
@@ -15,11 +19,16 @@ MODELOS_FALLBACK = [
     "gemini-2.5-flash",
 ]
 
-MAX_OUTPUT_TOKENS = 5000
-TEMPO_RETRY = 2  # segundos
+
+MAX_OUTPUT_TOKENS = 4096
+TEMPO_RETRY = 2
 MAX_RETRIES = 2
 
 CACHE_DIR = "cache_gemini"
+
+# Preços gemini-2.5-flash (USD por milhão de tokens)
+PRECO_INPUT_USD_POR_MILHAO = 0.15
+PRECO_OUTPUT_USD_POR_MILHAO = 0.60
 
 
 # =========================
@@ -59,6 +68,25 @@ def carregar_cache(hash_arquivo):
 
 
 # =========================
+# CLASSIFICAÇÃO
+# =========================
+
+_STATUS_FINAL_RE = re.compile(r"STATUS_FINAL:\s*(APROVADO|REPROVADO)", re.IGNORECASE)
+
+
+def _classificar_status(texto: str) -> str:
+    match = _STATUS_FINAL_RE.search(texto)
+    if match:
+        return "SIM" if match.group(1).upper() == "APROVADO" else "NAO"
+
+    # Fallback para respostas sem STATUS_FINAL (cache antigo)
+    texto_upper = texto.upper()
+    if "APROVADO" in texto_upper and "REPROVADO" not in texto_upper:
+        return "SIM"
+    return "NAO"
+
+
+# =========================
 # FUNÇÃO PRINCIPAL
 # =========================
 
@@ -84,7 +112,8 @@ def analisar_edital(caminho_pdf, prompt):
 
     if cache:
         print("[GEMINI] Cache encontrado, evitando custo")
-        return cache["texto"], cache["status"]
+        tokens_cache = {"prompt_tokens": 0, "output_tokens": 0, "cache_hit": True}
+        return cache["texto"], cache["status"], tokens_cache
 
     ultimo_erro = None
 
@@ -116,29 +145,31 @@ def analisar_edital(caminho_pdf, prompt):
                 if not texto:
                     raise Exception("Resposta vazia do Gemini")
 
-                print(f"[GEMINI] OK | {len(texto)} chars")
+                # Resposta muito curta = provavelmente cortada antes de terminar
+                if len(texto) < 800:
+                    raise Exception(f"Resposta suspeita de truncamento ({len(texto)} chars)")
 
-                texto_upper = texto.upper()
+                usage = getattr(response, "usage_metadata", None)
+                tokens_info = {
+                    "prompt_tokens": getattr(usage, "prompt_token_count", 0) or 0,
+                    "output_tokens": getattr(usage, "candidates_token_count", 0) or 0,
+                    "cache_hit": False
+                }
 
-                if "APROVADO" in texto_upper and "REPROVADO" not in texto_upper:
-                    status = "SIM"
-                else:
-                    status = "NAO"
+                print(f"[GEMINI] OK | {len(texto)} chars | "
+                      f"tokens entrada={tokens_info['prompt_tokens']} "
+                      f"saida={tokens_info['output_tokens']}")
 
+                status = _classificar_status(texto)
                 print(f"[GEMINI] Status: {status}")
 
-                # =========================
-                # SALVAR CACHE
-                # =========================
-                salvar_cache(hash_arquivo, {
-                    "texto": texto,
-                    "status": status
-                })
+                salvar_cache(hash_arquivo, {"texto": texto, "status": status})
 
-                return texto, status
+                return texto, status, tokens_info
 
             except Exception as e:
                 erro_str = str(e)
+                logger.error(f"[ERRO GEMINI] modelo={modelo} tentativa={tentativa+1} {type(e).__name__}: {erro_str}")
                 print(f"[ERRO GEMINI] {type(e).__name__}: {erro_str}")
 
                 # Retry antes de fallback
@@ -146,15 +177,30 @@ def analisar_edital(caminho_pdf, prompt):
                     time.sleep(TEMPO_RETRY)
                     continue
 
-                # Cota estourada → tenta próximo modelo
-                if "429" in erro_str or "RESOURCE_EXHAUSTED" in erro_str or "quota" in erro_str.lower():
-                    print(f"[GEMINI] Cota no modelo {modelo}, tentando próximo...")
+                # Modelo indisponível ou cota → tenta próximo
+                _pular = (
+                    "429" in erro_str
+                    or "RESOURCE_EXHAUSTED" in erro_str
+                    or "quota" in erro_str.lower()
+                    or "404" in erro_str
+                    or "NOT_FOUND" in erro_str
+                )
+                if _pular:
+                    logger.warning(f"[GEMINI] Modelo {modelo} indisponível, tentando próximo...")
+                    print(f"[GEMINI] Modelo {modelo} indisponível, tentando próximo...")
                     ultimo_erro = e
                     break
 
                 raise
 
     raise Exception(f"Cota esgotada em todos os modelos. Último erro: {ultimo_erro}")
+
+
+def tokens_para_custo_usd(prompt_tokens: int, output_tokens: int) -> float:
+    return (
+        prompt_tokens * PRECO_INPUT_USD_POR_MILHAO / 1_000_000
+        + output_tokens * PRECO_OUTPUT_USD_POR_MILHAO / 1_000_000
+    )
 
 
 # =========================
