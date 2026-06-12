@@ -14,9 +14,9 @@ logger = logging.getLogger("gemini_service")
 # =========================
 
 MODELOS_FALLBACK = [
-    "gemini-3-flash-preview",  
-    "gemini-2.0-flash",
+    "gemini-3-flash-preview",
     "gemini-2.5-flash",
+    "gemini-2.0-flash",
 ]
 
 
@@ -90,7 +90,7 @@ def _classificar_status(texto: str) -> str:
 # FUNÇÃO PRINCIPAL
 # =========================
 
-def analisar_edital(caminho_pdf, prompt):
+def analisar_edital(caminho_pdf, prompt, min_chars=500):
     creds = carregar_credenciais()
     api_key = creds.get("gemini_api_key")
 
@@ -145,9 +145,10 @@ def analisar_edital(caminho_pdf, prompt):
                 if not texto:
                     raise Exception("Resposta vazia do Gemini")
 
-                # Resposta muito curta = provavelmente cortada antes de terminar
-                if len(texto) < 800:
-                    raise Exception(f"Resposta suspeita de truncamento ({len(texto)} chars)")
+                # Resposta muito curta = provavelmente truncada ou bloqueada pelo modelo
+                if min_chars > 0 and len(texto) < min_chars:
+                    print(f"[GEMINI] Resposta curta recebida ({len(texto)} chars): {texto[:300]!r}")
+                    raise Exception(f"truncamento: resposta com apenas {len(texto)} chars")
 
                 usage = getattr(response, "usage_metadata", None)
                 tokens_info = {
@@ -177,13 +178,16 @@ def analisar_edital(caminho_pdf, prompt):
                     time.sleep(TEMPO_RETRY)
                     continue
 
-                # Modelo indisponível ou cota → tenta próximo
+                # Modelo indisponível, cota ou resposta truncada → tenta próximo
                 _pular = (
                     "429" in erro_str
+                    or "503" in erro_str
+                    or "UNAVAILABLE" in erro_str
                     or "RESOURCE_EXHAUSTED" in erro_str
                     or "quota" in erro_str.lower()
                     or "404" in erro_str
                     or "NOT_FOUND" in erro_str
+                    or "truncamento" in erro_str
                 )
                 if _pular:
                     logger.warning(f"[GEMINI] Modelo {modelo} indisponível, tentando próximo...")

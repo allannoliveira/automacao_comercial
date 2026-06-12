@@ -54,53 +54,60 @@ def limpar_texto(valor):
     return str(valor).strip().upper()
 
 
-_SEPARADORES_OBJETO = [
-    "LOCAL:", "HORÁRIO:", "HORARIO:", "SEGUNDA", "TERÇA", "TERCA",
-    "QUARTA", "QUINTA", "SEXTA", "SÁBADO", "SABADO", "DOMINGO",
-    "TOTALIZANDO", "CONTRATAÇÃO:", "CONTRATACAO:", "OBS:", "OBS.:",
-    "PERIODO:", "PERÍODO:", "CARGA HORÁRIA:", "CARGA HORARIA:",
-]
-
-_MAX_CHARS_OBJETO = 60
+# Regex para extrair o primeiro bullet do BLOCO 1 do GERED:
+# "• CIDADE/UF – ÓRGÃO – ESPECIALIDADE"
+_RE_BLOCO1_TITULO = re.compile(
+    r"[•\*]\s*([A-ZÁÉÍÓÚÂÊÔÃÕÇ][^\n•\*]{5,120}(?:–|-)[^\n•\*]{3,80}(?:–|-)[^\n•\*]{3,80})",
+    re.IGNORECASE
+)
 
 
-def _resumir_objeto(texto: str) -> str:
-    if not texto:
-        return "NÃO INFORMADO"
+def _titulo_de_resumo(resumo: str) -> str | None:
+    """Extrai o título estruturado do BLOCO 1 do GERED (primeiro bullet com 3 partes)."""
+    if not resumo:
+        return None
 
-    texto = str(texto).strip().upper()
+    for linha in resumo.splitlines():
+        linha = linha.strip()
+        # procura linha bullet com pelo menos dois separadores (– ou -)
+        if not linha.startswith(("•", "*", "-")):
+            continue
+        conteudo = linha.lstrip("•*- ").strip()
+        partes = re.split(r"\s*[–\-]\s*", conteudo)
+        if len(partes) >= 3:
+            # normaliza: uppercase, troca – por -
+            titulo = " - ".join(p.strip().upper() for p in partes[:4] if p.strip())
+            if len(titulo) > 20:
+                return titulo
 
-    for sep in _SEPARADORES_OBJETO:
-        idx = texto.find(sep)
-        if idx > 5:
-            texto = texto[:idx].strip().rstrip(".,;:-")
-            break
+    return None
 
-    if len(texto) > _MAX_CHARS_OBJETO:
-        texto = texto[:_MAX_CHARS_OBJETO].rsplit(" ", 1)[0].rstrip(".,;:-")
 
-    return texto or "NÃO INFORMADO"
+def _fallback_nome(dados):
+    """Fallback: monta título a partir dos campos brutos."""
+    municipio = limpar_texto(dados.get("orgao_cidade"))
+    uf        = limpar_texto(dados.get("orgao_estado"))
+    orgao_raw = limpar_texto(
+        dados.get("orgao_nome") or dados.get("orgao") or dados.get("nome_orgao")
+    )
+    orgao = orgao_raw[:30].rsplit(" ", 1)[0] if len(orgao_raw) > 30 else orgao_raw
+
+    objeto_raw = (
+        dados.get("objeto") or dados.get("descricao") or
+        dados.get("itens") or dados.get("edital") or ""
+    )
+    objeto = str(objeto_raw).strip().upper()[:40].rsplit(" ", 1)[0]
+
+    return f"{municipio} - {uf} - {orgao} - {objeto}"
 
 
 def gerar_nome_padrao(dados):
-    municipio = limpar_texto(dados.get("orgao_cidade"))
-    uf = limpar_texto(dados.get("orgao_estado"))
-
-    orgao = limpar_texto(
-        dados.get("orgao_nome") or
-        dados.get("orgao") or
-        dados.get("nome_orgao")
-    )
-
-    objeto_raw = (
-        dados.get("objeto") or
-        dados.get("descricao") or
-        dados.get("itens") or
-        dados.get("edital")
-    )
-    objeto = _resumir_objeto(objeto_raw)
-
-    return f"{municipio} – {uf} – {orgao} – {objeto}"
+    """Gera o título do deal. Tenta extrair do resumo Gemini; usa fallback se não encontrar."""
+    resumo = dados.get("resumo_ia") or ""
+    titulo = _titulo_de_resumo(resumo)
+    if titulo:
+        return titulo
+    return _fallback_nome(dados)
 
 
 def extrair_hora(datahora_str):
@@ -135,7 +142,11 @@ def conectar_sheet():
 
 
 def ler_dados(sheet):
-    return sheet.get_all_records()
+    rows = sheet.get_all_values()
+    if len(rows) < 2:
+        return []
+    headers = rows[0]
+    return [dict(zip(headers, row)) for row in rows[1:]]
 
 
 def atualizar_flag_importado(sheet, row_index):
@@ -338,7 +349,52 @@ def criar_nota(deal_id, texto):
 
 
 # =========================
-# PROCESSAMENTO
+# IMPORTAÇÃO UNITÁRIA (inline, sem ler planilha)
+# =========================
+
+def importar_deal_unico(dados):
+    """Cria/atualiza um deal diretamente de um dict de licitacao_dados.
+    Normaliza aliases de campo entre o dict interno e a planilha.
+    Retorna o deal_id criado/existente, ou None em caso de falha."""
+
+    dados_norm = dict(dados)
+    # bidding_id (interno) ↔ idconlicitacao (planilha / Pipedrive)
+    if not dados_norm.get("idconlicitacao"):
+        dados_norm["idconlicitacao"] = dados_norm.get("bidding_id", "")
+    # link_drive (interno) ↔ link_drive_edital (planilha)
+    if not dados_norm.get("link_drive_edital"):
+        dados_norm["link_drive_edital"] = dados_norm.get("link_drive", "")
+
+    bidding_id = str(dados_norm.get("idconlicitacao", "")).strip()
+    if not bidding_id:
+        print("[PIPEDRIVE] idconlicitacao vazio — pulando")
+        return None
+
+    existente = buscar_deal_existente(bidding_id)
+    if existente:
+        print(f"[PIPEDRIVE] Deal já existe: {existente}")
+        return existente
+
+    criado = criar_deal(dados_norm)
+    if not criado.get("success"):
+        print(f"[PIPEDRIVE] Erro ao criar deal: {criado}")
+        return None
+
+    deal_id = criado["data"]["id"]
+    print(f"[PIPEDRIVE] Deal criado inline: {deal_id}")
+
+    atualizar_deal(deal_id, dados_norm)
+
+    criar_nota(deal_id, dados_norm.get("resumo_ia"))
+    link = dados_norm.get("link_drive_edital") or ""
+    if link:
+        criar_nota(deal_id, f"Pasta no Google Drive:\n{link}")
+
+    return deal_id
+
+
+# =========================
+# PROCESSAMENTO (batch — lê planilha, serve como fallback/retry)
 # =========================
 
 def processar():

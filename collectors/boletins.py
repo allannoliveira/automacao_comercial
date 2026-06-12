@@ -17,8 +17,10 @@ load_dotenv()
 from services.drive_service import criar_pasta, upload_arquivo_para_pasta, SHARED_DRIVE_ID
 from services.gemini_queue import GeminiQueue
 from services.gemini_service import tokens_para_custo_usd
-from inputData.inputDataPipedrive import processar as importar_pipedrive
-from services.filtro_palavras import licitacao_relevante, motivo_match
+from inputData.inputDataPipedrive import processar as importar_pipedrive, importar_deal_unico
+from services.filtro_palavras import motivo_match, licitacao_telemedicina
+from services.feedback_service import processar_feedbacks
+from services.notificacao_service import notificar_resumo_coleta
 
 
 # =====================================================
@@ -27,6 +29,8 @@ from services.filtro_palavras import licitacao_relevante, motivo_match
 LOGIN_URL = "https://conlicitacao.com.br/"
 CALENDARIO_URL = "https://consulteonline.conlicitacao.com.br/boletim_web/public/boletins"
 BIDDINGS_API = "https://consultaonline.conlicitacao.com.br/boletim_web/public/boletins/{}/biddings.json"
+BIDDINGS_PER_PAGE = 50
+VALOR_MINIMO      = 1_200_000   # R$ 1.200.000 — não se aplica à telemedicina
 
 CHECKPOINT_FILE = "logs/ultimo_boletim.json"
 CHECKPOINT_LICITACOES_FILE = "logs/licitacoes_processadas.json"
@@ -573,20 +577,33 @@ def montar_linha_planilha(dados):
         dados.get("orgao_nome") or "",                  # 17 orgao_nome
         dados.get("modalidade") or "",                  # 18 modalidade
         dados.get("modo_disputa") or "",                # 19 modo_disputa
+        "",                                              # 20 classificacao
+        "",                                              # 21 feedback_qualitativo
     ]
 
 def inserir_boletim_google_sheets(spreadsheet, dados, ids_existentes):
     bidding_id = str(dados.get("bidding_id")).strip()
 
     if bidding_id in ids_existentes:
-        return False
+        return False, None
 
     nome_aba = SHEET_APROVADOS if dados.get("status_ia") == "SIM" else SHEET_REPROVADOS
     sheet = spreadsheet.worksheet(nome_aba)
-    sheet.append_row(montar_linha_planilha(dados), value_input_option="USER_ENTERED")
+    resp = sheet.append_row(montar_linha_planilha(dados), value_input_option="USER_ENTERED")
+
+    # Extrai índice da linha do range retornado pela API (ex: 'aprovados!A6:U6')
+    row_idx = None
+    try:
+        updated_range = resp.get("updates", {}).get("updatedRange", "")
+        m = re.search(r"!A(\d+):", updated_range)
+        if m:
+            row_idx = int(m.group(1))
+    except Exception:
+        pass
+
     ids_existentes.add(bidding_id)
-    print(f"1 linha inserida na aba {nome_aba}")
-    return True
+    print(f"1 linha inserida na aba {nome_aba} (linha {row_idx})")
+    return True, row_idx
 
 def inserir_boletins_google_sheets(spreadsheet, dados):
     ids_existentes = obter_ids_existentes(spreadsheet)
@@ -638,19 +655,18 @@ def ativar_boletim_html(context, boletim_id):
 # =====================================================
 def extrair_boletins(context):
     log_message("INFO", "Extraindo boletins via Playwright (FullCalendar)")
-    
+
     page = context.new_page()
-    boletins = set()
-    
+    boletins_info = {}  # {id: titulo_do_evento}
 
     try:
         page.goto(
             CALENDARIO_URL,
-            wait_until="networkidle",
-            timeout=60000
+            wait_until="domcontentloaded",
+            timeout=90000
         )
 
-        page.wait_for_selector(".fc-event", state="attached", timeout=60000)
+        page.wait_for_selector(".fc-event", state="attached", timeout=90000)
         page.wait_for_timeout(5000)
 
         eventos = page.locator(".fc-event").all()
@@ -658,22 +674,26 @@ def extrair_boletins(context):
         for ev in eventos:
             try:
                 href = ev.locator("a").get_attribute("href")
-
                 if href:
                     match = re.search(r"/boletins/(\d+)", href)
-
                     if match:
-                        boletins.add(int(match.group(1)))
+                        bid = int(match.group(1))
+                        try:
+                            titulo = ev.inner_text().strip().replace("\n", " ")
+                        except Exception:
+                            titulo = ""
+                        boletins_info[bid] = titulo
             except Exception:
                 continue
 
-        log_message("INFO", f"{len(boletins)} boletins válidos encontrados")
-        log_message("INFO", f"Boletins encontrados: {sorted(boletins)}")
-        return sorted(boletins)
+        ids = sorted(boletins_info.keys())
+        log_message("INFO", f"{len(ids)} boletins válidos encontrados")
+        log_message("INFO", f"Boletins encontrados: {ids}")
+        return ids, boletins_info
 
     except Exception as e:
         log_message("ERROR", f"Erro ao extrair boletins: {e}")
-        return []
+        return [], {}
 
     finally:
         page.close()
@@ -705,10 +725,17 @@ def baixar_edital_por_json(context, boletim_id, bidding_id, arquivo_json):
     for c in context.cookies():
         session.cookies.set(c["name"], c["value"], domain=c.get("domain"))
 
-    response = session.get(url_completa, timeout=60)
+    try:
+        response = session.get(url_completa, timeout=90)
+    except requests.exceptions.Timeout:
+        log_message("WARNING", f"Timeout ao baixar edital {bidding_id} — pulando")
+        return []
+    except requests.exceptions.RequestException as e:
+        log_message("WARNING", f"Erro de rede ao baixar edital {bidding_id}: {e} — pulando")
+        return []
 
     if response.status_code != 200:
-        log_message("WARNING", f"Arquivo não disponível {bidding_id}")
+        log_message("WARNING", f"Arquivo não disponível {bidding_id} (status {response.status_code})")
         return []
 
     caminho = pasta_base / filename
@@ -719,11 +746,15 @@ def baixar_edital_por_json(context, boletim_id, bidding_id, arquivo_json):
     arquivos_extraidos = []
 
     if filename.lower().endswith(".zip"):
-        with zipfile.ZipFile(caminho, 'r') as zip_ref:
-            zip_ref.extractall(pasta_base)
-            for nome in zip_ref.namelist():
-                arquivos_extraidos.append(str(pasta_base / nome))
-        caminho.unlink()
+        try:
+            with zipfile.ZipFile(caminho, 'r') as zip_ref:
+                zip_ref.extractall(pasta_base)
+                for nome in zip_ref.namelist():
+                    arquivos_extraidos.append(str(pasta_base / nome))
+            caminho.unlink()
+        except zipfile.BadZipFile:
+            log_message("WARNING", f"ZIP corrompido para bidding {bidding_id} — pulando")
+            return []
         return arquivos_extraidos
 
     return [str(caminho)]
@@ -735,16 +766,19 @@ def montar_nome_pasta(dados):
     ano_mes = datetime.now().strftime("%Y %m")
     municipio = (dados.get("orgao_cidade") or "").upper()
     uf = (dados.get("orgao_estado") or "").upper()
-    orgao = (dados.get("orgao_cidade") or "").upper()
+    orgao = ((dados.get("public_body") or {}).get("nome") or dados.get("orgao_cidade") or "").upper()
     objeto = (dados.get("edital") or "").upper()
+    bidding_id = str(dados.get("bidding_id") or "")
 
-    nome = f"{ano_mes} - {municipio} - {uf} - {orgao} - {objeto}"
-    return nome.replace("/", "-")
+    nome = f"{ano_mes} - {municipio} - {uf} - {orgao} - {objeto} - {bidding_id}"
+    return re.sub(r'[/\\:*?"<>|]', "-", nome)
 
 # =====================================================
 # COLETAR LICITAÇÕES
 # =====================================================
-def coletar_licitacoes(context, boletins):
+def coletar_licitacoes(context, boletins, boletins_info=None):
+    if boletins_info is None:
+        boletins_info = {}
 
     resultados = []
     spreadsheet = conectar_google_sheets()
@@ -775,19 +809,40 @@ def coletar_licitacoes(context, boletins):
         for c in context.cookies():
             session.cookies.set(c["name"], c["value"], domain=c.get("domain"))
 
-        resp = session.get(BIDDINGS_API.format(boletim_id), timeout=30)
+        biddings = []
+        pagina = 1
+        while True:
+            url_pag = f"{BIDDINGS_API.format(boletim_id)}?page={pagina}&per_page={BIDDINGS_PER_PAGE}"
+            try:
+                resp = session.get(url_pag, timeout=60)
+            except requests.exceptions.Timeout:
+                log_message("WARNING", f"Timeout boletim {boletim_id} página {pagina} — parando paginação")
+                break
+            except requests.exceptions.RequestException as e:
+                log_message("WARNING", f"Erro de rede boletim {boletim_id} página {pagina}: {e} — parando")
+                break
 
-        if resp.status_code != 200:
-            log_message("WARNING", f"API falhou {boletim_id}")
-            continue
+            if resp.status_code != 200:
+                log_message("WARNING", f"API falhou {boletim_id} p{pagina} (status {resp.status_code})")
+                break
 
-        try:
-            dados_json = resp.json()
-        except Exception:
-            log_message("ERROR", f"Resposta inválida API {boletim_id} | Conteúdo: {resp.text[:200]}")
-            continue
+            try:
+                dados_json = resp.json()
+            except Exception:
+                log_message("ERROR", f"Resposta inválida {boletim_id} p{pagina}: {resp.text[:200]}")
+                break
 
-        biddings = dados_json.get("biddings", [])
+            pagina_biddings = dados_json.get("biddings", [])
+            biddings.extend(pagina_biddings)
+
+            log_message("INFO", f"Boletim {boletim_id} — página {pagina}: {len(pagina_biddings)} biddings")
+
+            # Para quando vier menos que o tamanho da página (última página)
+            if len(pagina_biddings) < BIDDINGS_PER_PAGE:
+                break
+            pagina += 1
+
+        log_message("INFO", f"Boletim {boletim_id} — total: {len(biddings)} biddings em {pagina} página(s)")
 
         for item in biddings:
 
@@ -815,16 +870,28 @@ def coletar_licitacoes(context, boletins):
             # --------------------------------------------
             # FILTRO POR PALAVRAS-CHAVE (antes do download)
             # --------------------------------------------
-            termo = motivo_match(
-                item.get("edital", ""),
-                item.get("descricao", ""),
-                item.get("itens", ""),
-            )
+            # FILTRO POR PALAVRAS-CHAVE (antes do download)
+            # --------------------------------------------
+            _edital_txt = item.get("edital", "")
+            _descr_txt  = item.get("descricao", "")
+            _itens_txt  = item.get("itens", "") + " " + (item.get("objeto", "") or "")
+
+            termo = motivo_match(_edital_txt, _descr_txt, _itens_txt)
             if not termo:
                 log_message("INFO", f"Bidding {bidding_id} fora do escopo de saúde — ignorado")
                 continue
 
-            log_message("INFO", f"Bidding {bidding_id} relevante — termo: '{termo}'")
+            eh_tele = licitacao_telemedicina(_edital_txt, _descr_txt, _itens_txt)
+
+            # Telemedicina: qualquer valor. Demais: >= R$ 1.200.000
+            if not eh_tele:
+                valor = float(item.get("valor_estimado") or 0)
+                if valor < VALOR_MINIMO:
+                    log_message("INFO", f"Bidding {bidding_id} valor R$ {valor:,.0f} < R$ 1.200.000 — ignorado")
+                    continue
+
+            log_message("INFO", f"Bidding {bidding_id} relevante — termo: '{termo}'"
+                        + (" [TELEMEDICINA]" if eh_tele else f" [R$ {float(item.get('valor_estimado') or 0):,.0f}]"))
 
             # --------------------------------------------
             # DOWNLOAD DO EDITAL
@@ -849,7 +916,8 @@ def coletar_licitacoes(context, boletins):
             )
 
             if pdf_principal:
-                texto_ia, status_ia, tokens_ia = gemini_queue.processar(pdf_principal, montar_prompt_gemini())
+                _min = 1 if eh_tele else 800
+                texto_ia, status_ia, tokens_ia = gemini_queue.processar(pdf_principal, montar_prompt_gemini(), min_chars=_min)
                 log_message("INFO", f"Gemini retornou - Status: {status_ia} | Chars: {len(texto_ia or '')}")
 
                 stats["tokens_entrada"] += tokens_ia["prompt_tokens"]
@@ -916,7 +984,9 @@ def coletar_licitacoes(context, boletins):
 
             licitacao_dados = {
                 "boletim_id": boletim_id,
+                "boletim_titulo": boletins_info.get(boletim_id, ""),
                 "bidding_id": bidding_id,
+                "idconlicitacao": bidding_id,
                 "orgao_cidade": item.get("orgao_cidade"),
                 "orgao_estado": item.get("orgao_estado"),
                 "orgao_nome": (item.get("public_body") or {}).get("nome") or "",
@@ -928,18 +998,40 @@ def coletar_licitacoes(context, boletins):
                 "valor_estimado": item.get("valor_estimado"),
                 "datahora_abertura": item.get("datahora_abertura"),
                 "datahora_prazo": item.get("datahora_prazo"),
-                "status_ia": status_ia,
+                "status_ia": "SIM" if eh_tele else status_ia,
                 "link_drive": link_drive,
+                "link_drive_edital": link_drive,
                 "link_txt": link_txt,
                 "resumo_ia": texto_ia,
                 "modalidade": (item.get("modality") or {}).get("nome") or "",
                 "modo_disputa": _modo_match.group(1).upper() if _modo_match else "",
+                "deal_id_pipedrive": None,
             }
 
-            inserido = inserir_boletim_google_sheets(spreadsheet, licitacao_dados, ids_existentes)
+            if eh_tele and status_ia != "SIM":
+                status_ia = "SIM"
+                log_message("INFO", f"Bidding {bidding_id} [TELEMEDICINA] forçado APROVADO")
+
+            inserido, row_idx = inserir_boletim_google_sheets(spreadsheet, licitacao_dados, ids_existentes)
+
+            importar_pip = status_ia == "SIM"
+            if inserido and importar_pip:
+                try:
+                    deal_id_pip = importar_deal_unico(licitacao_dados)
+                    if deal_id_pip:
+                        licitacao_dados["deal_id_pipedrive"] = deal_id_pip
+                        if row_idx:
+                            spreadsheet.worksheet(SHEET_APROVADOS).update_cell(row_idx, 15, "TRUE")
+                        log_message("INFO", f"Deal Pipedrive criado inline: {deal_id_pip}"
+                                    + (" [TELEMEDICINA]" if eh_tele else ""))
+                except Exception as e:
+                    log_message("ERROR", f"Falha importacao inline {bidding_id}: {type(e).__name__}: {e}")
+
             if inserido:
                 salvar_licitacao_processada(bidding_id, licitacao_dados)
                 licitacoes_processadas[bidding_id_str] = licitacao_dados
+
+            licitacao_dados["termo_match"] = termo
 
             stats["licitacoes_coletadas"] += 1
             if status_ia == "SIM":
@@ -951,6 +1043,10 @@ def coletar_licitacoes(context, boletins):
 
             resultados.append(licitacao_dados)
             contador_teste += 1
+
+        # Salva checkpoint após cada boletim completo
+        salvar_ultimo_boletim(boletim_id)
+        log_message("INFO", f"Checkpoint salvo: boletim {boletim_id}")
 
     stats["custo_estimado_usd"] = round(
         tokens_para_custo_usd(stats["tokens_entrada"], stats["tokens_saida"]), 6
@@ -970,7 +1066,7 @@ def main():
     p, browser, context = criar_browser_autenticado()
 
     try:
-        boletins = extrair_boletins(context)
+        boletins, boletins_info = extrair_boletins(context)
         novos = sorted([b for b in boletins if b > ultimo])
 
         log_message("INFO", f"Último salvo: {ultimo}")
@@ -980,22 +1076,27 @@ def main():
             log_message("INFO", "Nenhum boletim novo encontrado")
             return
 
-        dados, stats = coletar_licitacoes(context, novos)
+        dados, stats = coletar_licitacoes(context, novos, boletins_info)
 
         if dados:
-            salvar_ultimo_boletim(max(novos))
             salvar_relatorio_coleta(stats)
+            notificar_resumo_coleta(stats, dados)
 
-        aprovadas = stats.get("licitacoes_aprovadas", 0)
-        if aprovadas > 0:
-            log_message("INFO", f"Iniciando importação Pipedrive ({aprovadas} aprovadas)")
-            try:
-                importar_pipedrive()
-                log_message("INFO", "Importação Pipedrive concluída")
-            except Exception as e:
-                log_message("ERROR", f"Falha na importação Pipedrive: {type(e).__name__}: {e}")
-        else:
-            log_message("INFO", "Nenhuma licitação aprovada — importação Pipedrive ignorada")
+        # Importação inline já ocorreu para aprovadas. O batch abaixo serve
+        # como fallback para deals que falharam inline ou estavam pendentes.
+        try:
+            importar_pipedrive()
+            log_message("INFO", "Importação Pipedrive (fallback/retry) concluída")
+        except Exception as e:
+            log_message("ERROR", f"Falha no fallback Pipedrive: {type(e).__name__}: {e}")
+
+        # Aprendizado contínuo: processa feedbacks Ouro + correções da planilha
+        try:
+            n = processar_feedbacks()
+            if n:
+                log_message("INFO", f"Memória Gemini atualizada com {n} entrada(s)")
+        except Exception as e:
+            log_message("ERROR", f"Falha ao processar feedbacks: {type(e).__name__}: {e}")
 
     finally:
         browser.close()

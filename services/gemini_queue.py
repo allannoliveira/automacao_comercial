@@ -8,7 +8,7 @@ class GeminiQueue:
         self.delay = delay
         self.max_retries = max_retries
 
-    def processar(self, pdf_path, prompt):
+    def processar(self, pdf_path, prompt, min_chars=800):
 
         tentativa = 0
 
@@ -16,7 +16,7 @@ class GeminiQueue:
 
         while tentativa < self.max_retries:
             try:
-                texto, status, tokens_info = analisar_edital(pdf_path, prompt)
+                texto, status, tokens_info = analisar_edital(pdf_path, prompt, min_chars=min_chars)
 
                 time.sleep(self.delay)
 

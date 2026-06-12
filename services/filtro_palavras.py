@@ -17,24 +17,64 @@ def _normalizar(texto: str) -> str:
 # dos padrões positivos abaixo
 # =====================================================
 _EXCLUSOES: List[re.Pattern] = [re.compile(p) for p in [
-    r"\bambulancia\b",                          # ambulância (qualquer tipo)
-    r"\buti movel\b",                           # UTI móvel (transporte de pacientes)
-    r"\bremocao de pacientes?\b",               # remoção de pacientes
-    r"\bassistencia social\b",                  # assistência social
-    r"\bengenharia clinica\b",                  # engenharia clínica
-    r"\bmanutencao (preventiva|corretiva)\b",   # manutenção de equipamentos
-    r"\bmanutencao (em|de) equipamento\b",      # manutenção em/de equipamento
-    r"\bpecas e componentes?\b",                # peças e componentes (equipamentos)
-    r"\bpecas e componetes?\b",                 # variante com typo frequente
-    r"\bcalibracao\b",                          # calibração de equipamentos
-    r"\bventilador pulmonar\b",                 # ventilador pulmonar (equipamento)
-    r"\bassistencia tecnica\b",                 # assistência técnica de equipamentos
+    # --- TRANSPORTE / REMOÇÃO ---
+    r"\bambulancia\b",                                      # ambulância (qualquer tipo)
+    r"\buti movel\b",                                       # UTI móvel
+    r"\bremocao de pacientes?\b",                           # remoção de pacientes
+    r"\btransporte escolar\b",                              # transporte escolar
+    r"\btransporte de alunos?\b",                           # transporte de alunos
+    r"\btransporte de pacientes?\b",                        # transporte de pacientes
+
+    # --- EVENTOS / ENTRETENIMENTO ---
+    r"\bdj\b",                                              # disk jockey
+    r"\bdisco?jockeys?\b",                                  # disk jockey escrito por extenso
+    r"\btrio eletrico\b",                                   # trio elétrico
+    r"\bshow (artistico|musical|de banda|sertanejo)\b",     # shows musicais
+    r"\banimacao (cultural|artistica|de eventos?)\b",       # animação de eventos
+    r"\blocacao de (palco|gradil|pavilhao|tenda|camarim|som e iluminacao)\b",
+    r"\bfesta\b",                                           # festa (contexto de evento)
+    r"\bcatering\b",                                        # catering/buffet
+    r"\bbuffet\b",                                          # buffet
+
+    # --- ENGENHARIA CLÍNICA / EQUIPAMENTOS ---
+    r"\bassistencia social\b",                              # assistência social
+    r"\bengenharia clinica\b",                              # engenharia clínica
+    r"\bmanutencao (preventiva|corretiva)\b",               # manutenção de equipamentos
+    r"\bmanutencao (em|de) equipamento\b",                  # manutenção em/de equipamento
+    r"\bpecas e componentes?\b",                            # peças e componentes
+    r"\bpecas e componetes?\b",                             # typo frequente
+    r"\bcalibracao\b",                                      # calibração
+    r"\bventilador pulmonar\b",                             # ventilador pulmonar
+    r"\bassistencia tecnica\b",                             # assistência técnica de equipamentos
+
+    # --- OUTROS SERVIÇOS NÃO MÉDICOS ---
+    r"\blimpeza (urbana|publica|de vias)\b",                # limpeza urbana
+    r"\bcoleta de (lixo|residuos|entulho)\b",               # coleta de lixo
+    r"\bmerenda escolar\b",                                 # merenda escolar
+    r"\balimentacao escolar\b",                             # alimentação escolar
+    r"\bvigilancia patrimonial\b",                          # vigilância patrimonial
+    r"\bguarda municipal\b",                                # guarda municipal
+    r"\bpoda de arvores?\b",                                # poda de árvores
+    r"\billuminacao publica\b",                             # iluminação pública
+]]
+
+# =====================================================
+# PADRÕES DE TELEMEDICINA — subconjunto para filtro de valor
+# =====================================================
+_TELEMEDICINA: List[re.Pattern] = [re.compile(p) for p in [
+    r"\bteleatendimentos?\b",
+    r"\bteles? atendimentos?\b",
+    r"\btelemedicinas?\b",
+    r"\bteles? medicinas?\b",
+    r"\btele?consultas?\b",
+    r"\btelessaudes?\b",
+    r"\btele saudes?\b",
 ]]
 
 # =====================================================
 # PADRÕES SIMPLES — um match basta para ser relevante
 # =====================================================
-_SIMPLES: List[re.Pattern] = [re.compile(p) for p in [
+_SIMPLES: List[re.Pattern] = _TELEMEDICINA + [re.compile(p) for p in [
     r"\bconsultas?\b",
     r"\benfermage(?:m|ns)\b",
     r"\benfermeiros?\b",
@@ -51,10 +91,6 @@ _SIMPLES: List[re.Pattern] = [re.compile(p) for p in [
     r"\bmaos? obras? enfermage(?:m|ns)\b",
     r"\bmedicos?\b",
     r"\bservicos? medic(?:o|a)s?\b",
-    r"\bteleatendimentos?\b",
-    r"\bteles? atendimentos?\b",
-    r"\btelemedicinas?\b",
-    r"\bteles? medicinas?\b",
 ]]
 
 # =====================================================
@@ -83,6 +119,12 @@ def licitacao_relevante(edital: str, descricao: str = "", itens: str = "") -> bo
             return True
 
     return False
+
+
+def licitacao_telemedicina(edital: str, descricao: str = "", itens: str = "") -> bool:
+    """Retorna True se o texto contém termos de telemedicina/teleconsulta."""
+    texto = _normalizar(f"{edital} {descricao} {itens}")
+    return any(p.search(texto) for p in _TELEMEDICINA)
 
 
 def motivo_match(edital: str, descricao: str = "", itens: str = "") -> str:
